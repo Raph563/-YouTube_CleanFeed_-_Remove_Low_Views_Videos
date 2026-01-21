@@ -53,8 +53,8 @@
       status_on: "ON",
       status_off: "OFF",
 
-      dock_collapse: "Ranger",
-      dock_expand: "Déplier",
+      dock_collapse: "Ranger 🗂️",
+      dock_expand: "Déplier 📂",
       dock_shorts_show: "Afficher Shorts",
       dock_shorts_hide: "Masquer Shorts",
       dock_lowpop_home_show: "Afficher les vidéos peu populaires",
@@ -154,8 +154,8 @@
       status_on: "ON",
       status_off: "OFF",
 
-      dock_collapse: "Collapse",
-      dock_expand: "Expand",
+      dock_collapse: "Collapse 🗂️",
+      dock_expand: "Expand 📂",
       dock_shorts_show: "Show Shorts",
       dock_shorts_hide: "Hide Shorts",
       dock_lowpop_home_show: "Show unpopular videos",
@@ -255,8 +255,8 @@
       status_on: "EIN",
       status_off: "AUS",
 
-      dock_collapse: "Einklappen",
-      dock_expand: "Ausklappen",
+      dock_collapse: "Einklappen 🗂️",
+      dock_expand: "Ausklappen 📂",
       dock_shorts_show: "Shorts anzeigen",
       dock_shorts_hide: "Shorts ausblenden",
       dock_lowpop_home_show: "Unbeliebte Videos anzeigen",
@@ -356,8 +356,8 @@
       status_on: "ON",
       status_off: "OFF",
 
-      dock_collapse: "Colapsar",
-      dock_expand: "Expandir",
+      dock_collapse: "Colapsar 🗂️",
+      dock_expand: "Expandir 📂",
       dock_shorts_show: "Mostrar Shorts",
       dock_shorts_hide: "Ocultar Shorts",
       dock_lowpop_home_show: "Mostrar videos poco populares",
@@ -1747,9 +1747,9 @@
     btn.style.cssText = `
       padding: 8px 12px;
       border-radius: 999px;
-      background: #ffffff;
-      color: #111827;
-      border: 1px solid #d1d5db;
+      background: rgba(0,0,0,0.72);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.2);
       cursor: pointer;
       font-size: 12px;
       transform: translateZ(0);
@@ -1759,9 +1759,30 @@
   }
 
   const MODE_COLORS = {
-    ultra: { bg: "#F97316", border: "#FDBA74", text: "#FFFFFF", kind: "ultra" },
-    eco: { bg: "#22C55E", border: "#16A34A", text: "#FFFFFF", kind: "eco" },
-    perf: { bg: "#3B82F6", border: "#1D4ED8", text: "#FFFFFF", kind: "perf" },
+    ultra: {
+      bg: "#E76F51",
+      border: "#F4A08A",
+      bgInactive: "#F0A891",
+      borderInactive: "#F7C2B4",
+      text: "#FFFFFF",
+      kind: "ultra",
+    },
+    eco: {
+      bg: "#2A9D8F",
+      border: "#53B2A8",
+      bgInactive: "#5FB8AD",
+      borderInactive: "#8ED0C8",
+      text: "#FFFFFF",
+      kind: "eco",
+    },
+    perf: {
+      bg: "#3A86FF",
+      border: "#6CA6FF",
+      bgInactive: "#6FA8FF",
+      borderInactive: "#A6C7FF",
+      text: "#FFFFFF",
+      kind: "perf",
+    },
   };
 
   function getModeStatusText() {
@@ -1787,6 +1808,47 @@
     forceRenderDockNow();
   }
 
+  const DOCK_STYLE_ID = "ytcf-dock-style";
+
+  function ensureDockStyle() {
+    if (document.getElementById(DOCK_STYLE_ID)) return;
+    const style = document.createElement("style");
+    style.id = DOCK_STYLE_ID;
+    style.textContent = `
+      @keyframes ytcf-eco-pulse {
+        0% { box-shadow: 0 0 0 rgba(34,197,94,0); }
+        50% { box-shadow: 0 0 12px rgba(34,197,94,0.35); }
+        100% { box-shadow: 0 0 0 rgba(34,197,94,0); }
+      }
+      @keyframes ytcf-perf-pulse {
+        0% { box-shadow: 0 0 0 rgba(59,130,246,0); }
+        50% { box-shadow: 0 0 14px rgba(59,130,246,0.45); }
+        100% { box-shadow: 0 0 0 rgba(59,130,246,0); }
+      }
+      @keyframes ytcf-ultra-pulse {
+        0% { box-shadow: 0 0 0 rgba(231,111,81,0); }
+        50% { box-shadow: 0 0 10px rgba(231,111,81,0.35); }
+        100% { box-shadow: 0 0 0 rgba(231,111,81,0); }
+      }
+      .ytcf-mode-anim-eco { animation: ytcf-eco-pulse 2.8s ease-in-out infinite; }
+      .ytcf-mode-anim-perf { animation: ytcf-perf-pulse 1.8s ease-in-out infinite; }
+      .ytcf-mode-anim-ultra { animation: ytcf-ultra-pulse 3.4s ease-in-out infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        .ytcf-mode-anim-eco,
+        .ytcf-mode-anim-perf,
+        .ytcf-mode-anim-ultra { animation: none; }
+      }
+    `;
+    document.documentElement.appendChild(style);
+  }
+
+  function getModeAnimationClass() {
+    const mode = getMode();
+    if (mode === "perf") return "ytcf-mode-anim-perf";
+    if (mode === "ultra") return "ytcf-mode-anim-ultra";
+    return "ytcf-mode-anim-eco";
+  }
+
   function renderToggleState(container, label, isOn) {
     const labelSpan = document.createElement("span");
     labelSpan.textContent = label;
@@ -1807,7 +1869,7 @@
   function applyToggleHoverState(btn, getLabel, getIsOn, getHoverText) {
     const stateWrap = document.createElement("span");
     const actionWrap = document.createElement("span");
-    actionWrap.style.color = "#111827";
+    actionWrap.style.color = "#ffffff";
     actionWrap.style.display = "none";
 
     btn.replaceChildren(stateWrap, actionWrap);
@@ -1840,9 +1902,9 @@
       width: 18px;
       height: 18px;
       border-radius: 999px;
-      border: 1px solid #9ca3af;
-      background: #ffffff;
-      color: #111827;
+      border: 1px solid rgba(255,255,255,0.6);
+      background: rgba(0,0,0,0.6);
+      color: #ffffff;
       font-size: 11px;
       line-height: 1;
       display: inline-flex;
@@ -1873,14 +1935,15 @@
     const color = MODE_COLORS[mode] || MODE_COLORS.eco;
     const isCurrent = getMode() === mode;
 
-    btn.style.background = isCurrent ? "#e5e7eb" : color.bg;
-    btn.style.border = `1px solid ${isCurrent ? "#cbd5f5" : color.border}`;
-    btn.style.color = isCurrent ? "#6b7280" : color.text;
+    btn.style.background = isCurrent ? color.bgInactive : color.bg;
+    btn.style.border = `1px solid ${isCurrent ? color.borderInactive : color.border}`;
+    btn.style.color = color.text;
     btn.style.fontWeight = "700";
     btn.style.cursor = isCurrent ? "default" : "pointer";
     if (isCurrent) {
-      btn.disabled = true;
+      btn.setAttribute("aria-disabled", "true");
       btn.style.opacity = "1";
+      btn.style.pointerEvents = "none";
     }
 
     if (!isCurrent) {
@@ -1896,14 +1959,17 @@
   }
 
   function makeModeStatusGroup() {
+    ensureDockStyle();
     const wrap = document.createElement("div");
     wrap.style.display = "flex";
-    wrap.style.flexDirection = "column";
+    wrap.style.flexDirection = "row";
     wrap.style.gap = "6px";
-    wrap.style.alignItems = "flex-end";
+    wrap.style.alignItems = "center";
+    wrap.style.justifyContent = "flex-end";
 
     const statusBtn = makeDockButton(BTN_MODE_STATUS, getModeStatusText());
     statusBtn.style.fontWeight = "700";
+    statusBtn.classList.add(getModeAnimationClass());
 
     const changeBtn = makeDockButton(BTN_MODE_CHANGE, T.dock_mode_change);
     changeBtn.style.display = "none";
@@ -1912,6 +1978,8 @@
       forceRenderDockNow();
     });
 
+    const infoBtn = makeInfoIcon(getMode());
+
     const show = () => { changeBtn.style.display = ""; };
     const hide = () => { changeBtn.style.display = "none"; };
 
@@ -1919,10 +1987,12 @@
     wrap.addEventListener("mouseleave", hide);
     statusBtn.addEventListener("focus", show);
     changeBtn.addEventListener("focus", show);
+    infoBtn.addEventListener("focus", show);
     statusBtn.addEventListener("blur", hide);
     changeBtn.addEventListener("blur", hide);
+    infoBtn.addEventListener("blur", hide);
 
-    wrap.append(statusBtn, changeBtn);
+    wrap.append(changeBtn, statusBtn, infoBtn);
     return wrap;
   }
 
@@ -2063,11 +2133,12 @@
       });
 
       const titleBtn = makeDockButton(BTN_MODE_TITLE, T.dock_mode_select);
-      titleBtn.disabled = true;
+      titleBtn.setAttribute("aria-disabled", "true");
+      titleBtn.style.pointerEvents = "none";
       titleBtn.style.cursor = "default";
-      titleBtn.style.background = "#ffffff";
-      titleBtn.style.color = "#111827";
-      titleBtn.style.border = "1px solid #d1d5db";
+      titleBtn.style.background = "rgba(0,0,0,0.62)";
+      titleBtn.style.color = "#ffffff";
+      titleBtn.style.border = "1px solid rgba(255,255,255,0.18)";
       titleBtn.style.fontWeight = "700";
       titleBtn.style.opacity = "1";
 
@@ -2162,7 +2233,7 @@
       syncLowpopHomeLabel();
 
       const modeGroup = makeModeStatusGroup();
-      dock.replaceChildren(collapse, shortsBtn, lowpopHomeBtn, modeGroup);
+      dock.replaceChildren(collapse, modeGroup, shortsBtn, lowpopHomeBtn);
       armDockIdle(dock, "home");
       if (getMode() === "perf") animateDockIn(dock);
       return;
@@ -2251,7 +2322,7 @@
       syncLowpopWatchLabel();
 
       const modeGroup = makeModeStatusGroup();
-      dock.replaceChildren(collapseW, headerBtn, lowpopWatchBtn, modeGroup);
+      dock.replaceChildren(collapseW, modeGroup, headerBtn, lowpopWatchBtn);
       armDockIdle(dock, "watch");
       if (getMode() === "perf") animateDockIn(dock);
       return;
