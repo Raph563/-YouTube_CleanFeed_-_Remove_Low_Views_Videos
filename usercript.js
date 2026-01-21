@@ -153,6 +153,8 @@
 
       // ✅ CLÉ MANQUANTE AJOUTÉE
       dock_go_top: "Allez en haut de la page",
+      dock_lang_label: "Langue",
+      dock_lang_auto: "Auto",
 
       toast_updated: "Mise à jour",
       toast_reset: "Réglages réinitialisés",
@@ -299,6 +301,8 @@
 
       // ✅ CLÉ MANQUANTE AJOUTÉE
       dock_go_top: "Go to the top of the page",
+      dock_lang_label: "Language",
+      dock_lang_auto: "Auto",
 
       toast_updated: "Updated",
       toast_reset: "Settings reset",
@@ -445,6 +449,8 @@
 
       // ✅ CLÉ MANQUANTE AJOUTÉE
       dock_go_top: "Zur Seitenoberkante",
+      dock_lang_label: "Sprache",
+      dock_lang_auto: "Auto",
 
       toast_updated: "Aktualisiert",
       toast_reset: "Einstellungen zurückgesetzt",
@@ -591,6 +597,8 @@
 
       // ✅ CLÉ MANQUANTE AJOUTÉE
       dock_go_top: "Ir al inicio de la página",
+      dock_lang_label: "Idioma",
+      dock_lang_auto: "Auto",
 
       toast_updated: "Actualizado",
       toast_reset: "Ajustes restablecidos",
@@ -605,6 +613,736 @@
       toast_header_on: "Header auto: ACTIVADO (/watch)",
       toast_header_off: "Header auto: DESACTIVADO (/watch)",
     },
+    it: {
+      sec_global: "Globale",
+      sec_home: "Home",
+      sec_search: "Ricerca",
+      sec_watch: "Riproduzione (/watch)",
+      sec_navui: "Navigazione e UI",
+      sec_actions: "Azioni",
+
+      mode_label: "Modalita",
+      mode_perf: "Prestazioni",
+      mode_eco: "Risparmio",
+      mode_ultra: "Ultra Risparmio",
+
+      opt_shorts_home: "Nascondi Shorts in Home",
+      opt_shorts_search: "Nascondi Shorts nella ricerca (scaffale + risultati)",
+      opt_news_home: "Nascondi Notizie/Top news in Home",
+      opt_sidebar_shorts: 'Nascondi "Shorts" nella barra laterale',
+      opt_block_shorts_page: "Blocca la pagina Shorts (reindirizza a Home)",
+
+      opt_lowpop_home: "Filtra video poco popolari in Home",
+      opt_lowpop_watch: "Filtra consigli poco popolari su /watch",
+
+      opt_float_buttons: "Mostra dock dei pulsanti (Home + /watch)",
+      opt_header_hover_watch: "Nascondi header quando non in hover (/watch)",
+
+      act_apply: "↻ Applica ora",
+      act_reset: "⟲ Reimposta tutte le impostazioni",
+
+      status_on: "ON",
+      status_off: "OFF",
+
+      dock_collapse: "Comprimi ▼",
+      dock_expand: "Impostazioni ▲",
+      dock_shorts_show: "Mostra Shorts",
+      dock_shorts_hide: "Nascondi Shorts",
+      dock_lowpop_home_show: "Mostra video poco popolari",
+      dock_lowpop_home_hide: "Nascondi video poco popolari",
+      dock_lowpop_watch_show: "Mostra consigli poco popolari",
+      dock_lowpop_watch_hide: "Nascondi consigli poco popolari",
+
+      dock_header_on: "Header auto",
+      dock_header_off: "Header normale",
+      dock_header_state_on: "Header auto-hide: ON",
+      dock_header_state_off: "Header auto-hide: OFF",
+      dock_header_label: "Header auto-hide",
+      dock_header_action_on: "Mostra sempre l'header",
+      dock_header_action_off: "Attiva auto-hide",
+
+      dock_shorts_state_on: "Filtro Shorts: ON",
+      dock_shorts_state_off: "Filtro Shorts: OFF",
+      dock_shorts_label: "Shorts nascosti",
+      dock_shorts_action_on: "Mostra Shorts",
+      dock_shorts_action_off: "Nascondi Shorts",
+      dock_shorts_info: "Nasconde gli scaffali Shorts nella Home.",
+
+      dock_news_label: "Notizie nascoste",
+      dock_news_action_on: "Mostra Notizie",
+      dock_news_action_off: "Nascondi Notizie",
+      dock_news_info: "Nasconde la sezione Notizie/Top news in Home.",
+
+      dock_shorts_search_label: "Shorts nascosti (Ricerca)",
+      dock_shorts_search_action_on: "Mostra Shorts (Ricerca)",
+      dock_shorts_search_action_off: "Nascondi Shorts (Ricerca)",
+      dock_shorts_search_info: "Rimuove scaffali Shorts e risultati Shorts nella ricerca.",
+
+      dock_sidebar_shorts_label: "Shorts nascosti (menu)",
+      dock_sidebar_shorts_action_on: "Mostra \"Shorts\" (menu)",
+      dock_sidebar_shorts_action_off: "Nascondi \"Shorts\" (menu)",
+      dock_sidebar_shorts_info: "Nasconde la voce Shorts nella barra laterale.",
+
+      dock_block_shorts_label: "Pagina Shorts bloccata",
+      dock_block_shorts_action_on: "Sblocca pagina Shorts",
+      dock_block_shorts_action_off: "Blocca pagina Shorts",
+      dock_block_shorts_info: "Reindirizza la pagina Shorts alla Home.",
+
+      dock_lowpop_home_state_on: "Filtro poco popolare (Home): ON",
+      dock_lowpop_home_state_off: "Filtro poco popolare (Home): OFF",
+      dock_lowpop_home_label: "Video poco popolari (Home)",
+      dock_lowpop_home_action_on: "Mostra video poco popolari",
+      dock_lowpop_home_action_off: "Nascondi video poco popolari",
+      dock_lowpop_home_info: "Nasconde video sotto la soglia di visualizzazioni in Home.",
+
+      dock_lowpop_watch_state_on: "Filtro poco popolare (/watch): ON",
+      dock_lowpop_watch_state_off: "Filtro poco popolare (/watch): OFF",
+      dock_lowpop_watch_label: "Consigli poco popolari (/watch)",
+      dock_lowpop_watch_action_on: "Mostra consigli poco popolari",
+      dock_lowpop_watch_action_off: "Nascondi consigli poco popolari",
+      dock_lowpop_watch_info: "Nasconde consigli sotto la soglia di visualizzazioni su /watch.",
+
+      dock_header_info: "Attiva auto-hide dell'header su /watch, con comparsa al passaggio.",
+      dock_float_buttons_label: "Dock visibile",
+      dock_float_buttons_action_on: "Nascondi dock",
+      dock_float_buttons_action_off: "Mostra dock",
+      dock_float_buttons_info: "Mostra o nasconde il dock dei pulsanti flottanti.",
+      dock_menu_home_label: "Funzionalita Home",
+      dock_menu_home_title: "Funzionalita Home:",
+      dock_menu_home_info: "Impostazioni Home (Shorts, Notizie, video poco popolari).",
+      dock_menu_watch_label: "Funzionalita Video",
+      dock_menu_watch_title: "Funzionalita Video:",
+      dock_menu_watch_info: "Impostazioni pagina video (/watch).",
+      dock_menu_search_label: "Funzionalita Ricerca",
+      dock_menu_search_title: "Funzionalita Ricerca:",
+      dock_menu_search_info: "Opzioni specifiche per risultati e scaffali di ricerca.",
+      dock_menu_sidebar_label: "Funzionalita Barra laterale",
+      dock_menu_sidebar_title: "Funzionalita Barra laterale:",
+      dock_menu_sidebar_info: "Impostazioni per la barra laterale.",
+      dock_menu_adv_label: "Avanzate",
+      dock_menu_adv_title: "Avanzate:",
+      dock_menu_adv_info: "Opzioni avanzate del dock (visibilita, ecc.).",
+      dock_menu_back: "Indietro ◀️",
+
+      dock_mode_state_perf: "Modalita: Prestazioni",
+      dock_mode_state_eco: "Modalita: Risparmio",
+      dock_mode_label: "Modalita eco",
+      dock_mode_action_perf: "Passa a Risparmio",
+      dock_mode_action_eco: "Passa a Prestazioni",
+      dock_mode_status_ultra: "Modalita: Ultra Risparmio",
+      dock_mode_status_eco: "Modalita: Risparmio",
+      dock_mode_status_perf: "Modalita: Prestazioni",
+      dock_mode_change: "Cambia modalita",
+      dock_mode_back: "Indietro",
+      dock_mode_select: "Seleziona la tua modalita:",
+      dock_mode_btn_ultra: "Ultra Risparmio",
+      dock_mode_btn_eco: "Risparmio",
+      dock_mode_btn_perf: "Prestazioni",
+      dock_mode_info_ultra: "Ultra Risparmio:\n- Disabilita filtri poco popolari\n- Disabilita auto-hide header\n- Animazioni minime\n- Meno scansioni automatiche",
+      dock_mode_info_eco: "Risparmio:\n- Scansioni in idle\n- Animazioni ridotte\n- Funzioni standard",
+      dock_mode_info_perf: "Prestazioni:\n- Observer in tempo reale\n- Animazioni complete\n- Tutte le funzioni",
+
+      dock_go_top: "Vai all'inizio della pagina",
+      dock_lang_label: "Lingua",
+      dock_lang_auto: "Auto",
+
+      toast_updated: "Aggiornato",
+      toast_reset: "Impostazioni reimpostate",
+      toast_mode_perf: "Modalita: Prestazioni",
+      toast_mode_eco: "Modalita: Risparmio risorse",
+      toast_mode_ultra: "Modalita: Ultra Risparmio",
+      toast_btn_home_on: "Filtro Home: ON (pulsante)",
+      toast_btn_home_off: "Filtro Home: OFF (pulsante)",
+      toast_btn_watch_on: "Filtro /watch: ON (pulsante)",
+      toast_btn_watch_off: "Filtro /watch: OFF (pulsante)",
+
+      toast_header_on: "Header auto: ON (/watch)",
+      toast_header_off: "Header auto: OFF (/watch)",
+    },
+    pt: {
+      sec_global: "Global",
+      sec_home: "Inicio (Home)",
+      sec_search: "Pesquisa",
+      sec_watch: "Reproducao (/watch)",
+      sec_navui: "Navegacao e UI",
+      sec_actions: "Acoes",
+
+      mode_label: "Modo",
+      mode_perf: "Desempenho",
+      mode_eco: "Economia",
+      mode_ultra: "Ultra Economia",
+
+      opt_shorts_home: "Ocultar Shorts na Home",
+      opt_shorts_search: "Ocultar Shorts na Pesquisa (estante + resultados)",
+      opt_news_home: "Ocultar Noticias/Top stories na Home",
+      opt_sidebar_shorts: "Ocultar \"Shorts\" no menu lateral",
+      opt_block_shorts_page: "Bloquear pagina Shorts (redirecionar para Home)",
+
+      opt_lowpop_home: "Filtrar videos pouco populares na Home",
+      opt_lowpop_watch: "Filtrar recomendacoes pouco populares em /watch",
+
+      opt_float_buttons: "Mostrar dock de botoes (Home + /watch)",
+      opt_header_hover_watch: "Ocultar header quando nao houver hover (/watch)",
+
+      act_apply: "↻ Aplicar agora",
+      act_reset: "⟲ Redefinir todas as configuracoes",
+
+      status_on: "ON",
+      status_off: "OFF",
+
+      dock_collapse: "Recolher ▼",
+      dock_expand: "Configuracoes ▲",
+      dock_shorts_show: "Mostrar Shorts",
+      dock_shorts_hide: "Ocultar Shorts",
+      dock_lowpop_home_show: "Mostrar videos pouco populares",
+      dock_lowpop_home_hide: "Ocultar videos pouco populares",
+      dock_lowpop_watch_show: "Mostrar recomendacoes pouco populares",
+      dock_lowpop_watch_hide: "Ocultar recomendacoes pouco populares",
+
+      dock_header_on: "Header auto",
+      dock_header_off: "Header normal",
+      dock_header_state_on: "Auto-ocultar header: ON",
+      dock_header_state_off: "Auto-ocultar header: OFF",
+      dock_header_label: "Auto-ocultar header",
+      dock_header_action_on: "Mostrar header sempre",
+      dock_header_action_off: "Ativar auto-ocultacao",
+
+      dock_shorts_state_on: "Filtro Shorts: ON",
+      dock_shorts_state_off: "Filtro Shorts: OFF",
+      dock_shorts_label: "Shorts ocultos",
+      dock_shorts_action_on: "Mostrar Shorts",
+      dock_shorts_action_off: "Ocultar Shorts",
+      dock_shorts_info: "Oculta as prateleiras de Shorts na Home.",
+
+      dock_news_label: "Noticias ocultas",
+      dock_news_action_on: "Mostrar Noticias",
+      dock_news_action_off: "Ocultar Noticias",
+      dock_news_info: "Oculta a secao Noticias/Top stories na Home.",
+
+      dock_shorts_search_label: "Shorts ocultos (Pesquisa)",
+      dock_shorts_search_action_on: "Mostrar Shorts (Pesquisa)",
+      dock_shorts_search_action_off: "Ocultar Shorts (Pesquisa)",
+      dock_shorts_search_info: "Remove prateleiras de Shorts e resultados Shorts na pesquisa.",
+
+      dock_sidebar_shorts_label: "Shorts ocultos (menu)",
+      dock_sidebar_shorts_action_on: "Mostrar \"Shorts\" (menu)",
+      dock_sidebar_shorts_action_off: "Ocultar \"Shorts\" (menu)",
+      dock_sidebar_shorts_info: "Oculta a entrada Shorts no menu lateral.",
+
+      dock_block_shorts_label: "Pagina Shorts bloqueada",
+      dock_block_shorts_action_on: "Desbloquear pagina Shorts",
+      dock_block_shorts_action_off: "Bloquear pagina Shorts",
+      dock_block_shorts_info: "Redireciona a pagina Shorts para a Home.",
+
+      dock_lowpop_home_state_on: "Filtro pouco popular (Home): ON",
+      dock_lowpop_home_state_off: "Filtro pouco popular (Home): OFF",
+      dock_lowpop_home_label: "Videos pouco populares (Home)",
+      dock_lowpop_home_action_on: "Mostrar videos pouco populares",
+      dock_lowpop_home_action_off: "Ocultar videos pouco populares",
+      dock_lowpop_home_info: "Oculta videos abaixo do limite de visualizacoes na Home.",
+
+      dock_lowpop_watch_state_on: "Filtro pouco popular (/watch): ON",
+      dock_lowpop_watch_state_off: "Filtro pouco popular (/watch): OFF",
+      dock_lowpop_watch_label: "Recomendacoes pouco populares (/watch)",
+      dock_lowpop_watch_action_on: "Mostrar recomendacoes pouco populares",
+      dock_lowpop_watch_action_off: "Ocultar recomendacoes pouco populares",
+      dock_lowpop_watch_info: "Oculta recomendacoes abaixo do limite de visualizacoes em /watch.",
+
+      dock_header_info: "Ativa auto-ocultacao do header em /watch, com exibicao ao passar o mouse.",
+      dock_float_buttons_label: "Dock visivel",
+      dock_float_buttons_action_on: "Ocultar dock",
+      dock_float_buttons_action_off: "Mostrar dock",
+      dock_float_buttons_info: "Mostra ou oculta o dock de botoes flutuantes.",
+      dock_menu_home_label: "Funcionalidades da Home",
+      dock_menu_home_title: "Funcionalidades da Home:",
+      dock_menu_home_info: "Configuracoes da Home (Shorts, Noticias, videos pouco populares).",
+      dock_menu_watch_label: "Funcionalidades de Video",
+      dock_menu_watch_title: "Funcionalidades de Video:",
+      dock_menu_watch_info: "Configuracoes da pagina de video (/watch).",
+      dock_menu_search_label: "Funcionalidades de Pesquisa",
+      dock_menu_search_title: "Funcionalidades de Pesquisa:",
+      dock_menu_search_info: "Opcoes especificas para resultados e prateleiras de pesquisa.",
+      dock_menu_sidebar_label: "Funcionalidades do Menu lateral",
+      dock_menu_sidebar_title: "Funcionalidades do Menu lateral:",
+      dock_menu_sidebar_info: "Configuracoes para entradas do menu lateral.",
+      dock_menu_adv_label: "Avancado",
+      dock_menu_adv_title: "Avancado:",
+      dock_menu_adv_info: "Opcoes avancadas do dock (visibilidade, etc.).",
+      dock_menu_back: "Voltar ◀️",
+
+      dock_mode_state_perf: "Modo: Desempenho",
+      dock_mode_state_eco: "Modo: Economia",
+      dock_mode_label: "Modo economia",
+      dock_mode_action_perf: "Mudar para Economia",
+      dock_mode_action_eco: "Mudar para Desempenho",
+      dock_mode_status_ultra: "Modo: Ultra Economia",
+      dock_mode_status_eco: "Modo: Economia",
+      dock_mode_status_perf: "Modo: Desempenho",
+      dock_mode_change: "Mudar modo",
+      dock_mode_back: "Voltar",
+      dock_mode_select: "Selecione seu modo:",
+      dock_mode_btn_ultra: "Ultra Economia",
+      dock_mode_btn_eco: "Economia",
+      dock_mode_btn_perf: "Desempenho",
+      dock_mode_info_ultra: "Ultra Economia:\n- Desativa filtros pouco populares\n- Desativa auto-ocultacao do header\n- Animacoes minimas\n- Menos varreduras automaticas",
+      dock_mode_info_eco: "Economia:\n- Varreduras em idle\n- Animacoes reduzidas\n- Funcoes padrao",
+      dock_mode_info_perf: "Desempenho:\n- Observers em tempo real\n- Animacoes completas\n- Todas as funcoes",
+
+      dock_go_top: "Ir para o topo da pagina",
+      dock_lang_label: "Idioma",
+      dock_lang_auto: "Auto",
+
+      toast_updated: "Atualizado",
+      toast_reset: "Configuracoes redefinidas",
+      toast_mode_perf: "Modo: Desempenho",
+      toast_mode_eco: "Modo: Economia de recursos",
+      toast_mode_ultra: "Modo: Ultra Economia",
+      toast_btn_home_on: "Filtro Home: ON (botao)",
+      toast_btn_home_off: "Filtro Home: OFF (botao)",
+      toast_btn_watch_on: "Filtro /watch: ON (botao)",
+      toast_btn_watch_off: "Filtro /watch: OFF (botao)",
+
+      toast_header_on: "Header auto: ON (/watch)",
+      toast_header_off: "Header auto: OFF (/watch)",
+    },
+    nl: {
+      sec_global: "Algemeen",
+      sec_home: "Home",
+      sec_search: "Zoeken",
+      sec_watch: "Bekijken (/watch)",
+      sec_navui: "Navigatie en UI",
+      sec_actions: "Acties",
+
+      mode_label: "Modus",
+      mode_perf: "Prestatie",
+      mode_eco: "Besparen",
+      mode_ultra: "Ultra Besparen",
+
+      opt_shorts_home: "Shorts verbergen op Home",
+      opt_shorts_search: "Shorts verbergen in Zoeken (shelf + resultaten)",
+      opt_news_home: "Nieuws/Top stories verbergen op Home",
+      opt_sidebar_shorts: "\"Shorts\" verbergen in zijbalk",
+      opt_block_shorts_page: "Shorts-pagina blokkeren (omleiden naar Home)",
+
+      opt_lowpop_home: "Weinig populaire video's filteren op Home",
+      opt_lowpop_watch: "Weinig populaire aanbevelingen filteren op /watch",
+
+      opt_float_buttons: "Knoppendock tonen (Home + /watch)",
+      opt_header_hover_watch: "Header verbergen wanneer niet gehoverd (/watch)",
+
+      act_apply: "↻ Nu toepassen",
+      act_reset: "⟲ Alle instellingen resetten",
+
+      status_on: "AAN",
+      status_off: "UIT",
+
+      dock_collapse: "Inklappen ▼",
+      dock_expand: "Instellingen ▲",
+      dock_shorts_show: "Shorts tonen",
+      dock_shorts_hide: "Shorts verbergen",
+      dock_lowpop_home_show: "Onpopulaire video's tonen",
+      dock_lowpop_home_hide: "Onpopulaire video's verbergen",
+      dock_lowpop_watch_show: "Onpopulaire aanbevelingen tonen",
+      dock_lowpop_watch_hide: "Onpopulaire aanbevelingen verbergen",
+
+      dock_header_on: "Header auto",
+      dock_header_off: "Header normaal",
+      dock_header_state_on: "Header auto-hide: AAN",
+      dock_header_state_off: "Header auto-hide: UIT",
+      dock_header_label: "Header auto-hide",
+      dock_header_action_on: "Header altijd tonen",
+      dock_header_action_off: "Auto-hide inschakelen",
+
+      dock_shorts_state_on: "Shorts-filter: AAN",
+      dock_shorts_state_off: "Shorts-filter: UIT",
+      dock_shorts_label: "Shorts verborgen",
+      dock_shorts_action_on: "Shorts tonen",
+      dock_shorts_action_off: "Shorts verbergen",
+      dock_shorts_info: "Verbergt Shorts-shelves op de Home-feed.",
+
+      dock_news_label: "Nieuws verborgen",
+      dock_news_action_on: "Nieuws tonen",
+      dock_news_action_off: "Nieuws verbergen",
+      dock_news_info: "Verbergt de Nieuws/Top stories-sectie op Home.",
+
+      dock_shorts_search_label: "Shorts verborgen (Zoeken)",
+      dock_shorts_search_action_on: "Shorts tonen (Zoeken)",
+      dock_shorts_search_action_off: "Shorts verbergen (Zoeken)",
+      dock_shorts_search_info: "Verwijdert Shorts-shelves en Shorts-resultaten in Zoeken.",
+
+      dock_sidebar_shorts_label: "Shorts verborgen (menu)",
+      dock_sidebar_shorts_action_on: "\"Shorts\" tonen (menu)",
+      dock_sidebar_shorts_action_off: "\"Shorts\" verbergen (menu)",
+      dock_sidebar_shorts_info: "Verbergt de Shorts-item in de zijbalk.",
+
+      dock_block_shorts_label: "Shorts-pagina geblokkeerd",
+      dock_block_shorts_action_on: "Shorts-pagina deblokkeren",
+      dock_block_shorts_action_off: "Shorts-pagina blokkeren",
+      dock_block_shorts_info: "Leidt de Shorts-pagina terug naar Home.",
+
+      dock_lowpop_home_state_on: "Low-pop filter (Home): AAN",
+      dock_lowpop_home_state_off: "Low-pop filter (Home): UIT",
+      dock_lowpop_home_label: "Weinig populaire video's (Home)",
+      dock_lowpop_home_action_on: "Onpopulaire video's tonen",
+      dock_lowpop_home_action_off: "Onpopulaire video's verbergen",
+      dock_lowpop_home_info: "Verbergt video's onder de weergavedrempel op Home.",
+
+      dock_lowpop_watch_state_on: "Low-pop filter (/watch): AAN",
+      dock_lowpop_watch_state_off: "Low-pop filter (/watch): UIT",
+      dock_lowpop_watch_label: "Onpopulaire aanbevelingen (/watch)",
+      dock_lowpop_watch_action_on: "Onpopulaire aanbevelingen tonen",
+      dock_lowpop_watch_action_off: "Onpopulaire aanbevelingen verbergen",
+      dock_lowpop_watch_info: "Verbergt aanbevelingen onder de weergavedrempel op /watch.",
+
+      dock_header_info: "Schakelt auto-hide in voor de header op /watch, met tonen bij hover.",
+      dock_float_buttons_label: "Dock zichtbaar",
+      dock_float_buttons_action_on: "Dock verbergen",
+      dock_float_buttons_action_off: "Dock tonen",
+      dock_float_buttons_info: "Toont of verbergt het zwevende knoppendock.",
+      dock_menu_home_label: "Home-functies",
+      dock_menu_home_title: "Home-functies:",
+      dock_menu_home_info: "Home-specifieke instellingen (Shorts, Nieuws, onpopulaire video's).",
+      dock_menu_watch_label: "Video-functies",
+      dock_menu_watch_title: "Video-functies:",
+      dock_menu_watch_info: "Instellingen voor de videopagina (/watch).",
+      dock_menu_search_label: "Zoek-functies",
+      dock_menu_search_title: "Zoek-functies:",
+      dock_menu_search_info: "Zoek-specifieke filters en shelves.",
+      dock_menu_sidebar_label: "Zijbalk-functies",
+      dock_menu_sidebar_title: "Zijbalk-functies:",
+      dock_menu_sidebar_info: "Zichtbaarheid van zijbalk-items.",
+      dock_menu_adv_label: "Geavanceerd",
+      dock_menu_adv_title: "Geavanceerd:",
+      dock_menu_adv_info: "Geavanceerde dock-opties (zichtbaarheid, enz.).",
+      dock_menu_back: "Terug ◀️",
+
+      dock_mode_state_perf: "Modus: Prestatie",
+      dock_mode_state_eco: "Modus: Besparen",
+      dock_mode_label: "Eco-modus",
+      dock_mode_action_perf: "Schakel naar Besparen",
+      dock_mode_action_eco: "Schakel naar Prestatie",
+      dock_mode_status_ultra: "Modus: Ultra Besparen",
+      dock_mode_status_eco: "Modus: Besparen",
+      dock_mode_status_perf: "Modus: Prestatie",
+      dock_mode_change: "Modus wijzigen",
+      dock_mode_back: "Terug",
+      dock_mode_select: "Selecteer je modus:",
+      dock_mode_btn_ultra: "Ultra Besparen",
+      dock_mode_btn_eco: "Besparen",
+      dock_mode_btn_perf: "Prestatie",
+      dock_mode_info_ultra: "Ultra Besparen:\n- Schakelt low-pop filters uit\n- Schakelt header auto-hide uit\n- Minimale animaties\n- Minder automatische scans",
+      dock_mode_info_eco: "Besparen:\n- Scans tijdens idle\n- Minder animaties\n- Standaardfuncties",
+      dock_mode_info_perf: "Prestatie:\n- Realtime observers\n- Volledige animaties\n- Alle functies",
+
+      dock_go_top: "Ga naar de bovenkant van de pagina",
+      dock_lang_label: "Taal",
+      dock_lang_auto: "Auto",
+
+      toast_updated: "Bijgewerkt",
+      toast_reset: "Instellingen gereset",
+      toast_mode_perf: "Modus: Prestatie",
+      toast_mode_eco: "Modus: Besparen",
+      toast_mode_ultra: "Modus: Ultra Besparen",
+      toast_btn_home_on: "Home-filter: AAN (knop)",
+      toast_btn_home_off: "Home-filter: UIT (knop)",
+      toast_btn_watch_on: "Watch-filter: AAN (knop)",
+      toast_btn_watch_off: "Watch-filter: UIT (knop)",
+
+      toast_header_on: "Header auto: AAN (/watch)",
+      toast_header_off: "Header auto: UIT (/watch)",
+    },
+    pl: {
+      sec_global: "Globalne",
+      sec_home: "Strona glowna (Home)",
+      sec_search: "Wyszukiwanie",
+      sec_watch: "Odtwarzanie (/watch)",
+      sec_navui: "Nawigacja i interfejs",
+      sec_actions: "Akcje",
+
+      mode_label: "Tryb",
+      mode_perf: "Wydajnosc",
+      mode_eco: "Oszczedny",
+      mode_ultra: "Ultra oszczedny",
+
+      opt_shorts_home: "Ukryj Shorts na stronie glownej",
+      opt_shorts_search: "Ukryj Shorts w wyszukiwaniu (polka + wyniki)",
+      opt_news_home: "Ukryj Wiadomosci/Top news na Home",
+      opt_sidebar_shorts: "Ukryj \"Shorts\" w pasku bocznym",
+      opt_block_shorts_page: "Zablokuj strone Shorts (przekieruj na Home)",
+
+      opt_lowpop_home: "Filtruj malo popularne filmy na Home",
+      opt_lowpop_watch: "Filtruj malo popularne rekomendacje na /watch",
+
+      opt_float_buttons: "Pokaz dock przyciskow (Home + /watch)",
+      opt_header_hover_watch: "Ukryj naglowek, gdy brak hover (/watch)",
+
+      act_apply: "↻ Zastosuj teraz",
+      act_reset: "⟲ Zresetuj wszystkie ustawienia",
+
+      status_on: "WL",
+      status_off: "WYL",
+
+      dock_collapse: "Zwin ▼",
+      dock_expand: "Ustawienia ▲",
+      dock_shorts_show: "Pokaz Shorts",
+      dock_shorts_hide: "Ukryj Shorts",
+      dock_lowpop_home_show: "Pokaz malo popularne filmy",
+      dock_lowpop_home_hide: "Ukryj malo popularne filmy",
+      dock_lowpop_watch_show: "Pokaz malo popularne rekomendacje",
+      dock_lowpop_watch_hide: "Ukryj malo popularne rekomendacje",
+
+      dock_header_on: "Naglowek auto",
+      dock_header_off: "Naglowek normalny",
+      dock_header_state_on: "Auto-ukrywanie naglowka: WL",
+      dock_header_state_off: "Auto-ukrywanie naglowka: WYL",
+      dock_header_label: "Auto-ukrywanie naglowka",
+      dock_header_action_on: "Zawsze pokazuj naglowek",
+      dock_header_action_off: "Wlacz auto-ukrywanie",
+
+      dock_shorts_state_on: "Filtr Shorts: WL",
+      dock_shorts_state_off: "Filtr Shorts: WYL",
+      dock_shorts_label: "Shorts ukryte",
+      dock_shorts_action_on: "Pokaz Shorts",
+      dock_shorts_action_off: "Ukryj Shorts",
+      dock_shorts_info: "Ukrywa polki Shorts na stronie glownej.",
+
+      dock_news_label: "Wiadomosci ukryte",
+      dock_news_action_on: "Pokaz wiadomosci",
+      dock_news_action_off: "Ukryj wiadomosci",
+      dock_news_info: "Ukrywa sekcje Wiadomosci/Top news na Home.",
+
+      dock_shorts_search_label: "Shorts ukryte (Wyszukiwanie)",
+      dock_shorts_search_action_on: "Pokaz Shorts (Wyszukiwanie)",
+      dock_shorts_search_action_off: "Ukryj Shorts (Wyszukiwanie)",
+      dock_shorts_search_info: "Usuwa polki Shorts i wyniki Shorts w wyszukiwaniu.",
+
+      dock_sidebar_shorts_label: "Shorts ukryte (menu)",
+      dock_sidebar_shorts_action_on: "Pokaz \"Shorts\" (menu)",
+      dock_sidebar_shorts_action_off: "Ukryj \"Shorts\" (menu)",
+      dock_sidebar_shorts_info: "Ukrywa wpis Shorts w pasku bocznym.",
+
+      dock_block_shorts_label: "Strona Shorts zablokowana",
+      dock_block_shorts_action_on: "Odblokuj strone Shorts",
+      dock_block_shorts_action_off: "Zablokuj strone Shorts",
+      dock_block_shorts_info: "Przekierowuje strone Shorts na Home.",
+
+      dock_lowpop_home_state_on: "Filtr low-pop (Home): WL",
+      dock_lowpop_home_state_off: "Filtr low-pop (Home): WYL",
+      dock_lowpop_home_label: "Malo popularne filmy (Home)",
+      dock_lowpop_home_action_on: "Pokaz malo popularne filmy",
+      dock_lowpop_home_action_off: "Ukryj malo popularne filmy",
+      dock_lowpop_home_info: "Ukrywa filmy ponizej progu wyswietlen na Home.",
+
+      dock_lowpop_watch_state_on: "Filtr low-pop (/watch): WL",
+      dock_lowpop_watch_state_off: "Filtr low-pop (/watch): WYL",
+      dock_lowpop_watch_label: "Malo popularne rekomendacje (/watch)",
+      dock_lowpop_watch_action_on: "Pokaz malo popularne rekomendacje",
+      dock_lowpop_watch_action_off: "Ukryj malo popularne rekomendacje",
+      dock_lowpop_watch_info: "Ukrywa rekomendacje ponizej progu wyswietlen na /watch.",
+
+      dock_header_info: "Wlacza auto-ukrywanie naglowka na /watch, z pokazaniem po najechaniu.",
+      dock_float_buttons_label: "Dock widoczny",
+      dock_float_buttons_action_on: "Ukryj dock",
+      dock_float_buttons_action_off: "Pokaz dock",
+      dock_float_buttons_info: "Pokazuje lub ukrywa plywajacy dock przyciskow.",
+      dock_menu_home_label: "Funkcje Home",
+      dock_menu_home_title: "Funkcje Home:",
+      dock_menu_home_info: "Ustawienia Home (Shorts, Wiadomosci, malo popularne filmy).",
+      dock_menu_watch_label: "Funkcje wideo",
+      dock_menu_watch_title: "Funkcje wideo:",
+      dock_menu_watch_info: "Ustawienia strony wideo (/watch).",
+      dock_menu_search_label: "Funkcje wyszukiwania",
+      dock_menu_search_title: "Funkcje wyszukiwania:",
+      dock_menu_search_info: "Filtry i polki wynikow wyszukiwania.",
+      dock_menu_sidebar_label: "Funkcje paska bocznego",
+      dock_menu_sidebar_title: "Funkcje paska bocznego:",
+      dock_menu_sidebar_info: "Widocznosc wpisow paska bocznego.",
+      dock_menu_adv_label: "Zaawansowane",
+      dock_menu_adv_title: "Zaawansowane:",
+      dock_menu_adv_info: "Zaawansowane opcje docka (widocznosc, itp.).",
+      dock_menu_back: "Wstecz ◀️",
+
+      dock_mode_state_perf: "Tryb: Wydajnosc",
+      dock_mode_state_eco: "Tryb: Oszczedny",
+      dock_mode_label: "Tryb eco",
+      dock_mode_action_perf: "Przelacz na Oszczedny",
+      dock_mode_action_eco: "Przelacz na Wydajnosc",
+      dock_mode_status_ultra: "Tryb: Ultra oszczedny",
+      dock_mode_status_eco: "Tryb: Oszczedny",
+      dock_mode_status_perf: "Tryb: Wydajnosc",
+      dock_mode_change: "Zmien tryb",
+      dock_mode_back: "Wstecz",
+      dock_mode_select: "Wybierz tryb:",
+      dock_mode_btn_ultra: "Ultra oszczedny",
+      dock_mode_btn_eco: "Oszczedny",
+      dock_mode_btn_perf: "Wydajnosc",
+      dock_mode_info_ultra: "Ultra oszczedny:\n- Wylacza filtry low-pop\n- Wylacza auto-ukrywanie naglowka\n- Minimalne animacje\n- Mniej automatycznych skanow",
+      dock_mode_info_eco: "Oszczedny:\n- Skanowanie w idle\n- Mniej animacji\n- Standardowe funkcje",
+      dock_mode_info_perf: "Wydajnosc:\n- Obserwatory w czasie rzeczywistym\n- Pelne animacje\n- Wszystkie funkcje",
+
+      dock_go_top: "Przejdz na gore strony",
+      dock_lang_label: "Jezyk",
+      dock_lang_auto: "Auto",
+
+      toast_updated: "Zaktualizowano",
+      toast_reset: "Ustawienia zresetowane",
+      toast_mode_perf: "Tryb: Wydajnosc",
+      toast_mode_eco: "Tryb: Oszczedny",
+      toast_mode_ultra: "Tryb: Ultra oszczedny",
+      toast_btn_home_on: "Filtr Home: WL (przycisk)",
+      toast_btn_home_off: "Filtr Home: WYL (przycisk)",
+      toast_btn_watch_on: "Filtr /watch: WL (przycisk)",
+      toast_btn_watch_off: "Filtr /watch: WYL (przycisk)",
+
+      toast_header_on: "Header auto: WL (/watch)",
+      toast_header_off: "Header auto: WYL (/watch)",
+    },
+    tr: {
+      sec_global: "Genel",
+      sec_home: "Ana Sayfa (Home)",
+      sec_search: "Arama",
+      sec_watch: "Izleme (/watch)",
+      sec_navui: "Gezinme ve Arayuz",
+      sec_actions: "Eylemler",
+
+      mode_label: "Mod",
+      mode_perf: "Performans",
+      mode_eco: "Tasarruf",
+      mode_ultra: "Ultra Tasarruf",
+
+      opt_shorts_home: "Ana sayfada Shorts'u gizle",
+      opt_shorts_search: "Aramada Shorts'u gizle (raf + sonuclar)",
+      opt_news_home: "Ana sayfada Haberler/Top news gizle",
+      opt_sidebar_shorts: "Yan menude \"Shorts\"u gizle",
+      opt_block_shorts_page: "Shorts sayfasini engelle (Ana sayfaya yonlendir)",
+
+      opt_lowpop_home: "Ana sayfada az populer videolari filtrele",
+      opt_lowpop_watch: "/watch uzerinde az populer onerileri filtrele",
+
+      opt_float_buttons: "Buton dock'u goster (Home + /watch)",
+      opt_header_hover_watch: "Hover yokken header gizle (/watch)",
+
+      act_apply: "↻ Simdi uygula",
+      act_reset: "⟲ Tum ayarlari sifirla",
+
+      status_on: "ACIK",
+      status_off: "KAPALI",
+
+      dock_collapse: "Daralt ▼",
+      dock_expand: "Ayarlar ▲",
+      dock_shorts_show: "Shorts'u goster",
+      dock_shorts_hide: "Shorts'u gizle",
+      dock_lowpop_home_show: "Az populer videolari goster",
+      dock_lowpop_home_hide: "Az populer videolari gizle",
+      dock_lowpop_watch_show: "Az populer onerileri goster",
+      dock_lowpop_watch_hide: "Az populer onerileri gizle",
+
+      dock_header_on: "Header auto",
+      dock_header_off: "Header normal",
+      dock_header_state_on: "Header auto-hide: ACIK",
+      dock_header_state_off: "Header auto-hide: KAPALI",
+      dock_header_label: "Header auto-hide",
+      dock_header_action_on: "Header'i her zaman goster",
+      dock_header_action_off: "Auto-hide etkinlestir",
+
+      dock_shorts_state_on: "Shorts filtresi: ACIK",
+      dock_shorts_state_off: "Shorts filtresi: KAPALI",
+      dock_shorts_label: "Shorts gizli",
+      dock_shorts_action_on: "Shorts'u goster",
+      dock_shorts_action_off: "Shorts'u gizle",
+      dock_shorts_info: "Ana sayfada Shorts raflarini gizler.",
+
+      dock_news_label: "Haberler gizli",
+      dock_news_action_on: "Haberleri goster",
+      dock_news_action_off: "Haberleri gizle",
+      dock_news_info: "Ana sayfada Haberler/Top news bolumunu gizler.",
+
+      dock_shorts_search_label: "Shorts gizli (Arama)",
+      dock_shorts_search_action_on: "Shorts'u goster (Arama)",
+      dock_shorts_search_action_off: "Shorts'u gizle (Arama)",
+      dock_shorts_search_info: "Aramada Shorts raflarini ve Shorts sonuclarini kaldirir.",
+
+      dock_sidebar_shorts_label: "Shorts gizli (menu)",
+      dock_sidebar_shorts_action_on: "\"Shorts\"u goster (menu)",
+      dock_sidebar_shorts_action_off: "\"Shorts\"u gizle (menu)",
+      dock_sidebar_shorts_info: "Yan menudeki Shorts girisini gizler.",
+
+      dock_block_shorts_label: "Shorts sayfasi engelli",
+      dock_block_shorts_action_on: "Shorts sayfasini ac",
+      dock_block_shorts_action_off: "Shorts sayfasini engelle",
+      dock_block_shorts_info: "Shorts sayfasini Ana sayfaya yonlendirir.",
+
+      dock_lowpop_home_state_on: "Az populer filtre (Home): ACIK",
+      dock_lowpop_home_state_off: "Az populer filtre (Home): KAPALI",
+      dock_lowpop_home_label: "Az populer videolar (Home)",
+      dock_lowpop_home_action_on: "Az populer videolari goster",
+      dock_lowpop_home_action_off: "Az populer videolari gizle",
+      dock_lowpop_home_info: "Home'da goruntuleme esiginin altindaki videolari gizler.",
+
+      dock_lowpop_watch_state_on: "Az populer filtre (/watch): ACIK",
+      dock_lowpop_watch_state_off: "Az populer filtre (/watch): KAPALI",
+      dock_lowpop_watch_label: "Az populer oneriler (/watch)",
+      dock_lowpop_watch_action_on: "Az populer onerileri goster",
+      dock_lowpop_watch_action_off: "Az populer onerileri gizle",
+      dock_lowpop_watch_info: "/watch'ta goruntuleme esiginin altindaki onerileri gizler.",
+
+      dock_header_info: "/watch'ta header icin auto-hide etkinlestirir, hover ile gorunur.",
+      dock_float_buttons_label: "Dock gorunur",
+      dock_float_buttons_action_on: "Dock'u gizle",
+      dock_float_buttons_action_off: "Dock'u goster",
+      dock_float_buttons_info: "Yuzen buton dock'unu gosterir veya gizler.",
+      dock_menu_home_label: "Home Ozellikleri",
+      dock_menu_home_title: "Home Ozellikleri:",
+      dock_menu_home_info: "Home ayarlari (Shorts, Haberler, az populer videolar).",
+      dock_menu_watch_label: "Video Ozellikleri",
+      dock_menu_watch_title: "Video Ozellikleri:",
+      dock_menu_watch_info: "Video sayfasi ayarlari (/watch).",
+      dock_menu_search_label: "Arama Ozellikleri",
+      dock_menu_search_title: "Arama Ozellikleri:",
+      dock_menu_search_info: "Arama sonuclari ve raflari icin secenekler.",
+      dock_menu_sidebar_label: "Yan Menu Ozellikleri",
+      dock_menu_sidebar_title: "Yan Menu Ozellikleri:",
+      dock_menu_sidebar_info: "Yan menu giris gorunurlugu.",
+      dock_menu_adv_label: "Gelismis",
+      dock_menu_adv_title: "Gelismis:",
+      dock_menu_adv_info: "Dock icin gelismis secenekler (gorunurluk, vb.).",
+      dock_menu_back: "Geri ◀️",
+
+      dock_mode_state_perf: "Mod: Performans",
+      dock_mode_state_eco: "Mod: Tasarruf",
+      dock_mode_label: "Eco mod",
+      dock_mode_action_perf: "Tasarruf moduna gec",
+      dock_mode_action_eco: "Performans moduna gec",
+      dock_mode_status_ultra: "Mod: Ultra Tasarruf",
+      dock_mode_status_eco: "Mod: Tasarruf",
+      dock_mode_status_perf: "Mod: Performans",
+      dock_mode_change: "Modu degistir",
+      dock_mode_back: "Geri",
+      dock_mode_select: "Modunu sec:",
+      dock_mode_btn_ultra: "Ultra Tasarruf",
+      dock_mode_btn_eco: "Tasarruf",
+      dock_mode_btn_perf: "Performans",
+      dock_mode_info_ultra: "Ultra Tasarruf:\n- Az populer filtreleri kapatir\n- Header auto-hide kapatir\n- Minimum animasyonlar\n- Daha az otomatik tarama",
+      dock_mode_info_eco: "Tasarruf:\n- Bosta taramalar\n- Azaltilmis animasyonlar\n- Standart ozellikler",
+      dock_mode_info_perf: "Performans:\n- Gercek zamanli observer'lar\n- Tam animasyonlar\n- Tum ozellikler",
+
+      dock_go_top: "Sayfanin ustune git",
+      dock_lang_label: "Dil",
+      dock_lang_auto: "Otomatik",
+
+      toast_updated: "Guncellendi",
+      toast_reset: "Ayarlar sifirlandi",
+      toast_mode_perf: "Mod: Performans",
+      toast_mode_eco: "Mod: Kaynak tasarrufu",
+      toast_mode_ultra: "Mod: Ultra Tasarruf",
+      toast_btn_home_on: "Home filtresi: ACIK (buton)",
+      toast_btn_home_off: "Home filtresi: KAPALI (buton)",
+      toast_btn_watch_on: "/watch filtresi: ACIK (buton)",
+      toast_btn_watch_off: "/watch filtresi: KAPALI (buton)",
+
+      toast_header_on: "Header auto: ACIK (/watch)",
+      toast_header_off: "Header auto: KAPALI (/watch)",
+    },
   };
 
 
@@ -613,14 +1351,15 @@
     const short = raw.split("-")[0];
     return I18N[short] ? short : "en";
   }
-  const LANG = detectLang();
-  const T = I18N[LANG];
+  let LANG = "en";
+  let T = I18N.en;
 
   /* =========================================================
    * SETTINGS (Unified)
    * ========================================================= */
   const KEY = {
     mode: "ytcf_mode", // "eco" | "perf" | "ultra"
+    lang: "ytcf_lang", // "auto" | language code
 
     shortsHome: "ytcf_shorts_home",
     shortsSearch: "ytcf_shorts_search",
@@ -641,6 +1380,7 @@
 
   const DEFAULTS = {
     [KEY.mode]: "eco",
+    [KEY.lang]: "auto",
 
     [KEY.shortsHome]: true,
     [KEY.shortsSearch]: true,
@@ -667,6 +1407,61 @@
 
   function getBool(k) { return !!getVal(k); }
   function setBool(k, v) { setVal(k, !!v); }
+
+  function getLangSetting() {
+    const v = String(getVal(KEY.lang) || DEFAULTS[KEY.lang]);
+    if (v === "auto") return "auto";
+    return I18N[v] ? v : "auto";
+  }
+  function setLangSetting(v) { setVal(KEY.lang, v); }
+
+  const LANG_NATIVE_NAMES = {
+    fr: "Français",
+    en: "English",
+    de: "Deutsch",
+    es: "Español",
+    it: "Italiano",
+    pt: "Português",
+    nl: "Nederlands",
+    pl: "Polski",
+    tr: "Türkçe",
+  };
+
+  const LANG_CYCLE = ["auto", ...Object.keys(I18N)];
+
+  function resolveLang() {
+    const override = getLangSetting();
+    if (override !== "auto" && I18N[override]) return override;
+    return detectLang();
+  }
+
+  function applyLanguage() {
+    LANG = resolveLang();
+    T = I18N[LANG] || I18N.en;
+  }
+
+  function getLangDisplayName(code) {
+    if (code === "auto") return T.dock_lang_auto || "Auto";
+    return LANG_NATIVE_NAMES[code] || code.toUpperCase();
+  }
+
+  function getCurrentLangLabel() {
+    const setting = getLangSetting();
+    if (setting === "auto") {
+      const autoLabel = getLangDisplayName("auto");
+      const activeLabel = LANG_NATIVE_NAMES[LANG] || LANG.toUpperCase();
+      return `${autoLabel} (${activeLabel})`;
+    }
+    return getLangDisplayName(setting);
+  }
+
+  function getNextLangCode(cur) {
+    const idx = LANG_CYCLE.indexOf(cur);
+    if (idx === -1) return LANG_CYCLE[0];
+    return LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
+  }
+
+  applyLanguage();
 
   function getMode() {
     const v = String(getVal(KEY.mode) || DEFAULTS[KEY.mode]);
@@ -1003,7 +1798,12 @@
     "news", "top news", "breaking news",
     "actualites", "actualités", "actus",
     "nachrichten", "top-meldungen", "schlagzeilen",
-    "noticias", "titulares", "últimas noticias", "ultimas noticias"
+    "noticias", "titulares", "últimas noticias", "ultimas noticias",
+    "notizie", "notizie principali", "ultime notizie",
+    "notícias", "principais noticias", "principais notícias",
+    "nieuws", "topnieuws", "laatste nieuws",
+    "wiadomosci", "najwazniejsze wiadomosci", "najważniejsze wiadomości",
+    "haberler", "son dakika", "gundem", "gündem"
   ].map(normalizeBasic);
 
   function titleLooksLikeNews(title) {
@@ -1068,6 +1868,11 @@
     en: { views: ["view", "views"], live: ["viewer", "viewers"] },
     de: { views: ["aufruf", "aufrufe", "aufrufen"], live: ["zuschauer"] },
     es: { views: ["vista", "vistas", "visualiz", "visualización", "visualizaciones"], live: ["espectador", "espectadores"] },
+    it: { views: ["visualizzazione", "visualizzazioni"], live: ["spettatore", "spettatori"] },
+    pt: { views: ["visualizacao", "visualizacoes", "visualização", "visualizações"], live: ["espectador", "espectadores"] },
+    nl: { views: ["weergave", "weergaven"], live: ["kijker", "kijkers"] },
+    pl: { views: ["wyświetlenie", "wyświetlenia", "wyświetleń", "wyswietlenie", "wyswietlenia", "wyswietlen"], live: ["widz", "widzów", "widzowie", "widzow"] },
+    tr: { views: ["goruntuleme", "goruntulenme", "görüntüleme", "görüntülenme"], live: ["izleyici"] },
   };
 
   const NO_VIEWS = {
@@ -1075,6 +1880,11 @@
     en: ["no views", "0 views", "0 view"],
     de: ["keine aufrufe", "0 aufrufe", "0 aufruf"],
     es: ["sin visualizaciones", "sin vistas", "0 vistas", "0 visualizaciones", "0 vista", "0 visualización"],
+    it: ["nessuna visualizzazione", "0 visualizzazioni", "0 visualizzazione"],
+    pt: ["nenhuma visualizacao", "nenhuma visualização", "sem visualizacoes", "sem visualizações", "0 visualizacoes", "0 visualizações", "0 visualizacao", "0 visualização"],
+    nl: ["geen weergaven", "0 weergaven", "0 weergave"],
+    pl: ["brak wyswietlen", "brak wyświetleń", "0 wyswietlen", "0 wyświetleń", "0 wyswietlenia", "0 wyświetlenia"],
+    tr: ["goruntuleme yok", "görüntüleme yok", "0 goruntuleme", "0 görüntüleme", "0 goruntulenme", "0 görüntülenme"],
   };
 
   function normalizeMetric(text) {
@@ -1283,6 +2093,12 @@
     return headerEl;
   }
 
+  function setHeaderVisible(header, visible) {
+    if (!header) return;
+    header.style.transform = visible ? "translateY(0)" : "translateY(-100%)";
+    header.style.pointerEvents = visible ? "auto" : "none";
+  }
+
   function headerEnable() {
     const header = getHeaderEl();
     const app = document.querySelector("ytd-app");
@@ -1298,7 +2114,7 @@
     header.style.right = "0";
     header.style.zIndex = "9999";
     header.style.transition = "transform 0.25s ease";
-    header.style.transform = "translateY(-100%)";
+    setHeaderVisible(header, false);
 
     app.style.setProperty("--ytd-masthead-height", "0px");
     app.style.paddingTop = "0px";
@@ -1328,7 +2144,7 @@
     headerPinned = false;
 
     if (header) {
-      header.style.transform = "translateY(0)";
+      header.style.pointerEvents = "";
       header.classList.remove(YT_HDR_CLASS);
       header.style.position = "";
       header.style.top = "";
@@ -1505,7 +2321,7 @@
     headerPinned = isSearchBoxActive();
     if (headerPinned) {
       const header = getHeaderEl();
-      if (header) header.style.transform = "translateY(0)";
+      if (header) setHeaderVisible(header, true);
     }
   }
 
@@ -1539,15 +2355,16 @@
         if (headerMouseY <= YT_HDR_SHOW_ZONE) {
           if (headerHideTimer) clearTimeout(headerHideTimer);
           headerHideTimer = null;
-          header.style.transform = "translateY(0)";
+          setHeaderVisible(header, true);
           return;
         }
 
+        header.style.pointerEvents = "none";
         if (headerHideTimer) return;
         headerHideTimer = setTimeout(() => {
           headerHideTimer = null;
           if (!headerHoverEnabled || headerPinned) return;
-          header.style.transform = "translateY(-100%)";
+          setHeaderVisible(header, false);
         }, YT_HDR_HIDE_DELAY);
       });
     }, { passive: true });
@@ -2106,6 +2923,94 @@
     return wrap;
   }
 
+  function makeLanguageRow() {
+    const wrap = document.createElement("div");
+    wrap.style.display = "flex";
+    wrap.style.gap = "6px";
+    wrap.style.alignItems = "center";
+    wrap.style.justifyContent = "flex-end";
+
+    const actionBtn = makeDockButton("ytcf-btn-lang-next", "");
+    const stateBtn = makeDockButton("ytcf-btn-lang-state", "");
+    stateBtn.setAttribute("aria-disabled", "true");
+    stateBtn.style.pointerEvents = "none";
+
+    const perf = getMode() === "perf";
+    actionBtn.style.whiteSpace = "nowrap";
+    if (perf) {
+      actionBtn.style.maxWidth = "0";
+      actionBtn.style.paddingLeft = "0";
+      actionBtn.style.paddingRight = "0";
+      actionBtn.style.opacity = "0";
+      actionBtn.style.transform = "translateX(6px)";
+      actionBtn.style.marginRight = "-6px";
+      actionBtn.style.overflow = "hidden";
+      actionBtn.style.pointerEvents = "none";
+      actionBtn.style.transition = "max-width 180ms ease, padding 180ms ease, opacity 180ms ease, transform 180ms ease";
+    } else {
+      actionBtn.style.display = "none";
+      actionBtn.style.pointerEvents = "none";
+    }
+
+    const render = () => {
+      const curSetting = getLangSetting();
+      const nextCode = getNextLangCode(curSetting);
+      stateBtn.textContent = `${T.dock_lang_label}: ${getCurrentLangLabel()}`;
+      actionBtn.textContent = getLangDisplayName(nextCode);
+    };
+
+    actionBtn.addEventListener("click", () => {
+      const nextCode = getNextLangCode(getLangSetting());
+      setLangSetting(nextCode);
+      applyLanguage();
+      render();
+      registerMenu();
+      forceRenderDockNow();
+      scheduleRun(true);
+    });
+
+    const showAction = () => {
+      if (perf) {
+        actionBtn.style.maxWidth = "240px";
+        actionBtn.style.paddingLeft = "12px";
+        actionBtn.style.paddingRight = "12px";
+        actionBtn.style.opacity = "1";
+        actionBtn.style.transform = "translateX(0)";
+        actionBtn.style.marginRight = "0";
+        actionBtn.style.pointerEvents = "auto";
+      } else {
+        actionBtn.style.display = "";
+        actionBtn.style.pointerEvents = "auto";
+      }
+    };
+
+    const hideAction = () => {
+      if (perf) {
+        actionBtn.style.maxWidth = "0";
+        actionBtn.style.paddingLeft = "0";
+        actionBtn.style.paddingRight = "0";
+        actionBtn.style.opacity = "0";
+        actionBtn.style.transform = "translateX(6px)";
+        actionBtn.style.marginRight = "-6px";
+        actionBtn.style.pointerEvents = "none";
+      } else {
+        actionBtn.style.display = "none";
+        actionBtn.style.pointerEvents = "none";
+      }
+    };
+
+    render();
+    hideAction();
+
+    wrap.addEventListener("mouseenter", showAction);
+    wrap.addEventListener("mouseleave", hideAction);
+    wrap.addEventListener("focusin", showAction);
+    wrap.addEventListener("focusout", hideAction);
+
+    wrap.append(actionBtn, stateBtn);
+    return wrap;
+  }
+
   function makeMenuAccessButton(id, label, infoText, onClick, highlight = false) {
     const btn = makeDockButton(id, label);
     if (highlight) {
@@ -2381,6 +3286,7 @@ function buildAdvancedRows() {
       infoText: T.dock_float_buttons_info,
       onToggle: () => { scheduleRun(true); },
     }),
+    makeLanguageRow(),
   ];
 }
 
@@ -2486,6 +3392,7 @@ function buildSubmenuButtons(highlightTarget) {
     const stateKey = [
       "v4",
       getMode(),
+      LANG,
       uiCollapsed ? "c1" : "c0",
       uiCollapsedWatch ? "cw1" : "cw0",
       fs ? "fs1" : "fs0",
@@ -2952,6 +3859,7 @@ function buildSubmenuButtons(highlightTarget) {
       setUiCollapsed(!!DEFAULTS[KEY.uiCollapsed]);
       setUiCollapsedWatch(!!DEFAULTS[KEY.uiCollapsedWatch]);
 
+      applyLanguage();
       showToast(T.toast_reset, "info");
       unhideLowpop();
 
@@ -2982,6 +3890,7 @@ function buildSubmenuButtons(highlightTarget) {
     if (url === lastNavUrl) return;
     lastNavUrl = url;
 
+    applyLanguage();
     maybeRedirectShortsPage();
     applyMode();
     registerMenu();
