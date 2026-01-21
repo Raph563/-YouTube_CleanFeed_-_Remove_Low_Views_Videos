@@ -43,9 +43,15 @@
 
       opt_lowpop_home: "Filtrer vidéos peu populaires sur Accueil",
       opt_lowpop_watch: "Filtrer recommandations peu populaires sur /watch",
+      opt_lowpop_search: "Filtrer vidéos peu populaires dans la recherche",
 
       opt_float_buttons: "Afficher le menu de boutons (Home + /watch)",
       opt_header_hover_watch: "Masquer le header hors survol (/watch)",
+
+      dock_lowpop_min_label: "Seuil vues impopulaires",
+      dock_lowpop_min_custom: "Personnaliser",
+      dock_lowpop_min_prompt: "Entrer un seuil (ex: 1k, 1M, 1k3)",
+      dock_lowpop_min_invalid: "Valeur invalide",
 
       act_apply: "↻ Appliquer maintenant",
       act_reset: "⟲ Réinitialiser tous les réglages",
@@ -110,6 +116,11 @@
       dock_lowpop_watch_action_on: "Afficher les recommandations peu populaires",
       dock_lowpop_watch_action_off: "Masquer les recommandations peu populaires",
       dock_lowpop_watch_info: "Masque les recommandations sous le seuil de vues sur /watch.",
+
+      dock_lowpop_search_label: "Vidéos peu populaires (Recherche)",
+      dock_lowpop_search_action_on: "Afficher les vidéos peu populaires (Recherche)",
+      dock_lowpop_search_action_off: "Masquer les vidéos peu populaires (Recherche)",
+      dock_lowpop_search_info: "Masque les vidéos sous le seuil de vues dans la recherche.",
 
       dock_header_info: "Active le masquage auto du header sur /watch, avec apparition au survol.",
       dock_float_buttons_label: "Dock affiché",
@@ -191,9 +202,15 @@
 
       opt_lowpop_home: "Filter low-popularity videos on Home",
       opt_lowpop_watch: "Filter low-popularity recommendations on /watch",
+      opt_lowpop_search: "Filter low-popularity videos in Search",
 
       opt_float_buttons: "Show button dock (Home + /watch)",
       opt_header_hover_watch: "Hide header when not hovered (/watch)",
+
+      dock_lowpop_min_label: "Low-pop min views",
+      dock_lowpop_min_custom: "Custom",
+      dock_lowpop_min_prompt: "Enter a threshold (e.g. 1k, 1M, 1k3)",
+      dock_lowpop_min_invalid: "Invalid value",
 
       act_apply: "↻ Apply now",
       act_reset: "⟲ Reset all settings",
@@ -258,6 +275,11 @@
       dock_lowpop_watch_action_on: "Show unpopular recommendations",
       dock_lowpop_watch_action_off: "Hide unpopular recommendations",
       dock_lowpop_watch_info: "Hides recommendations under the view threshold on /watch.",
+
+      dock_lowpop_search_label: "Low-pop videos (Search)",
+      dock_lowpop_search_action_on: "Show unpopular videos (Search)",
+      dock_lowpop_search_action_off: "Hide unpopular videos (Search)",
+      dock_lowpop_search_info: "Hides videos under the view threshold in Search.",
 
       dock_header_info: "Enables auto-hide for the header on /watch, with reveal on hover.",
       dock_float_buttons_label: "Dock visible",
@@ -339,6 +361,7 @@
 
       opt_lowpop_home: "Unbeliebte Videos auf Startseite filtern",
       opt_lowpop_watch: "Unbeliebte Empfehlungen auf /watch filtern",
+      opt_lowpop_search: "Unbeliebte Videos in der Suche filtern",
 
       opt_float_buttons: "Button-Dock anzeigen (Home + /watch)",
       opt_header_hover_watch: "Header ausblenden, wenn nicht gehovert (/watch)",
@@ -406,6 +429,11 @@
       dock_lowpop_watch_action_on: "Unbeliebte Empfehlungen anzeigen",
       dock_lowpop_watch_action_off: "Unbeliebte Empfehlungen ausblenden",
       dock_lowpop_watch_info: "Blendet Empfehlungen unter dem Aufruf-Schwellenwert auf /watch aus.",
+
+      dock_lowpop_search_label: "Unbeliebte Videos (Suche)",
+      dock_lowpop_search_action_on: "Unbeliebte Videos anzeigen (Suche)",
+      dock_lowpop_search_action_off: "Unbeliebte Videos ausblenden (Suche)",
+      dock_lowpop_search_info: "Blendet Videos unter dem Aufruf-Schwellenwert in der Suche aus.",
 
       dock_header_info: "Aktiviert Auto-Hide für den Header auf /watch, mit Anzeige bei Hover.",
       dock_float_buttons_label: "Dock sichtbar",
@@ -487,6 +515,7 @@
 
       opt_lowpop_home: "Filtrar videos poco populares en Inicio",
       opt_lowpop_watch: "Filtrar recomendaciones poco populares en /watch",
+      opt_lowpop_search: "Filtrar videos poco populares en Búsqueda",
 
       opt_float_buttons: "Mostrar dock de botones (Home + /watch)",
       opt_header_hover_watch: "Ocultar header si no hay hover (/watch)",
@@ -554,6 +583,11 @@
       dock_lowpop_watch_action_on: "Mostrar recomendaciones poco populares",
       dock_lowpop_watch_action_off: "Ocultar recomendaciones poco populares",
       dock_lowpop_watch_info: "Oculta recomendaciones por debajo del umbral de vistas en /watch.",
+
+      dock_lowpop_search_label: "Videos poco populares (Búsqueda)",
+      dock_lowpop_search_action_on: "Mostrar videos poco populares (Búsqueda)",
+      dock_lowpop_search_action_off: "Ocultar videos poco populares (Búsqueda)",
+      dock_lowpop_search_info: "Oculta videos por debajo del umbral de vistas en Búsqueda.",
 
       dock_header_info: "Activa el auto-ocultado del header en /watch con aparición al pasar.",
       dock_float_buttons_label: "Dock visible",
@@ -634,6 +668,7 @@
 
       opt_lowpop_home: "Filtra video poco popolari in Home",
       opt_lowpop_watch: "Filtra consigli poco popolari su /watch",
+      opt_lowpop_search: "Filtra video poco popolari in Ricerca",
 
       opt_float_buttons: "Mostra dock dei pulsanti (Home + /watch)",
       opt_header_hover_watch: "Nascondi header quando non in hover (/watch)",
@@ -701,6 +736,11 @@
       dock_lowpop_watch_action_on: "Mostra consigli poco popolari",
       dock_lowpop_watch_action_off: "Nascondi consigli poco popolari",
       dock_lowpop_watch_info: "Nasconde consigli sotto la soglia di visualizzazioni su /watch.",
+
+      dock_lowpop_search_label: "Video poco popolari (Ricerca)",
+      dock_lowpop_search_action_on: "Mostra video poco popolari (Ricerca)",
+      dock_lowpop_search_action_off: "Nascondi video poco popolari (Ricerca)",
+      dock_lowpop_search_info: "Nasconde video sotto la soglia di visualizzazioni nella ricerca.",
 
       dock_header_info: "Attiva auto-hide dell'header su /watch, con comparsa al passaggio.",
       dock_float_buttons_label: "Dock visibile",
@@ -780,6 +820,7 @@
 
       opt_lowpop_home: "Filtrar videos pouco populares na Home",
       opt_lowpop_watch: "Filtrar recomendacoes pouco populares em /watch",
+      opt_lowpop_search: "Filtrar videos pouco populares na Pesquisa",
 
       opt_float_buttons: "Mostrar dock de botoes (Home + /watch)",
       opt_header_hover_watch: "Ocultar header quando nao houver hover (/watch)",
@@ -847,6 +888,11 @@
       dock_lowpop_watch_action_on: "Mostrar recomendacoes pouco populares",
       dock_lowpop_watch_action_off: "Ocultar recomendacoes pouco populares",
       dock_lowpop_watch_info: "Oculta recomendacoes abaixo do limite de visualizacoes em /watch.",
+
+      dock_lowpop_search_label: "Videos pouco populares (Pesquisa)",
+      dock_lowpop_search_action_on: "Mostrar videos pouco populares (Pesquisa)",
+      dock_lowpop_search_action_off: "Ocultar videos pouco populares (Pesquisa)",
+      dock_lowpop_search_info: "Oculta videos abaixo do limite de visualizacoes na pesquisa.",
 
       dock_header_info: "Ativa auto-ocultacao do header em /watch, com exibicao ao passar o mouse.",
       dock_float_buttons_label: "Dock visivel",
@@ -926,6 +972,7 @@
 
       opt_lowpop_home: "Weinig populaire video's filteren op Home",
       opt_lowpop_watch: "Weinig populaire aanbevelingen filteren op /watch",
+      opt_lowpop_search: "Weinig populaire video's filteren in Zoeken",
 
       opt_float_buttons: "Knoppendock tonen (Home + /watch)",
       opt_header_hover_watch: "Header verbergen wanneer niet gehoverd (/watch)",
@@ -993,6 +1040,11 @@
       dock_lowpop_watch_action_on: "Onpopulaire aanbevelingen tonen",
       dock_lowpop_watch_action_off: "Onpopulaire aanbevelingen verbergen",
       dock_lowpop_watch_info: "Verbergt aanbevelingen onder de weergavedrempel op /watch.",
+
+      dock_lowpop_search_label: "Onpopulaire video's (Zoeken)",
+      dock_lowpop_search_action_on: "Onpopulaire video's tonen (Zoeken)",
+      dock_lowpop_search_action_off: "Onpopulaire video's verbergen (Zoeken)",
+      dock_lowpop_search_info: "Verbergt video's onder de weergavedrempel in Zoeken.",
 
       dock_header_info: "Schakelt auto-hide in voor de header op /watch, met tonen bij hover.",
       dock_float_buttons_label: "Dock zichtbaar",
@@ -1072,6 +1124,7 @@
 
       opt_lowpop_home: "Filtruj malo popularne filmy na Home",
       opt_lowpop_watch: "Filtruj malo popularne rekomendacje na /watch",
+      opt_lowpop_search: "Filtruj malo popularne filmy w wyszukiwaniu",
 
       opt_float_buttons: "Pokaz dock przyciskow (Home + /watch)",
       opt_header_hover_watch: "Ukryj naglowek, gdy brak hover (/watch)",
@@ -1139,6 +1192,11 @@
       dock_lowpop_watch_action_on: "Pokaz malo popularne rekomendacje",
       dock_lowpop_watch_action_off: "Ukryj malo popularne rekomendacje",
       dock_lowpop_watch_info: "Ukrywa rekomendacje ponizej progu wyswietlen na /watch.",
+
+      dock_lowpop_search_label: "Malo popularne filmy (Wyszukiwanie)",
+      dock_lowpop_search_action_on: "Pokaz malo popularne filmy (Wyszukiwanie)",
+      dock_lowpop_search_action_off: "Ukryj malo popularne filmy (Wyszukiwanie)",
+      dock_lowpop_search_info: "Ukrywa filmy ponizej progu wyswietlen w wyszukiwaniu.",
 
       dock_header_info: "Wlacza auto-ukrywanie naglowka na /watch, z pokazaniem po najechaniu.",
       dock_float_buttons_label: "Dock widoczny",
@@ -1218,6 +1276,7 @@
 
       opt_lowpop_home: "Ana sayfada az populer videolari filtrele",
       opt_lowpop_watch: "/watch uzerinde az populer onerileri filtrele",
+      opt_lowpop_search: "Aramada az populer videolari filtrele",
 
       opt_float_buttons: "Buton dock'u goster (Home + /watch)",
       opt_header_hover_watch: "Hover yokken header gizle (/watch)",
@@ -1285,6 +1344,11 @@
       dock_lowpop_watch_action_on: "Az populer onerileri goster",
       dock_lowpop_watch_action_off: "Az populer onerileri gizle",
       dock_lowpop_watch_info: "/watch'ta goruntuleme esiginin altindaki onerileri gizler.",
+
+      dock_lowpop_search_label: "Az populer videolar (Arama)",
+      dock_lowpop_search_action_on: "Az populer videolari goster (Arama)",
+      dock_lowpop_search_action_off: "Az populer videolari gizle (Arama)",
+      dock_lowpop_search_info: "Aramada goruntuleme esiginin altindaki videolari gizler.",
 
       dock_header_info: "/watch'ta header icin auto-hide etkinlestirir, hover ile gorunur.",
       dock_float_buttons_label: "Dock gorunur",
@@ -1369,6 +1433,8 @@
 
     lowpopHome: "ytcf_lowpop_home",
     lowpopWatch: "ytcf_lowpop_watch",
+    lowpopSearch: "ytcf_lowpop_search",
+    lowpopMinViews: "ytcf_lowpop_min_views",
 
     floatButtons: "ytcf_float_buttons",
     uiCollapsed: "ytcf_ui_collapsed",
@@ -1390,6 +1456,8 @@
 
     [KEY.lowpopHome]: false,
     [KEY.lowpopWatch]: true,
+    [KEY.lowpopSearch]: false,
+    [KEY.lowpopMinViews]: 5000,
 
     [KEY.floatButtons]: true,
     [KEY.uiCollapsed]: false,
@@ -1407,6 +1475,18 @@
 
   function getBool(k) { return !!getVal(k); }
   function setBool(k, v) { setVal(k, !!v); }
+
+  function getMinViews() {
+    const raw = Number(getVal(KEY.lowpopMinViews));
+    if (Number.isFinite(raw) && raw > 0) return Math.round(raw);
+    return DEFAULTS[KEY.lowpopMinViews];
+  }
+
+  function setMinViews(v) {
+    const next = Math.max(1, Math.round(Number(v) || 0));
+    setVal(KEY.lowpopMinViews, next);
+    CONFIG.minViews = next;
+  }
 
   function getLangSetting() {
     const v = String(getVal(KEY.lang) || DEFAULTS[KEY.lang]);
@@ -1459,6 +1539,11 @@
     const idx = LANG_CYCLE.indexOf(cur);
     if (idx === -1) return LANG_CYCLE[0];
     return LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
+  }
+  function getPrevLangCode(cur) {
+    const idx = LANG_CYCLE.indexOf(cur);
+    if (idx === -1) return LANG_CYCLE[0];
+    return LANG_CYCLE[(idx - 1 + LANG_CYCLE.length) % LANG_CYCLE.length];
   }
 
   applyLanguage();
@@ -1861,7 +1946,7 @@
   /* =========================================================
    * Low-popularity filter (Home + Watch)
    * ========================================================= */
-  const CONFIG = { minViews: 5000 };
+  const CONFIG = { minViews: getMinViews() };
 
   const WORDS = {
     fr: { views: ["vue", "vues"], live: ["spectateur", "spectateurs"] },
@@ -1915,21 +2000,44 @@
     return parseNumberWithSuffix(t);
   }
 
+  function getViewCountFromNode(node) {
+    if (!node || node.nodeType !== 1) return null;
+
+    const candidates = node.querySelectorAll(
+      [
+        "span.yt-content-metadata-view-model__metadata-text",
+        "#metadata-line span",
+        "span.inline-metadata-item",
+        "ytd-video-meta-block span",
+        "span",
+      ].join(", ")
+    );
+
+    for (const span of candidates) {
+      const count = parseViewsOrLive(span.textContent);
+      if (count != null) return count;
+    }
+
+    const aria = node.getAttribute?.("aria-label") || "";
+    if (aria) {
+      const count = parseViewsOrLive(aria);
+      if (count != null) return count;
+    }
+
+    return null;
+  }
+
   function processHomeItem(item) {
     if (!getBool(KEY.lowpopHome)) return;
     if (!item || item.nodeType !== 1) return;
     if (item.dataset.ytcfLowpopDone === "1") return;
 
-    const spans = item.querySelectorAll("span");
-    for (const span of spans) {
-      const count = parseViewsOrLive(span.textContent);
-      if (count != null) {
-        item.dataset.ytcfLowpopDone = "1";
-        if (count < CONFIG.minViews) {
-          item.style.display = "none";
-          item.dataset.ytcfLowpopHidden = "1";
-        }
-        return;
+    const count = getViewCountFromNode(item);
+    if (count != null) {
+      item.dataset.ytcfLowpopDone = "1";
+      if (count < CONFIG.minViews) {
+        item.style.display = "none";
+        item.dataset.ytcfLowpopHidden = "1";
       }
     }
   }
@@ -1946,16 +2054,12 @@
     if (!card || card.nodeType !== 1) return;
     if (card.dataset.ytcfLowpopDone === "1") return;
 
-    const spans = card.querySelectorAll("span.yt-content-metadata-view-model__metadata-text");
-    for (const span of spans) {
-      const count = parseViewsOrLive(span.textContent);
-      if (count != null) {
-        card.dataset.ytcfLowpopDone = "1";
-        if (count < CONFIG.minViews) {
-          card.style.display = "none";
-          card.dataset.ytcfLowpopHidden = "1";
-        }
-        return;
+    const count = getViewCountFromNode(card);
+    if (count != null) {
+      card.dataset.ytcfLowpopDone = "1";
+      if (count < CONFIG.minViews) {
+        card.style.display = "none";
+        card.dataset.ytcfLowpopHidden = "1";
       }
     }
   }
@@ -1963,8 +2067,61 @@
   function scanWatchLowpop(root) {
     if (!getBool(KEY.lowpopWatch)) return;
     const base = root && root.querySelectorAll ? root : document;
-    base.querySelectorAll("div.yt-lockup-view-model").forEach(processWatchCard);
-    if (root && root.matches && root.matches("div.yt-lockup-view-model")) processWatchCard(root);
+    base.querySelectorAll(
+      [
+        "div.yt-lockup-view-model",
+        "ytd-compact-video-renderer",
+        "ytd-video-renderer",
+        "ytd-grid-video-renderer",
+        "ytd-rich-item-renderer",
+      ].join(", ")
+    ).forEach(processWatchCard);
+    if (
+      root &&
+      root.matches &&
+      root.matches(
+        [
+          "div.yt-lockup-view-model",
+          "ytd-compact-video-renderer",
+          "ytd-video-renderer",
+          "ytd-grid-video-renderer",
+          "ytd-rich-item-renderer",
+        ].join(", ")
+      )
+    ) {
+      processWatchCard(root);
+    }
+  }
+
+  function processSearchItem(item) {
+    if (!getBool(KEY.lowpopSearch)) return;
+    if (!item || item.nodeType !== 1) return;
+    if (item.dataset.ytcfLowpopDone === "1") return;
+
+    const count = getViewCountFromNode(item);
+    if (count != null) {
+      item.dataset.ytcfLowpopDone = "1";
+      if (count < CONFIG.minViews) {
+        item.style.display = "none";
+        item.dataset.ytcfLowpopHidden = "1";
+      }
+    }
+  }
+
+  function scanSearchLowpop(root) {
+    if (!getBool(KEY.lowpopSearch)) return;
+    const base = root && root.querySelectorAll ? root : document;
+    const candidates = base.querySelectorAll(
+      "ytd-video-renderer, ytd-compact-video-renderer, ytd-grid-video-renderer, ytd-rich-item-renderer"
+    );
+    candidates.forEach(processSearchItem);
+    if (
+      root &&
+      root.matches &&
+      root.matches("ytd-video-renderer, ytd-compact-video-renderer, ytd-grid-video-renderer, ytd-rich-item-renderer")
+    ) {
+      processSearchItem(root);
+    }
   }
 
   function unhideLowpop() {
@@ -1972,13 +2129,41 @@
       v.style.display = "";
       v.removeAttribute("data-ytcf-lowpop-hidden");
       v.removeAttribute("data-ytcfLowpopHidden");
+      v.removeAttribute("data-ytcf-lowpop-done");
+      v.removeAttribute("data-ytcfLowpopDone");
+    });
+    document.querySelectorAll("ytd-video-renderer[data-ytcf-lowpop-hidden='1'], ytd-video-renderer[data-ytcfLowpopHidden='1'], ytd-compact-video-renderer[data-ytcf-lowpop-hidden='1'], ytd-compact-video-renderer[data-ytcfLowpopHidden='1'], ytd-grid-video-renderer[data-ytcf-lowpop-hidden='1'], ytd-grid-video-renderer[data-ytcfLowpopHidden='1'], ytd-rich-item-renderer[data-ytcf-lowpop-hidden='1'], ytd-rich-item-renderer[data-ytcfLowpopHidden='1']").forEach(v => {
+      v.style.display = "";
+      v.removeAttribute("data-ytcf-lowpop-hidden");
+      v.removeAttribute("data-ytcfLowpopHidden");
+      v.removeAttribute("data-ytcf-lowpop-done");
       v.removeAttribute("data-ytcfLowpopDone");
     });
     document.querySelectorAll("div.yt-lockup-view-model[data-ytcfLowpopHidden='1'], div.yt-lockup-view-model[data-ytcf-lowpop-hidden='1']").forEach(c => {
       c.style.display = "";
       c.removeAttribute("data-ytcfLowpopHidden");
       c.removeAttribute("data-ytcf-lowpop-hidden");
+      c.removeAttribute("data-ytcf-lowpop-done");
       c.removeAttribute("data-ytcfLowpopDone");
+    });
+    document.querySelectorAll("ytd-video-renderer[data-ytcfLowpopDone='1'], ytd-compact-video-renderer[data-ytcfLowpopDone='1'], ytd-grid-video-renderer[data-ytcfLowpopDone='1'], ytd-rich-item-renderer[data-ytcfLowpopDone='1'], div.yt-lockup-view-model[data-ytcfLowpopDone='1']").forEach(el => {
+      el.removeAttribute("data-ytcf-lowpop-done");
+      el.removeAttribute("data-ytcfLowpopDone");
+    });
+  }
+
+  function resetLowpopProcessed() {
+    document.querySelectorAll(
+      [
+        "ytd-rich-item-renderer[data-ytcf-lowpop-done='1']",
+        "ytd-video-renderer[data-ytcf-lowpop-done='1']",
+        "ytd-compact-video-renderer[data-ytcf-lowpop-done='1']",
+        "ytd-grid-video-renderer[data-ytcf-lowpop-done='1']",
+        "div.yt-lockup-view-model[data-ytcf-lowpop-done='1']",
+      ].join(", ")
+    ).forEach(el => {
+      el.removeAttribute("data-ytcf-lowpop-done");
+      el.removeAttribute("data-ytcfLowpopDone");
     });
   }
 
@@ -2533,33 +2718,14 @@
     btn.dataset.ytcfGearInit = "1";
 
     const fullLabel = T.dock_expand;
-    const showText = () => {
-      if (!btn.isConnected) return;
-      btn.textContent = fullLabel;
-      btn.style.width = "auto";
-      btn.style.maxWidth = "unset";
-      btn.style.paddingLeft = "12px";
-      btn.style.paddingRight = "12px";
-      btn.title = "";
-      btn.removeAttribute("aria-label");
-    };
-
-    const showIcon = () => {
-      if (!btn.isConnected) return;
-      btn.textContent = "⚙️";
-      btn.style.width = "28px";
-      btn.style.maxWidth = "28px";
-      btn.style.paddingLeft = "0";
-      btn.style.paddingRight = "0";
-      btn.title = fullLabel;
-      btn.setAttribute("aria-label", fullLabel);
-    };
-
-    showIcon();
-    btn.addEventListener("mouseenter", showText);
-    btn.addEventListener("mouseleave", showIcon);
-    btn.addEventListener("focus", showText);
-    btn.addEventListener("blur", showIcon);
+    if (!btn.isConnected) return;
+    btn.textContent = "??";
+    btn.style.width = "28px";
+    btn.style.maxWidth = "28px";
+    btn.style.paddingLeft = "0";
+    btn.style.paddingRight = "0";
+    btn.title = fullLabel;
+    btn.setAttribute("aria-label", fullLabel);
   }
 
   function applyGoTopHover(btn) {
@@ -2668,6 +2834,8 @@
   let dockWasFullscreen = false;
   let dockSubmenu = null; // "home" | "search" | "sidebar" | "watch" | "advanced" | null
   let modeChangeRevealUntil = 0;
+  let langChangeRevealUntil = 0;
+  let minViewsChangeRevealUntil = 0;
 
   function isFullscreenNow() {
     return !!(document.fullscreenElement || document.webkitFullscreenElement);
@@ -2923,6 +3091,242 @@
     return wrap;
   }
 
+  const MIN_VIEWS_STEPS = [
+    1000,
+    5000,
+    10000,
+    20000,
+    50000,
+    100000,
+    200000,
+    500000,
+    1000000,
+    2000000,
+    5000000,
+  ];
+
+  function formatViewsShort(value) {
+    const v = Math.max(0, Math.round(Number(value) || 0));
+    if (v >= 1e6) {
+      const num = v / 1e6;
+      const text = (num % 1 === 0) ? num.toFixed(0) : num.toFixed(1);
+      return `${text.replace(/\.0$/, "")}M`;
+    }
+    if (v >= 1e3) {
+      const num = v / 1e3;
+      const text = (num % 1 === 0) ? num.toFixed(0) : num.toFixed(1);
+      return `${text.replace(/\.0$/, "")}k`;
+    }
+    return String(v);
+  }
+
+  function parseCustomViewsInput(input) {
+    const raw = String(input || "").trim();
+    if (!raw) return null;
+
+    const cleaned = raw.toLowerCase().replace(/\s+/g, "").replace(/,/g, ".");
+    if (/^\d+$/.test(cleaned)) return Math.round(Number(cleaned));
+
+    const kmDecimal = cleaned.match(/^(\d+(?:\.\d+)?)([km])$/);
+    if (kmDecimal) {
+      const num = Number(kmDecimal[1]);
+      const mult = kmDecimal[2] === "m" ? 1e6 : 1e3;
+      if (!Number.isFinite(num)) return null;
+      return Math.round(num * mult);
+    }
+
+    const kmCompact = cleaned.match(/^(\d+)([km])(\d+)$/);
+    if (kmCompact) {
+      const base = parseInt(kmCompact[1], 10);
+      const unit = kmCompact[2] === "m" ? 1e6 : 1e3;
+      const suffix = kmCompact[3];
+      const unitPow = kmCompact[2] === "m" ? 6 : 3;
+      const scalePow = unitPow - suffix.length;
+      if (scalePow < 0) return null;
+      const suffixVal = parseInt(suffix, 10) * Math.pow(10, scalePow);
+      return Math.round(base * unit + suffixVal);
+    }
+
+    return null;
+  }
+
+  function getMinViewsDownValue(cur) {
+    for (let i = MIN_VIEWS_STEPS.length - 1; i >= 0; i--) {
+      if (MIN_VIEWS_STEPS[i] < cur) return MIN_VIEWS_STEPS[i];
+    }
+    return cur;
+  }
+
+  function getMinViewsUpValue(cur) {
+    for (const step of MIN_VIEWS_STEPS) {
+      if (step > cur) return step;
+    }
+    return cur;
+  }
+
+  function makeMinViewsRow() {
+    const wrap = document.createElement("div");
+    wrap.style.display = "flex";
+    wrap.style.gap = "6px";
+    wrap.style.alignItems = "center";
+    wrap.style.justifyContent = "flex-end";
+
+    const customBtn = makeDockButton("ytcf-btn-lowpop-min-custom", T.dock_lowpop_min_custom || "Custom");
+    const downBtn = makeDockButton("ytcf-btn-lowpop-min-down", "⬇️");
+    const upBtn = makeDockButton("ytcf-btn-lowpop-min-up", "⬆️");
+    const stateBtn = makeDockButton("ytcf-btn-lowpop-min-state", "");
+    stateBtn.setAttribute("aria-disabled", "true");
+    stateBtn.style.pointerEvents = "none";
+
+    const perf = getMode() === "perf";
+    customBtn.style.whiteSpace = "nowrap";
+    downBtn.style.whiteSpace = "nowrap";
+    upBtn.style.whiteSpace = "nowrap";
+
+    if (perf) {
+      for (const btn of [customBtn, downBtn, upBtn]) {
+        btn.style.maxWidth = "0";
+        btn.style.paddingLeft = "0";
+        btn.style.paddingRight = "0";
+        btn.style.opacity = "0";
+        btn.style.transform = "translateX(6px)";
+        btn.style.marginRight = "-6px";
+        btn.style.overflow = "hidden";
+        btn.style.pointerEvents = "none";
+        btn.style.transition = "max-width 180ms ease, padding 180ms ease, opacity 180ms ease, transform 180ms ease";
+      }
+    } else {
+      customBtn.style.display = "none";
+      downBtn.style.display = "none";
+      upBtn.style.display = "none";
+      customBtn.style.pointerEvents = "none";
+      downBtn.style.pointerEvents = "none";
+      upBtn.style.pointerEvents = "none";
+    }
+
+    const label = T.dock_lowpop_min_label || "Low-pop min views";
+
+    const render = () => {
+      const cur = getMinViews();
+      stateBtn.textContent = `${label}: ${formatViewsShort(cur)}`;
+      const downNext = getMinViewsDownValue(cur);
+      const upNext = getMinViewsUpValue(cur);
+      downBtn.title = `${label}: ${formatViewsShort(downNext)}`;
+      upBtn.title = `${label}: ${formatViewsShort(upNext)}`;
+      customBtn.title = T.dock_lowpop_min_prompt || "Enter a threshold (e.g. 1k, 1M, 1k3)";
+    };
+
+    const applyMinViewsChange = (next) => {
+      minViewsChangeRevealUntil = Date.now() + 500;
+      setMinViews(next);
+      resetLowpopProcessed();
+      unhideLowpop();
+      if (!isUltraMode()) {
+        if (getBool(KEY.lowpopHome)) scanHomeLowpop(homeContainer());
+        if (getBool(KEY.lowpopSearch)) scanSearchLowpop(searchContainer());
+        if (getBool(KEY.lowpopWatch)) scanWatchLowpop(watchContainer());
+      }
+      render();
+      forceRenderDockNow();
+      scheduleRun(true);
+      showToast(T.toast_updated || "Updated", "info");
+    };
+
+    customBtn.addEventListener("click", () => {
+      minViewsChangeRevealUntil = Date.now() + 500;
+      const promptText = T.dock_lowpop_min_prompt || "Enter a threshold (e.g. 1k, 1M, 1k3)";
+      const input = window.prompt(promptText, String(getMinViews()));
+      if (input == null) return;
+      const parsed = parseCustomViewsInput(input);
+      if (!parsed || parsed <= 0) {
+        showToast(T.dock_lowpop_min_invalid || "Invalid value", "off");
+        return;
+      }
+      applyMinViewsChange(parsed);
+    });
+
+    downBtn.addEventListener("click", () => {
+      applyMinViewsChange(getMinViewsDownValue(getMinViews()));
+    });
+
+    upBtn.addEventListener("click", () => {
+      applyMinViewsChange(getMinViewsUpValue(getMinViews()));
+    });
+
+    const showAction = () => {
+      if (perf) {
+        for (const btn of [customBtn, downBtn, upBtn]) {
+          btn.style.maxWidth = "240px";
+          btn.style.paddingLeft = "12px";
+          btn.style.paddingRight = "12px";
+          btn.style.opacity = "1";
+          btn.style.transform = "translateX(0)";
+          btn.style.marginRight = "0";
+          btn.style.pointerEvents = "auto";
+        }
+      } else {
+        customBtn.style.display = "";
+        downBtn.style.display = "";
+        upBtn.style.display = "";
+        customBtn.style.pointerEvents = "auto";
+        downBtn.style.pointerEvents = "auto";
+        upBtn.style.pointerEvents = "auto";
+      }
+    };
+
+    const hideAction = () => {
+      if (perf) {
+        for (const btn of [customBtn, downBtn, upBtn]) {
+          btn.style.maxWidth = "0";
+          btn.style.paddingLeft = "0";
+          btn.style.paddingRight = "0";
+          btn.style.opacity = "0";
+          btn.style.transform = "translateX(6px)";
+          btn.style.marginRight = "-6px";
+          btn.style.pointerEvents = "none";
+        }
+      } else {
+        customBtn.style.display = "none";
+        downBtn.style.display = "none";
+        upBtn.style.display = "none";
+        customBtn.style.pointerEvents = "none";
+        downBtn.style.pointerEvents = "none";
+        upBtn.style.pointerEvents = "none";
+      }
+    };
+
+    render();
+    hideAction();
+
+    let hideTimer = null;
+    const show = () => {
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = null;
+      showAction();
+    };
+    const scheduleHide = () => {
+      if (hideTimer) clearTimeout(hideTimer);
+      const delay = Math.max(0, minViewsChangeRevealUntil - Date.now());
+      if (delay === 0) {
+        if (!wrap.matches(":hover")) hideAction();
+        return;
+      }
+      hideTimer = setTimeout(() => {
+        if (!wrap.matches(":hover")) hideAction();
+      }, delay);
+    };
+
+    if (Date.now() < minViewsChangeRevealUntil) show();
+
+    wrap.addEventListener("mouseenter", show);
+    wrap.addEventListener("mouseleave", scheduleHide);
+    wrap.addEventListener("focusin", show);
+    wrap.addEventListener("focusout", scheduleHide);
+
+    wrap.append(customBtn, downBtn, upBtn, stateBtn);
+    return wrap;
+  }
+
   function makeLanguageRow() {
     const wrap = document.createElement("div");
     wrap.style.display = "flex";
@@ -2930,36 +3334,53 @@
     wrap.style.alignItems = "center";
     wrap.style.justifyContent = "flex-end";
 
-    const actionBtn = makeDockButton("ytcf-btn-lang-next", "");
+    const leftBtn = makeDockButton("ytcf-btn-lang-prev", "⬅️");
+    const rightBtn = makeDockButton("ytcf-btn-lang-next", "➡️");
     const stateBtn = makeDockButton("ytcf-btn-lang-state", "");
     stateBtn.setAttribute("aria-disabled", "true");
     stateBtn.style.pointerEvents = "none";
 
     const perf = getMode() === "perf";
-    actionBtn.style.whiteSpace = "nowrap";
+    leftBtn.style.whiteSpace = "nowrap";
+    rightBtn.style.whiteSpace = "nowrap";
     if (perf) {
-      actionBtn.style.maxWidth = "0";
-      actionBtn.style.paddingLeft = "0";
-      actionBtn.style.paddingRight = "0";
-      actionBtn.style.opacity = "0";
-      actionBtn.style.transform = "translateX(6px)";
-      actionBtn.style.marginRight = "-6px";
-      actionBtn.style.overflow = "hidden";
-      actionBtn.style.pointerEvents = "none";
-      actionBtn.style.transition = "max-width 180ms ease, padding 180ms ease, opacity 180ms ease, transform 180ms ease";
+      for (const btn of [leftBtn, rightBtn]) {
+        btn.style.maxWidth = "0";
+        btn.style.paddingLeft = "0";
+        btn.style.paddingRight = "0";
+        btn.style.opacity = "0";
+        btn.style.transform = "translateX(6px)";
+        btn.style.marginRight = "-6px";
+        btn.style.overflow = "hidden";
+        btn.style.pointerEvents = "none";
+        btn.style.transition = "max-width 180ms ease, padding 180ms ease, opacity 180ms ease, transform 180ms ease";
+      }
     } else {
-      actionBtn.style.display = "none";
-      actionBtn.style.pointerEvents = "none";
+      leftBtn.style.display = "none";
+      rightBtn.style.display = "none";
+      leftBtn.style.pointerEvents = "none";
+      rightBtn.style.pointerEvents = "none";
     }
 
     const render = () => {
       const curSetting = getLangSetting();
-      const nextCode = getNextLangCode(curSetting);
       stateBtn.textContent = `${T.dock_lang_label}: ${getCurrentLangLabel()}`;
-      actionBtn.textContent = getLangDisplayName(nextCode);
+      leftBtn.title = getLangDisplayName(getPrevLangCode(curSetting));
+      rightBtn.title = getLangDisplayName(getNextLangCode(curSetting));
     };
 
-    actionBtn.addEventListener("click", () => {
+    leftBtn.addEventListener("click", () => {
+      langChangeRevealUntil = Date.now() + 500;
+      const prevCode = getPrevLangCode(getLangSetting());
+      setLangSetting(prevCode);
+      applyLanguage();
+      render();
+      registerMenu();
+      forceRenderDockNow();
+      scheduleRun(true);
+    });
+    rightBtn.addEventListener("click", () => {
+      langChangeRevealUntil = Date.now() + 500;
       const nextCode = getNextLangCode(getLangSetting());
       setLangSetting(nextCode);
       applyLanguage();
@@ -2971,43 +3392,71 @@
 
     const showAction = () => {
       if (perf) {
-        actionBtn.style.maxWidth = "240px";
-        actionBtn.style.paddingLeft = "12px";
-        actionBtn.style.paddingRight = "12px";
-        actionBtn.style.opacity = "1";
-        actionBtn.style.transform = "translateX(0)";
-        actionBtn.style.marginRight = "0";
-        actionBtn.style.pointerEvents = "auto";
+        for (const btn of [leftBtn, rightBtn]) {
+          btn.style.maxWidth = "240px";
+          btn.style.paddingLeft = "12px";
+          btn.style.paddingRight = "12px";
+          btn.style.opacity = "1";
+          btn.style.transform = "translateX(0)";
+          btn.style.marginRight = "0";
+          btn.style.pointerEvents = "auto";
+        }
       } else {
-        actionBtn.style.display = "";
-        actionBtn.style.pointerEvents = "auto";
+        leftBtn.style.display = "";
+        rightBtn.style.display = "";
+        leftBtn.style.pointerEvents = "auto";
+        rightBtn.style.pointerEvents = "auto";
       }
     };
 
     const hideAction = () => {
       if (perf) {
-        actionBtn.style.maxWidth = "0";
-        actionBtn.style.paddingLeft = "0";
-        actionBtn.style.paddingRight = "0";
-        actionBtn.style.opacity = "0";
-        actionBtn.style.transform = "translateX(6px)";
-        actionBtn.style.marginRight = "-6px";
-        actionBtn.style.pointerEvents = "none";
+        for (const btn of [leftBtn, rightBtn]) {
+          btn.style.maxWidth = "0";
+          btn.style.paddingLeft = "0";
+          btn.style.paddingRight = "0";
+          btn.style.opacity = "0";
+          btn.style.transform = "translateX(6px)";
+          btn.style.marginRight = "-6px";
+          btn.style.pointerEvents = "none";
+        }
       } else {
-        actionBtn.style.display = "none";
-        actionBtn.style.pointerEvents = "none";
+        leftBtn.style.display = "none";
+        rightBtn.style.display = "none";
+        leftBtn.style.pointerEvents = "none";
+        rightBtn.style.pointerEvents = "none";
       }
     };
 
     render();
     hideAction();
 
-    wrap.addEventListener("mouseenter", showAction);
-    wrap.addEventListener("mouseleave", hideAction);
-    wrap.addEventListener("focusin", showAction);
-    wrap.addEventListener("focusout", hideAction);
+    let hideTimer = null;
+    const show = () => {
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = null;
+      showAction();
+    };
+    const scheduleHide = () => {
+      if (hideTimer) clearTimeout(hideTimer);
+      const delay = Math.max(0, langChangeRevealUntil - Date.now());
+      if (delay == 0) {
+        if (!wrap.matches(":hover")) hideAction();
+        return;
+      }
+      hideTimer = setTimeout(() => {
+        if (!wrap.matches(":hover")) hideAction();
+      }, delay);
+    };
 
-    wrap.append(actionBtn, stateBtn);
+    if (Date.now() < langChangeRevealUntil) show();
+
+    wrap.addEventListener("mouseenter", show);
+    wrap.addEventListener("mouseleave", scheduleHide);
+    wrap.addEventListener("focusin", show);
+    wrap.addEventListener("focusout", scheduleHide);
+
+    wrap.append(leftBtn, rightBtn, stateBtn);
     return wrap;
   }
 
@@ -3213,6 +3662,19 @@ function buildSearchRows() {
       infoText: T.dock_shorts_search_info,
       onToggle: () => { scheduleRun(true); },
     }),
+    makeToggleRow({
+      actionId: "ytcf-btn-lowpop-search-action",
+      stateId: "ytcf-btn-lowpop-search-state",
+      key: KEY.lowpopSearch,
+      label: T.dock_lowpop_search_label,
+      actionOn: T.dock_lowpop_search_action_on,
+      actionOff: T.dock_lowpop_search_action_off,
+      infoText: T.dock_lowpop_search_info,
+      onToggle: (next) => {
+        if (!next) unhideLowpop();
+        scheduleRun(true);
+      },
+    }),
   ];
 }
 
@@ -3286,6 +3748,7 @@ function buildAdvancedRows() {
       infoText: T.dock_float_buttons_info,
       onToggle: () => { scheduleRun(true); },
     }),
+    makeMinViewsRow(),
     makeLanguageRow(),
   ];
 }
@@ -3402,6 +3865,7 @@ function buildSubmenuButtons(highlightTarget) {
       getBool(KEY.lowpopHome) ? "lh1" : "lh0",
       getBool(KEY.lowpopWatch) ? "lw1" : "lw0",
       getBool(KEY.headerHoverWatch) ? "hh1" : "hh0",
+      `mv-${getMinViews()}`,
       dockSubmenu ? `sm-${dockSubmenu}` : "sm0",
       // ✅ new visibility bit so dock updates correctly without full rerenders
       (shouldShowGoTop() ? "gt1" : "gt0"),
@@ -3643,6 +4107,7 @@ function buildSubmenuButtons(highlightTarget) {
       hideShortsShelvesWithin(search, "search");
       hideShortsVideoResultsInSearch(search);
     }
+    if (!isUltraMode() && getBool(KEY.lowpopSearch)) scanSearchLowpop(search);
   }
 
   function runWatch() {
@@ -3718,7 +4183,7 @@ function buildSubmenuButtons(highlightTarget) {
     if (getMode() !== "perf") return false;
 
     const needHome = isHome() && (getBool(KEY.shortsHome) || getBool(KEY.newsHome) || getBool(KEY.lowpopHome));
-    const needSearch = isSearch() && getBool(KEY.shortsSearch);
+    const needSearch = isSearch() && (getBool(KEY.shortsSearch) || getBool(KEY.lowpopSearch));
     const needWatch = isWatch() && (getBool(KEY.lowpopWatch) || getBool(KEY.headerHoverWatch));
     const needUI = getBool(KEY.sidebarShorts);
 
@@ -3797,87 +4262,27 @@ function buildSubmenuButtons(highlightTarget) {
     clearMenu();
 
     addHeader(T.sec_global);
-    const m = getMode();
-    const modeText = (m === "perf") ? T.mode_perf : (m === "ultra" ? T.mode_ultra : T.mode_eco);
-    menuIds.push(GM_registerMenuCommand(`${T.mode_label}: ${modeText}`, () => {
-      const cur = getMode();
-      const next = (cur === "ultra") ? "eco" : (cur === "eco" ? "perf" : "ultra");
-      setMode(next);
-      if (next === "perf") showToast(T.toast_mode_perf, "info");
-      else if (next === "ultra") showToast(T.toast_mode_ultra, "info");
-      else showToast(T.toast_mode_eco, "info");
-      applyMode();
-      registerMenu();
-      scheduleRun(true);
-    }));
-
-    addHeader(T.sec_home);
-    addToggle(T.opt_shorts_home, KEY.shortsHome, () => { showToast(T.toast_updated, "info"); forceRenderDockNow(); scheduleRun(true); });
-    addToggle(T.opt_news_home, KEY.newsHome, () => { showToast(T.toast_updated, "info"); scheduleRun(true); });
-    addToggle(T.opt_lowpop_home, KEY.lowpopHome, (nv) => {
+    addToggle(T.opt_float_buttons, KEY.floatButtons, () => {
       showToast(T.toast_updated, "info");
-      if (!nv) unhideLowpop();
       forceRenderDockNow();
       scheduleRun(true);
     });
 
-    addHeader(T.sec_search);
-    addToggle(T.opt_shorts_search, KEY.shortsSearch, () => { showToast(T.toast_updated, "info"); scheduleRun(true); });
+    addHeader(T.dock_lang_label);
+    const currentLang = getLangSetting();
+    const options = ["auto", ...Object.keys(I18N)];
+    for (const code of options) {
+      const isCurrent = code === currentLang;
+      const label = isCurrent ? `[*] ${getLangDisplayName(code)}` : `[ ] ${getLangDisplayName(code)}`;
+      menuIds.push(GM_registerMenuCommand(label, () => {
+        setLangSetting(code);
+        applyLanguage();
+        registerMenu();
+        forceRenderDockNow();
+        scheduleRun(true);
+      }));
+    }
 
-    addHeader(T.sec_watch);
-    addToggle(T.opt_lowpop_watch, KEY.lowpopWatch, (nv) => {
-      showToast(T.toast_updated, "info");
-      if (!nv) unhideLowpop();
-      forceRenderDockNow();
-      scheduleRun(true);
-    });
-
-    addHeader(T.sec_navui);
-    addToggle(T.opt_sidebar_shorts, KEY.sidebarShorts, () => { showToast(T.toast_updated, "info"); scheduleRun(true); });
-    addToggle(T.opt_block_shorts_page, KEY.blockShortsPage, () => { showToast(T.toast_updated, "info"); maybeRedirectShortsPage(); });
-    addToggle(T.opt_float_buttons, KEY.floatButtons, () => { showToast(T.toast_updated, "info"); forceRenderDockNow(); scheduleRun(true); });
-
-    // ✅ NEW: header hover toggle (well-classed)
-    addToggle(T.opt_header_hover_watch, KEY.headerHoverWatch, (nv) => {
-      showToast(nv ? T.toast_header_on : T.toast_header_off, nv ? "on" : "off");
-      bindHeaderMouse();
-      applyHeaderHoverNow();
-      forceRenderDockNow();
-      scheduleRun(true);
-    });
-
-    addHeader(T.sec_actions);
-    menuIds.push(GM_registerMenuCommand(T.act_apply, () => {
-      showToast(T.toast_updated, "info");
-      applyMode();
-      scheduleRun(true);
-    }));
-
-    menuIds.push(GM_registerMenuCommand(T.act_reset, () => {
-      for (const k of Object.values(KEY)) setVal(k, DEFAULTS[k]);
-
-      setUiCollapsed(!!DEFAULTS[KEY.uiCollapsed]);
-      setUiCollapsedWatch(!!DEFAULTS[KEY.uiCollapsedWatch]);
-
-      applyLanguage();
-      showToast(T.toast_reset, "info");
-      unhideLowpop();
-
-      // reset header behavior
-      headerDisable();
-
-      document.getElementById(DOCK_ID)?.remove();
-      lastDockKey = "";
-      dockIsHidden = false;
-      dockWasFullscreen = false;
-      dockSubmenu = null;
-      if (fsRestoreTimer) clearTimeout(fsRestoreTimer);
-      fsRestoreTimer = null;
-
-      applyMode();
-      registerMenu();
-      scheduleRun(true);
-    }));
   }
 
   /* =========================================================
