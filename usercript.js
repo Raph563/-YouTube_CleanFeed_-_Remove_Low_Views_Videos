@@ -829,6 +829,7 @@
   const YT_HDR_SHOW_ZONE = 60;
 
   let headerHoverEnabled = false;
+  let headerPinned = false;
 
   function ensureHeaderStyle() {
     if (document.getElementById(YT_HDR_STYLE_ID)) return;
@@ -916,12 +917,39 @@
     }
 
     headerHoverEnabled = false;
+    headerPinned = false;
   }
 
   function applyHeaderHoverNow() {
     const want = isWatch() && getBool(KEY.headerHoverWatch);
     if (want) headerEnable();
     else headerDisable();
+  }
+
+  function getSearchInput() {
+    return (
+      document.querySelector("ytd-searchbox input#search") ||
+      document.querySelector("ytd-searchbox input")
+    );
+  }
+
+  function updateHeaderPinnedFromSearch() {
+    if (!isWatch() || !headerHoverEnabled) {
+      headerPinned = false;
+      return;
+    }
+    const input = getSearchInput();
+    if (!input) {
+      headerPinned = false;
+      return;
+    }
+    const hasText = !!input.value && input.value.trim().length > 0;
+    const focused = (document.activeElement === input) || input.contains?.(document.activeElement);
+    headerPinned = hasText && focused;
+    if (headerPinned) {
+      const header = document.querySelector("ytd-masthead");
+      if (header) header.style.transform = "translateY(0)";
+    }
   }
 
   // Mouse listener ONCE
@@ -932,11 +960,45 @@
 
     document.addEventListener("mousemove", (e) => {
       if (!headerHoverEnabled) return;
+      if (headerPinned) return;
       const header = document.querySelector("ytd-masthead");
       if (!header) return;
 
       header.style.transform = (e.clientY <= YT_HDR_SHOW_ZONE) ? "translateY(0)" : "translateY(-100%)";
     }, { passive: true });
+
+    document.addEventListener("scroll", () => {
+      if (!headerHoverEnabled || !headerPinned || !isWatch()) return;
+      headerPinned = false;
+    }, { passive: true });
+
+    document.addEventListener("click", (e) => {
+      if (!headerHoverEnabled || !headerPinned || !isWatch()) return;
+      const input = getSearchInput();
+      if (input && (e.target === input || input.contains?.(e.target))) return;
+      headerPinned = false;
+    }, true);
+
+    document.addEventListener("input", (e) => {
+      if (!headerHoverEnabled || !isWatch()) return;
+      const input = getSearchInput();
+      if (!input || e.target !== input) return;
+      updateHeaderPinnedFromSearch();
+    }, true);
+
+    document.addEventListener("focusin", (e) => {
+      if (!headerHoverEnabled || !isWatch()) return;
+      const input = getSearchInput();
+      if (!input || e.target !== input) return;
+      updateHeaderPinnedFromSearch();
+    }, true);
+
+    document.addEventListener("focusout", (e) => {
+      if (!headerHoverEnabled || !isWatch()) return;
+      const input = getSearchInput();
+      if (!input || e.target !== input) return;
+      headerPinned = false;
+    }, true);
   }
 
    /* =========================================================
