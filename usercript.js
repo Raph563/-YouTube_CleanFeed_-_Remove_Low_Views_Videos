@@ -122,6 +122,12 @@
       dock_menu_watch_label: "Fonctionnalités Vidéo",
       dock_menu_watch_title: "Fonctionnalités Vidéo :",
       dock_menu_watch_info: "Réglages spécifiques à la page vidéo (/watch).",
+      dock_menu_search_label: "Fonctionnalités Recherche",
+      dock_menu_search_title: "Fonctionnalités Recherche :",
+      dock_menu_search_info: "Options dédiées aux résultats et étagères de recherche.",
+      dock_menu_sidebar_label: "Fonctionnalités Menu latéral",
+      dock_menu_sidebar_title: "Fonctionnalités Menu latéral :",
+      dock_menu_sidebar_info: "Paramètres dédiés à la barre latérale.",
       dock_menu_adv_label: "Avancé",
       dock_menu_adv_title: "Avancé :",
       dock_menu_adv_info: "Options avancées du dock (visibilité, etc.).",
@@ -262,6 +268,12 @@
       dock_menu_watch_label: "Video Features",
       dock_menu_watch_title: "Video Features:",
       dock_menu_watch_info: "Video page settings (/watch).",
+      dock_menu_search_label: "Search Features",
+      dock_menu_search_title: "Search Features:",
+      dock_menu_search_info: "Search-specific filters and shelves.",
+      dock_menu_sidebar_label: "Sidebar Features",
+      dock_menu_sidebar_title: "Sidebar Features:",
+      dock_menu_sidebar_info: "Sidebar entry visibility choices.",
       dock_menu_adv_label: "Advanced",
       dock_menu_adv_title: "Advanced:",
       dock_menu_adv_info: "Advanced dock options (visibility, etc.).",
@@ -402,6 +414,12 @@
       dock_menu_watch_label: "Video-Funktionen",
       dock_menu_watch_title: "Video-Funktionen:",
       dock_menu_watch_info: "Einstellungen für die Videoseite (/watch).",
+      dock_menu_search_label: "Suche-Funktionen",
+      dock_menu_search_title: "Suche-Funktionen:",
+      dock_menu_search_info: "Such-spezifische Optionen für Regale und Ergebnisse.",
+      dock_menu_sidebar_label: "Seitenleisten-Funktionen",
+      dock_menu_sidebar_title: "Seitenleisten-Funktionen:",
+      dock_menu_sidebar_info: "Einstellungen für Einträge im Seitenmenü.",
       dock_menu_adv_label: "Erweitert",
       dock_menu_adv_title: "Erweitert:",
       dock_menu_adv_info: "Erweiterte Dock-Optionen (Sichtbarkeit, etc.).",
@@ -542,6 +560,12 @@
       dock_menu_watch_label: "Funciones de Video",
       dock_menu_watch_title: "Funciones de Video:",
       dock_menu_watch_info: "Ajustes de la página de video (/watch).",
+      dock_menu_search_label: "Funciones de Búsqueda",
+      dock_menu_search_title: "Funciones de Búsqueda:",
+      dock_menu_search_info: "Opciones centradas en resultados y estantes de búsqueda.",
+      dock_menu_sidebar_label: "Funciones del Menú lateral",
+      dock_menu_sidebar_title: "Funciones del Menú lateral:",
+      dock_menu_sidebar_info: "Controles del acceso al menú lateral.",
       dock_menu_adv_label: "Avanzado",
       dock_menu_adv_title: "Avanzado:",
       dock_menu_adv_info: "Opciones avanzadas del dock (visibilidad, etc.).",
@@ -1667,6 +1691,9 @@
   const BTN_HEADER = "ytcf-btn-header"; // ✅ header toggle on /watch
   const BTN_MODE_STATUS = "ytcf-btn-mode-status";
   const BTN_MODE_CHANGE = "ytcf-btn-mode-change";
+  const BTN_MENU_HOME = "ytcf-btn-menu-home";
+  const BTN_MENU_SEARCH = "ytcf-btn-menu-search";
+  const BTN_MENU_SIDEBAR = "ytcf-btn-menu-sidebar";
   const BTN_MENU_WATCH = "ytcf-btn-menu-watch";
   const BTN_MENU_ADV = "ytcf-btn-menu-adv";
   const BTN_MENU_BACK = "ytcf-btn-menu-back";
@@ -1822,7 +1849,7 @@
   let lastDockKey = "";
   let dockIsHidden = false;
   let dockWasFullscreen = false;
-  let dockSubmenu = null; // "watch" | "advanced" | null
+  let dockSubmenu = null; // "home" | "search" | "sidebar" | "watch" | "advanced" | null
 
   function isFullscreenNow() {
     return !!(document.fullscreenElement || document.webkitFullscreenElement);
@@ -2078,15 +2105,25 @@
     return wrap;
   }
 
-  function makeMenuAccessButton(id, label, infoText, onClick) {
+  function makeMenuAccessButton(id, label, infoText, onClick, highlight = false) {
     const btn = makeDockButton(id, label);
+    if (highlight) {
+      btn.style.borderColor = "rgba(96,165,250,0.9)";
+      btn.style.boxShadow = "0 0 18px rgba(59,130,246,0.45)";
+      btn.style.background = "linear-gradient(180deg, rgba(59,130,246,0.2), rgba(0,0,0,0.8))";
+      btn.style.color = "#f8fbff";
+    }
     const show = () => showStickyToast(infoText, "info");
     const hide = () => hideToast();
     btn.addEventListener("mouseenter", show);
     btn.addEventListener("mouseleave", hide);
     btn.addEventListener("focus", show);
     btn.addEventListener("blur", hide);
-    btn.addEventListener("click", onClick);
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      onClick();
+    });
     return btn;
   }
 
@@ -2196,7 +2233,7 @@
     if (animate) animateDockIn(dock);
   }
 
-  function buildHomeRows() {
+function buildHomeRows() {
     return [
       makeToggleRow({
         actionId: "ytcf-btn-shorts-action",
@@ -2238,44 +2275,38 @@
         },
       }),
     ];
-  }
+}
 
-  function buildGeneralRows() {
-    return [
-      makeToggleRow({
-        actionId: "ytcf-btn-shorts-search-action",
-        stateId: "ytcf-btn-shorts-search-state",
-        key: KEY.shortsSearch,
-        label: T.dock_shorts_search_label,
-        actionOn: T.dock_shorts_search_action_on,
-        actionOff: T.dock_shorts_search_action_off,
-        infoText: T.dock_shorts_search_info,
-        onToggle: () => { scheduleRun(true); },
-      }),
-      makeToggleRow({
-        actionId: "ytcf-btn-sidebar-shorts-action",
-        stateId: "ytcf-btn-sidebar-shorts-state",
-        key: KEY.sidebarShorts,
-        label: T.dock_sidebar_shorts_label,
-        actionOn: T.dock_sidebar_shorts_action_on,
-        actionOff: T.dock_sidebar_shorts_action_off,
-        infoText: T.dock_sidebar_shorts_info,
-        onToggle: () => { scheduleRun(true); },
-      }),
-      makeToggleRow({
-        actionId: "ytcf-btn-block-shorts-action",
-        stateId: "ytcf-btn-block-shorts-state",
-        key: KEY.blockShortsPage,
-        label: T.dock_block_shorts_label,
-        actionOn: T.dock_block_shorts_action_on,
-        actionOff: T.dock_block_shorts_action_off,
-        infoText: T.dock_block_shorts_info,
-        onToggle: () => { maybeRedirectShortsPage(); scheduleRun(true); },
-      }),
-    ];
-  }
+function buildSearchRows() {
+  return [
+    makeToggleRow({
+      actionId: "ytcf-btn-shorts-search-action",
+      stateId: "ytcf-btn-shorts-search-state",
+      key: KEY.shortsSearch,
+      label: T.dock_shorts_search_label,
+      actionOn: T.dock_shorts_search_action_on,
+      actionOff: T.dock_shorts_search_action_off,
+      infoText: T.dock_shorts_search_info,
+      onToggle: () => { scheduleRun(true); },
+    }),
+  ];
+}
 
-  function buildWatchRows() {
+function buildSidebarRows() {
+  return [
+    makeToggleRow({
+      actionId: "ytcf-btn-sidebar-shorts-action",
+      stateId: "ytcf-btn-sidebar-shorts-state",
+      key: KEY.sidebarShorts,
+      label: T.dock_sidebar_shorts_label,
+      actionOn: T.dock_sidebar_shorts_action_on,
+      actionOff: T.dock_sidebar_shorts_action_off,
+      infoText: T.dock_sidebar_shorts_info,
+      onToggle: () => { scheduleRun(true); },
+    }),
+  ];
+}
+function buildWatchRows() {
     return [
       makeToggleRow({
         actionId: "ytcf-btn-lowpop-watch-action",
@@ -2307,22 +2338,86 @@
         },
       }),
     ];
-  }
+}
 
-  function buildAdvancedRows() {
-    return [
-      makeToggleRow({
-        actionId: "ytcf-btn-float-buttons-action",
-        stateId: "ytcf-btn-float-buttons-state",
-        key: KEY.floatButtons,
-        label: T.dock_float_buttons_label,
-        actionOn: T.dock_float_buttons_action_on,
-        actionOff: T.dock_float_buttons_action_off,
-        infoText: T.dock_float_buttons_info,
-        onToggle: () => { scheduleRun(true); },
-      }),
-    ];
-  }
+function buildAdvancedRows() {
+  return [
+    makeToggleRow({
+      actionId: "ytcf-btn-block-shorts-action",
+      stateId: "ytcf-btn-block-shorts-state",
+      key: KEY.blockShortsPage,
+      label: T.dock_block_shorts_label,
+      actionOn: T.dock_block_shorts_action_on,
+      actionOff: T.dock_block_shorts_action_off,
+      infoText: T.dock_block_shorts_info,
+      onToggle: () => { maybeRedirectShortsPage(); scheduleRun(true); },
+    }),
+    makeToggleRow({
+      actionId: "ytcf-btn-float-buttons-action",
+      stateId: "ytcf-btn-float-buttons-state",
+      key: KEY.floatButtons,
+      label: T.dock_float_buttons_label,
+      actionOn: T.dock_float_buttons_action_on,
+      actionOff: T.dock_float_buttons_action_off,
+      infoText: T.dock_float_buttons_info,
+      onToggle: () => { scheduleRun(true); },
+    }),
+  ];
+}
+
+function buildSubmenuButtons(highlightTarget) {
+  return [
+    makeMenuAccessButton(
+      BTN_MENU_HOME,
+      T.dock_menu_home_label,
+      T.dock_menu_home_info,
+      () => {
+        dockSubmenu = "home";
+        forceRenderDockNow();
+      },
+      highlightTarget === "home"
+    ),
+    makeMenuAccessButton(
+      BTN_MENU_SEARCH,
+      T.dock_menu_search_label,
+      T.dock_menu_search_info,
+      () => {
+        dockSubmenu = "search";
+        forceRenderDockNow();
+      },
+      highlightTarget === "search"
+    ),
+    makeMenuAccessButton(
+      BTN_MENU_SIDEBAR,
+      T.dock_menu_sidebar_label,
+      T.dock_menu_sidebar_info,
+      () => {
+        dockSubmenu = "sidebar";
+        forceRenderDockNow();
+      },
+      highlightTarget === "sidebar"
+    ),
+    makeMenuAccessButton(
+      BTN_MENU_WATCH,
+      T.dock_menu_watch_label,
+      T.dock_menu_watch_info,
+      () => {
+        dockSubmenu = "watch";
+        forceRenderDockNow();
+      },
+      highlightTarget === "watch"
+    ),
+    makeMenuAccessButton(
+      BTN_MENU_ADV,
+      T.dock_menu_adv_label,
+      T.dock_menu_adv_info,
+      () => {
+        dockSubmenu = "advanced";
+        forceRenderDockNow();
+      }
+    ),
+  ];
+}
 
   function scheduleShowDockAfterExitFS(dock) {
     if (fsRestoreTimer) clearTimeout(fsRestoreTimer);
@@ -2368,6 +2463,7 @@
     const onWatch = isWatch();
     const fs = isFullscreenNow();
 
+    const highlightTarget = isHome() ? "home" : (isSearch() ? "search" : (isWatch() ? "watch" : null));
     const stateKey = [
       "v4",
       getMode(),
@@ -2435,8 +2531,14 @@
       titleBtn.style.opacity = "1";
 
       items.push(backBtn, titleBtn);
-      if (dockSubmenu === "watch") items.push(...buildWatchRows());
-      else items.push(...buildAdvancedRows());
+      const submenuRows = {
+        home: buildHomeRows(),
+        search: buildSearchRows(),
+        sidebar: buildSidebarRows(),
+        watch: buildWatchRows(),
+        advanced: buildAdvancedRows(),
+      };
+      items.push(...(submenuRows[dockSubmenu] || []));
 
       dock.replaceChildren(...items);
       return;
@@ -2475,31 +2577,6 @@
         forceRenderDockNow();
       });
 
-      const rows = [
-        ...buildHomeRows(),
-        ...buildGeneralRows(),
-      ];
-
-      const watchBtn = makeMenuAccessButton(
-        BTN_MENU_WATCH,
-        T.dock_menu_watch_label,
-        T.dock_menu_watch_info,
-        () => {
-          dockSubmenu = "watch";
-          forceRenderDockNow();
-        }
-      );
-
-      const advancedBtn = makeMenuAccessButton(
-        BTN_MENU_ADV,
-        T.dock_menu_adv_label,
-        T.dock_menu_adv_info,
-        () => {
-          dockSubmenu = "advanced";
-          forceRenderDockNow();
-        }
-      );
-
       const modeGroup = makeModeStatusGroup();
       const items = [];
       if (shouldShowGoTop()) {
@@ -2508,7 +2585,7 @@
         goTopBtn.addEventListener("click", () => goTopNow(goTopBtn));
         items.push(goTopBtn);
       }
-      items.push(collapse, modeGroup, ...rows, watchBtn, advancedBtn);
+      items.push(collapse, modeGroup, ...buildSubmenuButtons(highlightTarget));
       dock.replaceChildren(...items);
       armDockIdle(dock, "home");
       if (getMode() === "perf") animateDockIn(dock);
@@ -2549,30 +2626,6 @@
         forceRenderDockNow();
       });
 
-      const rows = [
-        ...buildGeneralRows(),
-      ];
-
-      const watchBtn = makeMenuAccessButton(
-        BTN_MENU_WATCH,
-        T.dock_menu_watch_label,
-        T.dock_menu_watch_info,
-        () => {
-          dockSubmenu = "watch";
-          forceRenderDockNow();
-        }
-      );
-
-      const advancedBtn = makeMenuAccessButton(
-        BTN_MENU_ADV,
-        T.dock_menu_adv_label,
-        T.dock_menu_adv_info,
-        () => {
-          dockSubmenu = "advanced";
-          forceRenderDockNow();
-        }
-      );
-
       const modeGroup = makeModeStatusGroup();
       const items = [];
       if (shouldShowGoTop()) {
@@ -2581,9 +2634,26 @@
         goTopBtn.addEventListener("click", () => goTopNow(goTopBtn));
         items.push(goTopBtn);
       }
-      items.push(collapseW, modeGroup, ...rows, watchBtn, advancedBtn);
+      items.push(collapseW, modeGroup, ...buildSubmenuButtons(highlightTarget));
       dock.replaceChildren(...items);
       armDockIdle(dock, "watch");
+      if (getMode() === "perf") animateDockIn(dock);
+      return;
+    }
+
+    // ===== SEARCH (main menu fallback) =====
+    if (isSearch()) {
+      const modeGroup = makeModeStatusGroup();
+      const items = [];
+      if (shouldShowGoTop()) {
+        const goTopBtn = makeDockButton(BTN_GO_TOP, GO_TOP_ICON);
+        applyGoTopHover(goTopBtn);
+        goTopBtn.addEventListener("click", () => goTopNow(goTopBtn));
+        items.push(goTopBtn);
+      }
+      items.push(modeGroup, ...buildSubmenuButtons(highlightTarget));
+      dock.replaceChildren(...items);
+      armDockIdle(dock, "home");
       if (getMode() === "perf") animateDockIn(dock);
       return;
     }
