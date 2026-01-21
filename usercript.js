@@ -33,6 +33,7 @@
       mode_label: "Mode",
       mode_perf: "Performance",
       mode_eco: "Économie",
+      mode_ultra: "Ultra Éco",
 
       opt_shorts_home: "Masquer Shorts sur Accueil",
       opt_shorts_search: "Masquer Shorts dans la Recherche (étagère + résultats)",
@@ -63,6 +64,47 @@
 
       dock_header_on: "Header auto",
       dock_header_off: "Header normal",
+      dock_header_state_on: "Header auto hide : ON",
+      dock_header_state_off: "Header auto hide : OFF",
+      dock_header_label: "Header auto hide",
+      dock_header_action_on: "Toujours afficher le header",
+      dock_header_action_off: "Activer le masquage auto",
+
+      dock_shorts_state_on: "Filtre Shorts : ON",
+      dock_shorts_state_off: "Filtre Shorts : OFF",
+      dock_shorts_label: "Shorts masqués",
+      dock_shorts_action_on: "Afficher les Shorts",
+      dock_shorts_action_off: "Masquer les Shorts",
+
+      dock_lowpop_home_state_on: "Filtre impopulaire (Accueil) : ON",
+      dock_lowpop_home_state_off: "Filtre impopulaire (Accueil) : OFF",
+      dock_lowpop_home_label: "Vidéos peu populaires (Accueil)",
+      dock_lowpop_home_action_on: "Afficher les vidéos peu populaires",
+      dock_lowpop_home_action_off: "Masquer les vidéos peu populaires",
+
+      dock_lowpop_watch_state_on: "Filtre impopulaire (/watch) : ON",
+      dock_lowpop_watch_state_off: "Filtre impopulaire (/watch) : OFF",
+      dock_lowpop_watch_label: "Vidéos peu populaires (/watch)",
+      dock_lowpop_watch_action_on: "Afficher les recommandations peu populaires",
+      dock_lowpop_watch_action_off: "Masquer les recommandations peu populaires",
+
+      dock_mode_state_perf: "Mode : Performance",
+      dock_mode_state_eco: "Mode : Économie",
+      dock_mode_label: "Mode éco",
+      dock_mode_action_perf: "Passer en mode Économie",
+      dock_mode_action_eco: "Passer en mode Performance",
+      dock_mode_status_ultra: "Mode : Ultra Éco",
+      dock_mode_status_eco: "Mode : Éco",
+      dock_mode_status_perf: "Mode : Performance",
+      dock_mode_change: "Changer mode",
+      dock_mode_back: "Retour",
+      dock_mode_select: "Sélectionner votre mode :",
+      dock_mode_btn_ultra: "Ultra Éco",
+      dock_mode_btn_eco: "Éco",
+      dock_mode_btn_perf: "Performance",
+      dock_mode_info_ultra: "Ultra Éco :\n- Désactive filtres impopulaires\n- Désactive auto-hide header\n- Animations minimales\n- Moins de scans automatiques",
+      dock_mode_info_eco: "Éco :\n- Scans en idle\n- Animations réduites\n- Fonctions standard",
+      dock_mode_info_perf: "Performance :\n- Observers en temps réel\n- Animations complètes\n- Toutes les fonctions",
 
       // ✅ CLÉ MANQUANTE AJOUTÉE
       dock_go_top: "Allez en haut de la page",
@@ -71,6 +113,7 @@
       toast_reset: "Réglages réinitialisés",
       toast_mode_perf: "Mode : Performance",
       toast_mode_eco: "Mode : Économie de ressources",
+      toast_mode_ultra: "Mode : Ultra Éco",
       toast_btn_home_on: "Filtre accueil : activé (bouton)",
       toast_btn_home_off: "Filtre accueil : désactivé (bouton)",
       toast_btn_watch_on: "Filtre /watch : activé (bouton)",
@@ -91,6 +134,7 @@
       mode_label: "Mode",
       mode_perf: "Performance",
       mode_eco: "Saver",
+      mode_ultra: "Ultra Saver",
 
       opt_shorts_home: "Hide Shorts on Home",
       opt_shorts_search: "Hide Shorts in Search (shelf + results)",
@@ -121,6 +165,47 @@
 
       dock_header_on: "Header auto",
       dock_header_off: "Header normal",
+      dock_header_state_on: "Header auto-hide: ON",
+      dock_header_state_off: "Header auto-hide: OFF",
+      dock_header_label: "Header auto-hide",
+      dock_header_action_on: "Keep the header always visible",
+      dock_header_action_off: "Enable auto-hide",
+
+      dock_shorts_state_on: "Shorts filter: ON",
+      dock_shorts_state_off: "Shorts filter: OFF",
+      dock_shorts_label: "Shorts hidden",
+      dock_shorts_action_on: "Show Shorts",
+      dock_shorts_action_off: "Hide Shorts",
+
+      dock_lowpop_home_state_on: "Low-pop filter (Home): ON",
+      dock_lowpop_home_state_off: "Low-pop filter (Home): OFF",
+      dock_lowpop_home_label: "Low-pop videos (Home)",
+      dock_lowpop_home_action_on: "Show unpopular videos",
+      dock_lowpop_home_action_off: "Hide unpopular videos",
+
+      dock_lowpop_watch_state_on: "Low-pop filter (/watch): ON",
+      dock_lowpop_watch_state_off: "Low-pop filter (/watch): OFF",
+      dock_lowpop_watch_label: "Low-pop recs (/watch)",
+      dock_lowpop_watch_action_on: "Show unpopular recommendations",
+      dock_lowpop_watch_action_off: "Hide unpopular recommendations",
+
+      dock_mode_state_perf: "Mode: Performance",
+      dock_mode_state_eco: "Mode: Saver",
+      dock_mode_label: "Eco mode",
+      dock_mode_action_perf: "Switch to Saver mode",
+      dock_mode_action_eco: "Switch to Performance mode",
+      dock_mode_status_ultra: "Mode: Ultra Saver",
+      dock_mode_status_eco: "Mode: Saver",
+      dock_mode_status_perf: "Mode: Performance",
+      dock_mode_change: "Change mode",
+      dock_mode_back: "Back",
+      dock_mode_select: "Select your mode:",
+      dock_mode_btn_ultra: "Ultra Saver",
+      dock_mode_btn_eco: "Saver",
+      dock_mode_btn_perf: "Performance",
+      dock_mode_info_ultra: "Ultra Saver:\n- Disables low-pop filters\n- Disables header auto-hide\n- Minimal animations\n- Fewer automatic scans",
+      dock_mode_info_eco: "Saver:\n- Idle-time scans\n- Reduced animations\n- Standard features",
+      dock_mode_info_perf: "Performance:\n- Real-time observers\n- Full animations\n- All features",
 
       // ✅ CLÉ MANQUANTE AJOUTÉE
       dock_go_top: "Go to the top of the page",
@@ -129,6 +214,7 @@
       toast_reset: "Settings reset",
       toast_mode_perf: "Mode: Performance",
       toast_mode_eco: "Mode: Resource Saver",
+      toast_mode_ultra: "Mode: Ultra Saver",
       toast_btn_home_on: "Home filter: ON (button)",
       toast_btn_home_off: "Home filter: OFF (button)",
       toast_btn_watch_on: "Watch filter: ON (button)",
@@ -149,6 +235,7 @@
       mode_label: "Modus",
       mode_perf: "Leistung",
       mode_eco: "Sparen",
+      mode_ultra: "Ultra Sparen",
 
       opt_shorts_home: "Shorts auf Startseite ausblenden",
       opt_shorts_search: "Shorts in Suche ausblenden (Regal + Ergebnisse)",
@@ -179,6 +266,47 @@
 
       dock_header_on: "Header auto",
       dock_header_off: "Header normal",
+      dock_header_state_on: "Header Auto-Hide: EIN",
+      dock_header_state_off: "Header Auto-Hide: AUS",
+      dock_header_label: "Header Auto-Ausblenden",
+      dock_header_action_on: "Header immer anzeigen",
+      dock_header_action_off: "Auto-Ausblenden aktivieren",
+
+      dock_shorts_state_on: "Shorts-Filter: EIN",
+      dock_shorts_state_off: "Shorts-Filter: AUS",
+      dock_shorts_label: "Shorts ausgeblendet",
+      dock_shorts_action_on: "Shorts anzeigen",
+      dock_shorts_action_off: "Shorts ausblenden",
+
+      dock_lowpop_home_state_on: "Unbeliebt-Filter (Home): EIN",
+      dock_lowpop_home_state_off: "Unbeliebt-Filter (Home): AUS",
+      dock_lowpop_home_label: "Unbeliebte Videos (Home)",
+      dock_lowpop_home_action_on: "Unbeliebte Videos anzeigen",
+      dock_lowpop_home_action_off: "Unbeliebte Videos ausblenden",
+
+      dock_lowpop_watch_state_on: "Unbeliebt-Filter (/watch): EIN",
+      dock_lowpop_watch_state_off: "Unbeliebt-Filter (/watch): AUS",
+      dock_lowpop_watch_label: "Unbeliebte Empfehlungen (/watch)",
+      dock_lowpop_watch_action_on: "Unbeliebte Empfehlungen anzeigen",
+      dock_lowpop_watch_action_off: "Unbeliebte Empfehlungen ausblenden",
+
+      dock_mode_state_perf: "Modus: Leistung",
+      dock_mode_state_eco: "Modus: Sparen",
+      dock_mode_label: "Sparmodus",
+      dock_mode_action_perf: "In Sparmodus wechseln",
+      dock_mode_action_eco: "In Leistungsmodus wechseln",
+      dock_mode_status_ultra: "Modus: Ultra Sparen",
+      dock_mode_status_eco: "Modus: Sparen",
+      dock_mode_status_perf: "Modus: Leistung",
+      dock_mode_change: "Modus ändern",
+      dock_mode_back: "Zurück",
+      dock_mode_select: "Modus auswählen:",
+      dock_mode_btn_ultra: "Ultra Sparen",
+      dock_mode_btn_eco: "Sparen",
+      dock_mode_btn_perf: "Leistung",
+      dock_mode_info_ultra: "Ultra Sparen:\n- Unbeliebt-Filter aus\n- Header Auto-Hide aus\n- Minimale Animationen\n- Weniger automatische Scans",
+      dock_mode_info_eco: "Sparen:\n- Scans im Leerlauf\n- Reduzierte Animationen\n- Standardfunktionen",
+      dock_mode_info_perf: "Leistung:\n- Echtzeit-Observer\n- Volle Animationen\n- Alle Funktionen",
 
       // ✅ CLÉ MANQUANTE AJOUTÉE
       dock_go_top: "Zur Seitenoberkante",
@@ -187,6 +315,7 @@
       toast_reset: "Einstellungen zurückgesetzt",
       toast_mode_perf: "Modus: Leistung",
       toast_mode_eco: "Modus: Ressourcen sparen",
+      toast_mode_ultra: "Modus: Ultra Sparen",
       toast_btn_home_on: "Startseitenfilter: EIN (Button)",
       toast_btn_home_off: "Startseitenfilter: AUS (Button)",
       toast_btn_watch_on: "Watch-Filter: EIN (Button)",
@@ -207,6 +336,7 @@
       mode_label: "Modo",
       mode_perf: "Rendimiento",
       mode_eco: "Ahorro",
+      mode_ultra: "Ultra Ahorro",
 
       opt_shorts_home: "Ocultar Shorts en Inicio",
       opt_shorts_search: "Ocultar Shorts en Búsqueda (estante + resultados)",
@@ -237,6 +367,47 @@
 
       dock_header_on: "Header auto",
       dock_header_off: "Header normal",
+      dock_header_state_on: "Auto-ocultar header: ON",
+      dock_header_state_off: "Auto-ocultar header: OFF",
+      dock_header_label: "Auto-ocultar header",
+      dock_header_action_on: "Mostrar header siempre",
+      dock_header_action_off: "Activar auto-ocultado",
+
+      dock_shorts_state_on: "Filtro Shorts: ON",
+      dock_shorts_state_off: "Filtro Shorts: OFF",
+      dock_shorts_label: "Shorts ocultos",
+      dock_shorts_action_on: "Mostrar Shorts",
+      dock_shorts_action_off: "Ocultar Shorts",
+
+      dock_lowpop_home_state_on: "Filtro poco popular (Inicio): ON",
+      dock_lowpop_home_state_off: "Filtro poco popular (Inicio): OFF",
+      dock_lowpop_home_label: "Videos poco populares (Inicio)",
+      dock_lowpop_home_action_on: "Mostrar videos poco populares",
+      dock_lowpop_home_action_off: "Ocultar videos poco populares",
+
+      dock_lowpop_watch_state_on: "Filtro poco popular (/watch): ON",
+      dock_lowpop_watch_state_off: "Filtro poco popular (/watch): OFF",
+      dock_lowpop_watch_label: "Recomendaciones poco populares (/watch)",
+      dock_lowpop_watch_action_on: "Mostrar recomendaciones poco populares",
+      dock_lowpop_watch_action_off: "Ocultar recomendaciones poco populares",
+
+      dock_mode_state_perf: "Modo: Rendimiento",
+      dock_mode_state_eco: "Modo: Ahorro",
+      dock_mode_label: "Modo ahorro",
+      dock_mode_action_perf: "Cambiar a modo Ahorro",
+      dock_mode_action_eco: "Cambiar a modo Rendimiento",
+      dock_mode_status_ultra: "Modo: Ultra Ahorro",
+      dock_mode_status_eco: "Modo: Ahorro",
+      dock_mode_status_perf: "Modo: Rendimiento",
+      dock_mode_change: "Cambiar modo",
+      dock_mode_back: "Volver",
+      dock_mode_select: "Selecciona tu modo:",
+      dock_mode_btn_ultra: "Ultra Ahorro",
+      dock_mode_btn_eco: "Ahorro",
+      dock_mode_btn_perf: "Rendimiento",
+      dock_mode_info_ultra: "Ultra Ahorro:\n- Desactiva filtros poco populares\n- Desactiva auto-ocultado del header\n- Animaciones mínimas\n- Menos escaneos automáticos",
+      dock_mode_info_eco: "Ahorro:\n- Escaneos en idle\n- Animaciones reducidas\n- Funciones estándar",
+      dock_mode_info_perf: "Rendimiento:\n- Observers en tiempo real\n- Animaciones completas\n- Todas las funciones",
 
       // ✅ CLÉ MANQUANTE AJOUTÉE
       dock_go_top: "Ir al inicio de la página",
@@ -245,6 +416,7 @@
       toast_reset: "Ajustes restablecidos",
       toast_mode_perf: "Modo: Rendimiento",
       toast_mode_eco: "Modo: Ahorro de recursos",
+      toast_mode_ultra: "Modo: Ultra Ahorro",
       toast_btn_home_on: "Filtro de inicio: ACTIVADO (botón)",
       toast_btn_home_off: "Filtro de inicio: DESACTIVADO (botón)",
       toast_btn_watch_on: "Filtro de /watch: ACTIVADO (botón)",
@@ -268,7 +440,7 @@
    * SETTINGS (Unified)
    * ========================================================= */
   const KEY = {
-    mode: "ytcf_mode", // "eco" | "perf"
+    mode: "ytcf_mode", // "eco" | "perf" | "ultra"
 
     shortsHome: "ytcf_shorts_home",
     shortsSearch: "ytcf_shorts_search",
@@ -318,10 +490,37 @@
 
   function getMode() {
     const v = String(getVal(KEY.mode) || DEFAULTS[KEY.mode]);
-    return (v === "perf") ? "perf" : "eco";
+    if (v === "perf" || v === "ultra") return v;
+    return "eco";
   }
   function setMode(m) {
-    setVal(KEY.mode, (m === "perf") ? "perf" : "eco");
+    if (m === "perf" || m === "ultra") setVal(KEY.mode, m);
+    else setVal(KEY.mode, "eco");
+  }
+
+  let savedUltraPrefs = null;
+  function isUltraMode() {
+    return getMode() === "ultra";
+  }
+  function enterUltraMode() {
+    if (!savedUltraPrefs) {
+      savedUltraPrefs = {
+        lowpopHome: getBool(KEY.lowpopHome),
+        lowpopWatch: getBool(KEY.lowpopWatch),
+        headerHoverWatch: getBool(KEY.headerHoverWatch),
+      };
+    }
+    setBool(KEY.lowpopHome, false);
+    setBool(KEY.lowpopWatch, false);
+    setBool(KEY.headerHoverWatch, false);
+    headerDisable();
+  }
+  function exitUltraMode() {
+    if (!savedUltraPrefs) return;
+    setBool(KEY.lowpopHome, savedUltraPrefs.lowpopHome);
+    setBool(KEY.lowpopWatch, savedUltraPrefs.lowpopWatch);
+    setBool(KEY.headerHoverWatch, savedUltraPrefs.headerHoverWatch);
+    savedUltraPrefs = null;
   }
 
   let uiCollapsed = !!getVal(KEY.uiCollapsed);
@@ -344,12 +543,12 @@
     on:   { bg: "#0B1F16", border: "#1F6F4A", text: "#D8F6E8", accent: "#2DD4BF" },
     off:  { bg: "#220D0D", border: "#7F1D1D", text: "#FFE4E6", accent: "#FB7185" },
     info: { bg: "#0B1220", border: "#1E3A8A", text: "#E0E7FF", accent: "#60A5FA" },
+    perf: { bg: "#0B1220", border: "#2563EB", text: "#E0E7FF", accent: "#60A5FA" },
+    eco:  { bg: "#0B1F16", border: "#16A34A", text: "#D8F6E8", accent: "#22C55E" },
+    ultra:{ bg: "#1F1208", border: "#F97316", text: "#FFE9D1", accent: "#FDBA74" },
   };
 
-  function showToast(message, kind = "info") {
-    if (!message) return;
-    const theme = TOAST_THEME[kind] || TOAST_THEME.info;
-
+  function ensureToast() {
     let toast = document.getElementById(TOAST_ID);
     if (!toast) {
       toast = document.createElement("div");
@@ -390,9 +589,22 @@
       toast.appendChild(text);
       document.documentElement.appendChild(toast);
     }
-
     const bar = document.getElementById(`${TOAST_ID}-bar`);
     const text = document.getElementById(`${TOAST_ID}-text`);
+    return { toast, bar, text };
+  }
+
+  function hideToast() {
+    const toast = document.getElementById(TOAST_ID);
+    if (!toast) return;
+    toast.style.opacity = "0";
+    toast.style.transform = "translateY(8px)";
+  }
+
+  function showToast(message, kind = "info", durationMs = 2000) {
+    if (!message) return;
+    const theme = TOAST_THEME[kind] || TOAST_THEME.info;
+    const { toast, bar, text } = ensureToast();
 
     toast.style.background = theme.bg;
     toast.style.border = `1px solid ${theme.border}`;
@@ -407,10 +619,15 @@
     toast.style.transform = "translateY(0)";
 
     clearTimeout(showToast._t);
-    showToast._t = setTimeout(() => {
-      toast.style.opacity = "0";
-      toast.style.transform = "translateY(8px)";
-    }, 2000);
+    if (durationMs > 0) {
+      showToast._t = setTimeout(() => {
+        hideToast();
+      }, durationMs);
+    }
+  }
+
+  function showStickyToast(message, kind = "info") {
+    showToast(message, kind, 0);
   }
 
   function statusLabel(on) {
@@ -831,9 +1048,18 @@
   const YT_HDR_STYLE_ID = "ytcf-hover-masthead-style";
   const YT_HDR_CLASS = "__ytcfHoverMasthead";
   const YT_HDR_SHOW_ZONE = 60;
+  const YT_HDR_HIDE_DELAY = 1200;
+  const YT_HDR_SEARCH_GRACE_MS = 1500;
 
   let headerHoverEnabled = false;
   let headerPinned = false;
+  let headerHideTimer = null;
+  let searchActiveUntil = 0;
+  let searchSuggestObserver = null;
+  let searchSuggestEl = null;
+  let searchBoxEl = null;
+  let searchInputEl = null;
+  let headerPinRaf = 0;
 
   function ensureHeaderStyle() {
     if (document.getElementById(YT_HDR_STYLE_ID)) return;
@@ -869,8 +1095,16 @@
     document.documentElement.appendChild(style);
   }
 
+  let headerEl = null;
+  function getHeaderEl() {
+    if (!headerEl || !headerEl.isConnected) {
+      headerEl = document.querySelector("ytd-masthead");
+    }
+    return headerEl;
+  }
+
   function headerEnable() {
-    const header = document.querySelector("ytd-masthead");
+    const header = getHeaderEl();
     const app = document.querySelector("ytd-app");
     if (!header || !app) return;
 
@@ -893,14 +1127,28 @@
     if (pageManager) pageManager.style.marginTop = "0px";
 
     headerHoverEnabled = true;
+    bindSearchSuggestionsObserver();
   }
 
   function headerDisable() {
-    const header = document.querySelector("ytd-masthead");
+    const header = getHeaderEl();
     const app = document.querySelector("ytd-app");
     const pageManager = document.querySelector("ytd-page-manager");
 
+    if (headerHideTimer) {
+      clearTimeout(headerHideTimer);
+      headerHideTimer = null;
+    }
+    if (headerPinRaf) {
+      cancelAnimationFrame(headerPinRaf);
+      headerPinRaf = 0;
+    }
+    searchActiveUntil = 0;
+    unbindSearchSuggestionsObserver();
+    headerPinned = false;
+
     if (header) {
+      header.style.transform = "translateY(0)";
       header.classList.remove(YT_HDR_CLASS);
       header.style.position = "";
       header.style.top = "";
@@ -921,20 +1169,151 @@
     }
 
     headerHoverEnabled = false;
-    headerPinned = false;
   }
 
   function applyHeaderHoverNow() {
+    if (isUltraMode()) {
+      if (headerHoverEnabled) headerDisable();
+      return;
+    }
     const want = isWatch() && getBool(KEY.headerHoverWatch);
     if (want) headerEnable();
     else headerDisable();
+    updateHeaderPinnedFromSearch();
+  }
+
+  function getActiveElementDeep(root) {
+    let active = root.activeElement;
+    while (active && active.shadowRoot && active.shadowRoot.activeElement) {
+      active = active.shadowRoot.activeElement;
+    }
+    return active;
+  }
+
+  function getSearchBox() {
+    if (!searchBoxEl || !searchBoxEl.isConnected) {
+      searchBoxEl = document.querySelector("ytd-searchbox");
+    }
+    return searchBoxEl;
   }
 
   function getSearchInput() {
-    return (
-      document.querySelector("ytd-searchbox input#search") ||
-      document.querySelector("ytd-searchbox input")
-    );
+    if (!searchInputEl || !searchInputEl.isConnected) {
+      const box = getSearchBox();
+      searchInputEl =
+        box?.querySelector("input#search") ||
+        box?.querySelector("input") ||
+        document.querySelector("ytd-searchbox input#search") ||
+        document.querySelector("ytd-searchbox input");
+    }
+    return searchInputEl;
+  }
+
+  function getSearchSuggestionsElement() {
+    if (searchSuggestEl && searchSuggestEl.isConnected) return searchSuggestEl;
+    const box = getSearchBox();
+    searchSuggestEl =
+      box?.shadowRoot?.querySelector("ytd-searchbox-suggestions") ||
+      document.querySelector("ytd-searchbox-suggestions");
+    return searchSuggestEl;
+  }
+
+  function isSearchSuggestionsOpen() {
+    const el = getSearchSuggestionsElement();
+    if (!el) return false;
+    if (el.hasAttribute("hidden")) return false;
+    if (el.getAttribute("aria-hidden") === "true") return false;
+    if (el.style.display === "none" || el.style.visibility === "hidden") return false;
+    const inlineStyle = (el.getAttribute("style") || "").toLowerCase();
+    if (inlineStyle.includes("display: none") || inlineStyle.includes("visibility: hidden")) return false;
+    if (el.hasAttribute("open")) return true;
+    return true;
+  }
+
+  function bumpSearchActive() {
+    searchActiveUntil = Date.now() + YT_HDR_SEARCH_GRACE_MS;
+  }
+
+  function isSearchActiveGrace() {
+    return Date.now() < searchActiveUntil;
+  }
+
+  function getSearchBoxFocused(searchBox) {
+    if (!searchBox) return false;
+    if (searchBox.matches?.(":focus-within")) return true;
+    const active = searchBox.shadowRoot?.activeElement;
+    return !!(active && searchBox.contains(active));
+  }
+
+  function isSearchBoxActive() {
+    const searchBox = getSearchBox();
+    if (isSearchSuggestionsOpen()) return true;
+    if (!searchBox) return isSearchActiveGrace();
+
+    if (
+      searchBox.hasAttribute("focused") ||
+      searchBox.hasAttribute("has-focus") ||
+      searchBox.hasAttribute("is-focused") ||
+      searchBox.hasAttribute("active")
+    ) {
+      return true;
+    }
+
+    if (getSearchBoxFocused(searchBox)) return true;
+
+    const input = getSearchInput();
+    if (input && document.activeElement === input) return true;
+
+    const active = getActiveElementDeep(document);
+    if (active && (active === searchBox || searchBox.contains(active))) return true;
+    if (input && (input === active || input.contains?.(active))) return true;
+
+    return isSearchActiveGrace();
+  }
+
+  function isSearchInteractionActive() {
+    const input = getSearchInput();
+    if (input && (document.activeElement === input || input.contains?.(document.activeElement))) return true;
+    return isSearchSuggestionsOpen();
+  }
+
+  function eventFromSearchUI(e) {
+    const path = e.composedPath?.() || [];
+    for (const node of path) {
+      if (!node || node.nodeType !== 1) continue;
+      const tag = node.tagName?.toLowerCase();
+      if (tag === "ytd-searchbox" || tag === "ytd-searchbox-suggestions" || tag === "yt-searchbox") return true;
+      if (node.id === "search") return true;
+    }
+    return false;
+  }
+
+  function bindSearchSuggestionsObserver() {
+    const el = getSearchSuggestionsElement();
+    if (!el) return;
+    if (searchSuggestObserver && searchSuggestEl === el) return;
+
+    if (searchSuggestObserver) {
+      searchSuggestObserver.disconnect();
+      searchSuggestObserver = null;
+    }
+
+    searchSuggestEl = el;
+    searchSuggestObserver = new MutationObserver(() => {
+      bumpSearchActive();
+      scheduleHeaderPinUpdate();
+    });
+    searchSuggestObserver.observe(el, {
+      attributes: true,
+      attributeFilter: ["hidden", "open", "aria-hidden"],
+    });
+  }
+
+  function unbindSearchSuggestionsObserver() {
+    if (!searchSuggestObserver) return;
+    searchSuggestObserver.disconnect();
+    searchSuggestObserver = null;
+    searchSuggestEl = null;
   }
 
   function updateHeaderPinnedFromSearch() {
@@ -942,44 +1321,72 @@
       headerPinned = false;
       return;
     }
-    const input = getSearchInput();
-    if (!input) {
-      headerPinned = false;
-      return;
-    }
-    const hasText = !!input.value && input.value.trim().length > 0;
-    const focused = (document.activeElement === input) || input.contains?.(document.activeElement);
-    headerPinned = hasText && focused;
+    bindSearchSuggestionsObserver();
+    headerPinned = isSearchBoxActive();
     if (headerPinned) {
-      const header = document.querySelector("ytd-masthead");
+      const header = getHeaderEl();
       if (header) header.style.transform = "translateY(0)";
     }
   }
 
+  function scheduleHeaderPinUpdate() {
+    if (headerPinRaf) return;
+    headerPinRaf = requestAnimationFrame(() => {
+      headerPinRaf = 0;
+      updateHeaderPinnedFromSearch();
+    });
+  }
+
   // Mouse listener ONCE
   let headerMouseBound = false;
+  let headerMouseTicking = false;
+  let headerMouseY = 0;
   function bindHeaderMouse() {
     if (headerMouseBound) return;
     headerMouseBound = true;
 
     document.addEventListener("mousemove", (e) => {
-      if (!headerHoverEnabled) return;
-      if (headerPinned) return;
-      const header = document.querySelector("ytd-masthead");
-      if (!header) return;
+      if (!headerHoverEnabled || headerPinned) return;
+      headerMouseY = e.clientY;
+      if (headerMouseTicking) return;
+      headerMouseTicking = true;
+      requestAnimationFrame(() => {
+        headerMouseTicking = false;
+        if (!headerHoverEnabled || headerPinned) return;
+        const header = getHeaderEl();
+        if (!header) return;
 
-      header.style.transform = (e.clientY <= YT_HDR_SHOW_ZONE) ? "translateY(0)" : "translateY(-100%)";
+        if (headerMouseY <= YT_HDR_SHOW_ZONE) {
+          if (headerHideTimer) clearTimeout(headerHideTimer);
+          headerHideTimer = null;
+          header.style.transform = "translateY(0)";
+          return;
+        }
+
+        if (headerHideTimer) return;
+        headerHideTimer = setTimeout(() => {
+          headerHideTimer = null;
+          if (!headerHoverEnabled || headerPinned) return;
+          header.style.transform = "translateY(-100%)";
+        }, YT_HDR_HIDE_DELAY);
+      });
     }, { passive: true });
 
     document.addEventListener("scroll", () => {
       if (!headerHoverEnabled || !headerPinned || !isWatch()) return;
+      if (isSearchSuggestionsOpen() || isSearchActiveGrace()) return;
       headerPinned = false;
     }, { passive: true });
 
     document.addEventListener("click", (e) => {
-      if (!headerHoverEnabled || !headerPinned || !isWatch()) return;
-      const input = getSearchInput();
-      if (input && (e.target === input || input.contains?.(e.target))) return;
+      if (!headerHoverEnabled || !isWatch()) return;
+      if (eventFromSearchUI(e)) {
+        bumpSearchActive();
+        bindSearchSuggestionsObserver();
+        scheduleHeaderPinUpdate();
+        return;
+      }
+      if (!headerPinned) return;
       headerPinned = false;
     }, true);
 
@@ -987,21 +1394,34 @@
       if (!headerHoverEnabled || !isWatch()) return;
       const input = getSearchInput();
       if (!input || e.target !== input) return;
-      updateHeaderPinnedFromSearch();
+      bumpSearchActive();
+      bindSearchSuggestionsObserver();
+      scheduleHeaderPinUpdate();
     }, true);
 
     document.addEventListener("focusin", (e) => {
       if (!headerHoverEnabled || !isWatch()) return;
       const input = getSearchInput();
       if (!input || e.target !== input) return;
-      updateHeaderPinnedFromSearch();
+      bumpSearchActive();
+      bindSearchSuggestionsObserver();
+      scheduleHeaderPinUpdate();
     }, true);
 
     document.addEventListener("focusout", (e) => {
       if (!headerHoverEnabled || !isWatch()) return;
       const input = getSearchInput();
       if (!input || e.target !== input) return;
+      if (isSearchSuggestionsOpen() || isSearchActiveGrace()) return;
       headerPinned = false;
+    }, true);
+
+    document.addEventListener("pointerdown", (e) => {
+      if (!headerHoverEnabled || !isWatch()) return;
+      if (!eventFromSearchUI(e)) return;
+      bumpSearchActive();
+      bindSearchSuggestionsObserver();
+      scheduleHeaderPinUpdate();
     }, true);
   }
 
@@ -1075,7 +1495,6 @@
     };
 
     dock.addEventListener("mouseenter", wake, true);
-    dock.addEventListener("mousemove", wake, true);
     dock.addEventListener("mousedown", wake, true);
     dock.addEventListener("focusin", wake, true);
     dock.addEventListener("touchstart", wake, { passive: true, capture: true });
@@ -1084,13 +1503,7 @@
   /* =========================================================
    * AUTO-SHRINK “Déplier / Expand” button (eco/perf)
    * ========================================================= */
-  let expandAutoTimer = null;
-  let expandIsShrunk = false;
-
-  function clearExpandAutoTimer() {
-    if (expandAutoTimer) clearTimeout(expandAutoTimer);
-    expandAutoTimer = null;
-  }
+  // (per-button timers are handled inside applyExpandAutoShrink)
 
   const DOCK_ID = "ytcf-dock";
   const BTN_SHORTS = "ytcf-btn-shorts";
@@ -1101,12 +1514,19 @@
   const BTN_WATCH_COLLAPSE = "ytcf-btn-watch-collapse";
   const BTN_WATCH_EXPAND = "ytcf-btn-watch-expand";
   const BTN_HEADER = "ytcf-btn-header"; // ✅ header toggle on /watch
+  const BTN_MODE_STATUS = "ytcf-btn-mode-status";
+  const BTN_MODE_CHANGE = "ytcf-btn-mode-change";
+  const BTN_MODE_BACK = "ytcf-btn-mode-back";
+  const BTN_MODE_TITLE = "ytcf-btn-mode-title";
+  const BTN_MODE_ULTRA = "ytcf-btn-mode-ultra";
+  const BTN_MODE_ECO = "ytcf-btn-mode-eco";
+  const BTN_MODE_PERF = "ytcf-btn-mode-perf";
 
   // ✅ NEW: Go top (only when dock collapsed & user scrolled enough)
   const BTN_GO_TOP = "ytcf-btn-go-top";
   const GO_TOP_ICON = "⬆️";
 
-  function applyExpandAutoShrink(btn) {
+  function applyExpandAutoShrink(btn, opts = {}) {
     if (!btn) return;
 
     const isExpand =
@@ -1116,26 +1536,23 @@
     if (!isExpand) return;
     if (btn.dataset.ytcfExpandShrinkInit === "1") return;
     btn.dataset.ytcfExpandShrinkInit = "1";
+    const allowExpand = opts.allowExpand !== false;
 
-    const perf = (getMode() === "perf");
-    const delay = perf ? 2000 : 5000;
-
+    const perf = getMode() === "perf";
     const SHRUNK_CHAR = "⚙️";
     const SHRUNK_W = "28px";
 
-    if (perf) {
-      btn.style.transition =
-        "width 180ms ease, max-width 180ms ease, padding 180ms ease, opacity 180ms ease";
-      btn.style.willChange = "width, max-width, padding, opacity";
-    } else {
-      btn.style.transition = "none";
-    }
+    btn.style.transition = perf
+      ? "width 160ms ease, max-width 160ms ease, padding 160ms ease"
+      : "none";
+    btn.style.willChange = perf ? "width, max-width, padding" : "";
 
     const fullLabel = T.dock_expand;
+    let isShrunk = false;
 
     function shrinkNow() {
       if (!btn.isConnected) return;
-      if (expandIsShrunk) return;
+      if (isShrunk) return;
 
       btn.dataset.ytcfFullText = btn.dataset.ytcfFullText || btn.textContent;
 
@@ -1144,16 +1561,16 @@
       btn.style.maxWidth = SHRUNK_W;
       btn.style.paddingLeft = "0";
       btn.style.paddingRight = "0";
-      btn.style.opacity = "0.85";
       btn.title = fullLabel;
       btn.setAttribute("aria-label", fullLabel);
 
-      expandIsShrunk = true;
+      isShrunk = true;
     }
 
     function expandNow() {
       if (!btn.isConnected) return;
-      if (!expandIsShrunk) return;
+      if (!isShrunk) return;
+      if (!allowExpand) return;
 
       const full = btn.dataset.ytcfFullText || fullLabel;
 
@@ -1162,32 +1579,18 @@
       btn.style.maxWidth = "unset";
       btn.style.paddingLeft = "12px";
       btn.style.paddingRight = "12px";
-      btn.style.opacity = "1";
       btn.removeAttribute("aria-label");
       btn.title = "";
 
-      expandIsShrunk = false;
-    }
-
-    function scheduleShrink() {
-      clearExpandAutoTimer();
-      expandAutoTimer = setTimeout(() => {
-        shrinkNow();
-      }, delay);
+      isShrunk = false;
     }
 
     // start directly shrunk
     shrinkNow();
-    scheduleShrink();
-
-    btn.addEventListener("mouseenter", () => {
-      clearExpandAutoTimer();
-      expandNow();
-    });
-
-    btn.addEventListener("mouseleave", scheduleShrink);
+    btn.addEventListener("mouseenter", expandNow);
+    btn.addEventListener("mouseleave", shrinkNow);
     btn.addEventListener("focus", expandNow);
-    btn.addEventListener("blur", scheduleShrink);
+    btn.addEventListener("blur", shrinkNow);
   }
 
   // ✅ NEW: show only when user really scrolled
@@ -1293,10 +1696,11 @@
           onScrollMaybeUpdateDock();
         });
       } else {
+        const delay = isUltraMode() ? 320 : 180;
         setTimeout(() => {
           scrollTicking = false;
           onScrollMaybeUpdateDock();
-        }, 180);
+        }, delay);
       }
     }, { passive: true });
   }
@@ -1307,6 +1711,7 @@
   let lastDockKey = "";
   let dockIsHidden = false;
   let dockWasFullscreen = false;
+  let dockModeMenuOpen = false;
 
   function isFullscreenNow() {
     return !!(document.fullscreenElement || document.webkitFullscreenElement);
@@ -1342,14 +1747,183 @@
     btn.style.cssText = `
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(0,0,0,.72);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,.2);
+      background: #ffffff;
+      color: #111827;
+      border: 1px solid #d1d5db;
       cursor: pointer;
       font-size: 12px;
       transform: translateZ(0);
     `;
+    if (getMode() !== "perf") btn.style.transform = "none";
     return btn;
+  }
+
+  const MODE_COLORS = {
+    ultra: { bg: "#F97316", border: "#FDBA74", text: "#FFFFFF", kind: "ultra" },
+    eco: { bg: "#22C55E", border: "#16A34A", text: "#FFFFFF", kind: "eco" },
+    perf: { bg: "#3B82F6", border: "#1D4ED8", text: "#FFFFFF", kind: "perf" },
+  };
+
+  function getModeStatusText() {
+    const m = getMode();
+    if (m === "ultra") return T.dock_mode_status_ultra;
+    if (m === "perf") return T.dock_mode_status_perf;
+    return T.dock_mode_status_eco;
+  }
+
+  function getModeInfoText(mode) {
+    if (mode === "ultra") return T.dock_mode_info_ultra;
+    if (mode === "perf") return T.dock_mode_info_perf;
+    return T.dock_mode_info_eco;
+  }
+
+  function applyModeAndNotify(next) {
+    setMode(next);
+    if (next === "perf") showToast(T.toast_mode_perf, "info");
+    else if (next === "ultra") showToast(T.toast_mode_ultra, "info");
+    else showToast(T.toast_mode_eco, "info");
+    applyMode();
+    registerMenu();
+    forceRenderDockNow();
+  }
+
+  function renderToggleState(container, label, isOn) {
+    const labelSpan = document.createElement("span");
+    labelSpan.textContent = label;
+    labelSpan.style.color = "#fff";
+    labelSpan.style.textShadow = "0 1px 2px rgba(0,0,0,0.6)";
+
+    const sep = document.createTextNode(" : ");
+
+    const stateSpan = document.createElement("span");
+    stateSpan.textContent = isOn ? T.status_on : T.status_off;
+    stateSpan.style.color = isOn ? "#22c55e" : "#ef4444";
+    stateSpan.style.fontWeight = "700";
+    stateSpan.style.textShadow = "0 1px 2px rgba(0,0,0,0.6)";
+
+    container.replaceChildren(labelSpan, sep, stateSpan);
+  }
+
+  function applyToggleHoverState(btn, getLabel, getIsOn, getHoverText) {
+    const stateWrap = document.createElement("span");
+    const actionWrap = document.createElement("span");
+    actionWrap.style.color = "#111827";
+    actionWrap.style.display = "none";
+
+    btn.replaceChildren(stateWrap, actionWrap);
+
+    const render = () => {
+      renderToggleState(stateWrap, getLabel(), getIsOn());
+      actionWrap.textContent = getHoverText();
+    };
+
+    const setHover = (hovering) => {
+      stateWrap.style.display = hovering ? "none" : "";
+      actionWrap.style.display = hovering ? "" : "none";
+    };
+
+    btn.addEventListener("mouseenter", () => setHover(true));
+    btn.addEventListener("mouseleave", () => setHover(false));
+    btn.addEventListener("focus", () => setHover(true));
+    btn.addEventListener("blur", () => setHover(false));
+
+    render();
+    setHover(false);
+    return render;
+  }
+
+  function makeInfoIcon(mode) {
+    const info = document.createElement("button");
+    info.type = "button";
+    info.textContent = "i";
+    info.style.cssText = `
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid #9ca3af;
+      background: #ffffff;
+      color: #111827;
+      font-size: 11px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+    `;
+
+    const kind = MODE_COLORS[mode]?.kind || "info";
+    const message = getModeInfoText(mode);
+
+    info.addEventListener("mouseenter", () => showStickyToast(message, kind));
+    info.addEventListener("mouseleave", hideToast);
+    info.addEventListener("focus", () => showStickyToast(message, kind));
+    info.addEventListener("blur", hideToast);
+    return info;
+  }
+
+  function makeModeOption(mode, label) {
+    const wrap = document.createElement("div");
+    wrap.style.display = "flex";
+    wrap.style.gap = "8px";
+    wrap.style.alignItems = "center";
+    wrap.style.justifyContent = "flex-end";
+
+    const btn = makeDockButton(`ytcf-mode-${mode}`, label);
+    const color = MODE_COLORS[mode] || MODE_COLORS.eco;
+    const isCurrent = getMode() === mode;
+
+    btn.style.background = isCurrent ? "#e5e7eb" : color.bg;
+    btn.style.border = `1px solid ${isCurrent ? "#cbd5f5" : color.border}`;
+    btn.style.color = isCurrent ? "#6b7280" : color.text;
+    btn.style.fontWeight = "700";
+    btn.style.cursor = isCurrent ? "default" : "pointer";
+    if (isCurrent) {
+      btn.disabled = true;
+      btn.style.opacity = "1";
+    }
+
+    if (!isCurrent) {
+      btn.addEventListener("click", () => {
+        dockModeMenuOpen = false;
+        applyModeAndNotify(mode);
+      });
+    }
+
+    const info = makeInfoIcon(mode);
+    wrap.append(btn, info);
+    return wrap;
+  }
+
+  function makeModeStatusGroup() {
+    const wrap = document.createElement("div");
+    wrap.style.display = "flex";
+    wrap.style.flexDirection = "column";
+    wrap.style.gap = "6px";
+    wrap.style.alignItems = "flex-end";
+
+    const statusBtn = makeDockButton(BTN_MODE_STATUS, getModeStatusText());
+    statusBtn.style.fontWeight = "700";
+
+    const changeBtn = makeDockButton(BTN_MODE_CHANGE, T.dock_mode_change);
+    changeBtn.style.display = "none";
+    changeBtn.addEventListener("click", () => {
+      dockModeMenuOpen = true;
+      forceRenderDockNow();
+    });
+
+    const show = () => { changeBtn.style.display = ""; };
+    const hide = () => { changeBtn.style.display = "none"; };
+
+    wrap.addEventListener("mouseenter", show);
+    wrap.addEventListener("mouseleave", hide);
+    statusBtn.addEventListener("focus", show);
+    changeBtn.addEventListener("focus", show);
+    statusBtn.addEventListener("blur", hide);
+    changeBtn.addEventListener("blur", hide);
+
+    wrap.append(statusBtn, changeBtn);
+    return wrap;
   }
 
   function applyDockProfile(dock) {
@@ -1392,7 +1966,7 @@
     if (fsRestoreTimer) clearTimeout(fsRestoreTimer);
     fsRestoreTimer = null;
 
-    const delay = (getMode() === "eco") ? 30000 : 10000;
+    const delay = (getMode() === "ultra") ? 45000 : (getMode() === "eco" ? 30000 : 10000);
     dockWasFullscreen = true;
 
     fsRestoreTimer = setTimeout(() => {
@@ -1444,6 +2018,7 @@
       getBool(KEY.lowpopHome) ? "lh1" : "lh0",
       getBool(KEY.lowpopWatch) ? "lw1" : "lw0",
       getBool(KEY.headerHoverWatch) ? "hh1" : "hh0",
+      dockModeMenuOpen ? "mm1" : "mm0",
       // ✅ new visibility bit so dock updates correctly without full rerenders
       (shouldShowGoTop() ? "gt1" : "gt0"),
     ].join("|");
@@ -1468,6 +2043,43 @@
 
     showDock(dock, getMode() === "perf");
 
+    const menuOpen = dockModeMenuOpen && (onHome || onWatch);
+    if (menuOpen) {
+      clearDockIdleTimers();
+      setDockDim(dock, false);
+
+      const items = [];
+      if (shouldShowGoTop()) {
+        const goTopBtn = makeDockButton(BTN_GO_TOP, GO_TOP_ICON);
+        applyGoTopHover(goTopBtn);
+        goTopBtn.addEventListener("click", () => goTopNow(goTopBtn));
+        items.push(goTopBtn);
+      }
+
+      const backBtn = makeDockButton(BTN_MODE_BACK, T.dock_mode_back);
+      backBtn.addEventListener("click", () => {
+        dockModeMenuOpen = false;
+        forceRenderDockNow();
+      });
+
+      const titleBtn = makeDockButton(BTN_MODE_TITLE, T.dock_mode_select);
+      titleBtn.disabled = true;
+      titleBtn.style.cursor = "default";
+      titleBtn.style.background = "#ffffff";
+      titleBtn.style.color = "#111827";
+      titleBtn.style.border = "1px solid #d1d5db";
+      titleBtn.style.fontWeight = "700";
+      titleBtn.style.opacity = "1";
+
+      items.push(backBtn, titleBtn);
+      items.push(makeModeOption("ultra", T.dock_mode_btn_ultra));
+      items.push(makeModeOption("eco", T.dock_mode_btn_eco));
+      items.push(makeModeOption("perf", T.dock_mode_btn_perf));
+
+      dock.replaceChildren(...items);
+      return;
+    }
+
     // ===== HOME (global collapse/expand) =====
     if (onHome) {
       if (uiCollapsed) {
@@ -1475,7 +2087,7 @@
         setDockDim(dock, false);
 
         const expand = makeDockButton(BTN_EXPAND, T.dock_expand);
-        applyExpandAutoShrink(expand);
+        applyExpandAutoShrink(expand, { allowExpand: !shouldShowGoTop() });
 
         expand.addEventListener("click", () => {
           setUiCollapsed(false);
@@ -1486,8 +2098,6 @@
         // ✅ NEW: go-top button above ⚙️ (only if scrolled enough)
         if (shouldShowGoTop()) {
           const goTopBtn = makeDockButton(BTN_GO_TOP, GO_TOP_ICON);
-          goTopBtn.style.background = "rgba(0,0,0,.62)";
-          goTopBtn.style.border = "1px solid rgba(255,255,255,.18)";
           applyGoTopHover(goTopBtn);
           goTopBtn.addEventListener("click", () => goTopNow(goTopBtn));
           dock.replaceChildren(goTopBtn, expand);
@@ -1498,18 +2108,20 @@
       }
 
       const collapse = makeDockButton(BTN_COLLAPSE, T.dock_collapse);
-      collapse.style.background = "rgba(0,0,0,.55)";
-      collapse.style.border = "1px solid rgba(255,255,255,.18)";
       collapse.addEventListener("click", () => {
         setUiCollapsed(true);
         forceRenderDockNow();
       });
 
       const shortsBtn = makeDockButton(BTN_SHORTS, "");
+      const updateShortsLabel = applyToggleHoverState(
+        shortsBtn,
+        () => T.dock_shorts_label,
+        () => getBool(KEY.shortsHome),
+        () => (getBool(KEY.shortsHome) ? T.dock_shorts_action_on : T.dock_shorts_action_off)
+      );
       const syncShortsLabel = () => {
-        const enabled = getBool(KEY.shortsHome);
-        shortsBtn.textContent = enabled ? T.dock_shorts_show : T.dock_shorts_hide;
-        shortsBtn.style.opacity = enabled ? "1" : "0.82";
+        updateShortsLabel();
       };
       shortsBtn.addEventListener("click", () => {
         const next = !getBool(KEY.shortsHome);
@@ -1527,10 +2139,14 @@
       syncShortsLabel();
 
       const lowpopHomeBtn = makeDockButton(BTN_HOME, "");
+      const updateLowpopHomeLabel = applyToggleHoverState(
+        lowpopHomeBtn,
+        () => T.dock_lowpop_home_label,
+        () => getBool(KEY.lowpopHome),
+        () => (getBool(KEY.lowpopHome) ? T.dock_lowpop_home_action_on : T.dock_lowpop_home_action_off)
+      );
       const syncLowpopHomeLabel = () => {
-        const enabled = getBool(KEY.lowpopHome);
-        lowpopHomeBtn.textContent = enabled ? T.dock_lowpop_home_show : T.dock_lowpop_home_hide;
-        lowpopHomeBtn.style.opacity = enabled ? "1" : "0.82";
+        updateLowpopHomeLabel();
       };
       lowpopHomeBtn.addEventListener("click", () => {
         const next = !getBool(KEY.lowpopHome);
@@ -1545,7 +2161,8 @@
       });
       syncLowpopHomeLabel();
 
-      dock.replaceChildren(collapse, shortsBtn, lowpopHomeBtn);
+      const modeGroup = makeModeStatusGroup();
+      dock.replaceChildren(collapse, shortsBtn, lowpopHomeBtn, modeGroup);
       armDockIdle(dock, "home");
       if (getMode() === "perf") animateDockIn(dock);
       return;
@@ -1556,7 +2173,7 @@
       // When collapsed on watch => show only Expand (+ go-top above if needed)
       if (uiCollapsedWatch) {
         const expandW = makeDockButton(BTN_WATCH_EXPAND, T.dock_expand);
-        applyExpandAutoShrink(expandW);
+        applyExpandAutoShrink(expandW, { allowExpand: !shouldShowGoTop() });
         expandW.addEventListener("click", () => {
           setUiCollapsedWatch(false);
           forceRenderDockNow();
@@ -1569,8 +2186,6 @@
         // ✅ NEW: go-top button above ⚙️ (only if scrolled enough)
         if (shouldShowGoTop()) {
           const goTopBtn = makeDockButton(BTN_GO_TOP, GO_TOP_ICON);
-          goTopBtn.style.background = "rgba(0,0,0,.62)";
-          goTopBtn.style.border = "1px solid rgba(255,255,255,.18)";
           applyGoTopHover(goTopBtn);
           goTopBtn.addEventListener("click", () => goTopNow(goTopBtn));
           dock.replaceChildren(goTopBtn, expandW);
@@ -1582,8 +2197,6 @@
 
       // Show "Ranger" + header toggle + lowpop toggle (watch)
       const collapseW = makeDockButton(BTN_WATCH_COLLAPSE, T.dock_collapse);
-      collapseW.style.background = "rgba(0,0,0,.55)";
-      collapseW.style.border = "1px solid rgba(255,255,255,.18)";
       collapseW.addEventListener("click", () => {
         setUiCollapsedWatch(true);
         forceRenderDockNow();
@@ -1591,19 +2204,18 @@
 
       // Header hover toggle button (watch)
       const headerBtn = makeDockButton(BTN_HEADER, "");
-      headerBtn.style.background = "rgba(0,0,0,.62)";
-      headerBtn.style.border = "1px solid rgba(255,255,255,.18)";
 
-      const syncHeaderLabel = () => {
-        const enabled = getBool(KEY.headerHoverWatch);
-        headerBtn.textContent = enabled ? T.dock_header_off : T.dock_header_on;
-        headerBtn.style.opacity = enabled ? "1" : "0.82";
-      };
+      const updateHeaderLabel = applyToggleHoverState(
+        headerBtn,
+        () => T.dock_header_label,
+        () => getBool(KEY.headerHoverWatch),
+        () => (getBool(KEY.headerHoverWatch) ? T.dock_header_action_on : T.dock_header_action_off)
+      );
 
       headerBtn.addEventListener("click", () => {
         const next = !getBool(KEY.headerHoverWatch);
         setBool(KEY.headerHoverWatch, next);
-        syncHeaderLabel();
+        updateHeaderLabel();
 
         bindHeaderMouse();
         applyHeaderHoverNow();
@@ -1613,13 +2225,17 @@
         registerMenu();
         forceRenderDockNow();
       });
-      syncHeaderLabel();
+      updateHeaderLabel();
 
       const lowpopWatchBtn = makeDockButton(BTN_WATCH, "");
+      const updateLowpopWatchLabel = applyToggleHoverState(
+        lowpopWatchBtn,
+        () => T.dock_lowpop_watch_label,
+        () => getBool(KEY.lowpopWatch),
+        () => (getBool(KEY.lowpopWatch) ? T.dock_lowpop_watch_action_on : T.dock_lowpop_watch_action_off)
+      );
       const syncLowpopWatchLabel = () => {
-        const enabled = getBool(KEY.lowpopWatch);
-        lowpopWatchBtn.textContent = enabled ? T.dock_lowpop_watch_show : T.dock_lowpop_watch_hide;
-        lowpopWatchBtn.style.opacity = enabled ? "1" : "0.82";
+        updateLowpopWatchLabel();
       };
       lowpopWatchBtn.addEventListener("click", () => {
         const next = !getBool(KEY.lowpopWatch);
@@ -1634,7 +2250,8 @@
       });
       syncLowpopWatchLabel();
 
-      dock.replaceChildren(collapseW, headerBtn, lowpopWatchBtn);
+      const modeGroup = makeModeStatusGroup();
+      dock.replaceChildren(collapseW, headerBtn, lowpopWatchBtn, modeGroup);
       armDockIdle(dock, "watch");
       if (getMode() === "perf") animateDockIn(dock);
       return;
@@ -1648,6 +2265,16 @@
    * RUNNER (Unified) — multi-pass after navigation
    * ========================================================= */
   let scheduled = false;
+  let deferredRunTimer = null;
+
+  function deferHeavyRun() {
+    if (deferredRunTimer) clearTimeout(deferredRunTimer);
+    const delay = isUltraMode() ? 600 : (getMode() === "eco" ? 400 : 250);
+    deferredRunTimer = setTimeout(() => {
+      deferredRunTimer = null;
+      if (!isSearchInteractionActive()) scheduleRun(true);
+    }, delay);
+  }
 
   function scheduleRun(force = false) {
     if (scheduled && !force) return;
@@ -1655,21 +2282,29 @@
     setTimeout(() => {
       scheduled = false;
       run();
-    }, force ? 0 : 90);
+    }, force ? 0 : (isUltraMode() ? 220 : 90));
   }
 
   function runHome() {
     const home = homeContainer();
     if (!home) return;
+    if (isSearchInteractionActive()) {
+      deferHeavyRun();
+      return;
+    }
 
     if (getBool(KEY.shortsHome)) hideShortsShelvesWithin(home, "home");
     if (getBool(KEY.newsHome)) hideNewsShelfOnHome(home);
-    if (getBool(KEY.lowpopHome)) scanHomeLowpop(home);
+    if (!isUltraMode() && getBool(KEY.lowpopHome)) scanHomeLowpop(home);
   }
 
   function runSearch() {
     const search = searchContainer();
     if (!search) return;
+    if (isSearchInteractionActive()) {
+      deferHeavyRun();
+      return;
+    }
     if (getBool(KEY.shortsSearch)) {
       hideShortsShelvesWithin(search, "search");
       hideShortsVideoResultsInSearch(search);
@@ -1679,14 +2314,24 @@
   function runWatch() {
     const watch = watchContainer();
     if (!watch) return;
-    if (getBool(KEY.lowpopWatch)) scanWatchLowpop(watch);
+    const deferHeavy = isSearchInteractionActive();
+    if (!isUltraMode() && getBool(KEY.lowpopWatch) && !deferHeavy) scanWatchLowpop(watch);
+    if (deferHeavy) deferHeavyRun();
 
     // ✅ apply header hover (watch only)
-    bindHeaderMouse();
-    applyHeaderHoverNow();
+    if (!isUltraMode()) {
+      bindHeaderMouse();
+      applyHeaderHoverNow();
+    } else if (headerHoverEnabled) {
+      headerDisable();
+    }
   }
 
   function runUI() {
+    if (isSearchInteractionActive()) {
+      deferHeavyRun();
+      return;
+    }
     if (getBool(KEY.sidebarShorts)) hideSidebarShortsEntry();
   }
 
@@ -1729,6 +2374,10 @@
     if (!mo) return;
     try { mo.disconnect(); } catch (_) {}
     mo = null;
+    if (deferredRunTimer) {
+      clearTimeout(deferredRunTimer);
+      deferredRunTimer = null;
+    }
   }
 
   function shouldObserve() {
@@ -1749,7 +2398,13 @@
     }
     if (mo) return;
 
-    mo = new MutationObserver(() => scheduleRun(false));
+    mo = new MutationObserver(() => {
+      if (isSearchInteractionActive()) {
+        deferHeavyRun();
+        return;
+      }
+      scheduleRun(false);
+    });
     mo.observe(document.documentElement, { childList: true, subtree: true });
   }
 
@@ -1769,6 +2424,9 @@
   function applyMode() {
     resetEcoQueue();
     bindEcoClickNudge();
+    if (isUltraMode()) enterUltraMode();
+    else exitUltraMode();
+
     if (getMode() === "perf") connectObserver();
     else disconnectObserver();
 
@@ -1806,11 +2464,14 @@
 
     addHeader(T.sec_global);
     const m = getMode();
-    const modeText = (m === "perf") ? T.mode_perf : T.mode_eco;
+    const modeText = (m === "perf") ? T.mode_perf : (m === "ultra" ? T.mode_ultra : T.mode_eco);
     menuIds.push(GM_registerMenuCommand(`${T.mode_label}: ${modeText}`, () => {
-      const next = (getMode() === "perf") ? "eco" : "perf";
+      const cur = getMode();
+      const next = (cur === "perf") ? "eco" : (cur === "eco" ? "ultra" : "perf");
       setMode(next);
-      showToast(next === "perf" ? T.toast_mode_perf : T.toast_mode_eco, "info");
+      if (next === "perf") showToast(T.toast_mode_perf, "info");
+      else if (next === "ultra") showToast(T.toast_mode_ultra, "info");
+      else showToast(T.toast_mode_eco, "info");
       applyMode();
       registerMenu();
       scheduleRun(true);
@@ -1874,6 +2535,7 @@
       lastDockKey = "";
       dockIsHidden = false;
       dockWasFullscreen = false;
+      dockModeMenuOpen = false;
       if (fsRestoreTimer) clearTimeout(fsRestoreTimer);
       fsRestoreTimer = null;
 
@@ -1896,15 +2558,18 @@
     maybeRedirectShortsPage();
     applyMode();
     registerMenu();
+    dockModeMenuOpen = false;
 
     // ✅ keep header in sync with route
     bindHeaderMouse();
     applyHeaderHoverNow();
 
     scheduleRun(true);
-    setTimeout(() => scheduleRun(true), 250);
-    setTimeout(() => scheduleRun(true), 900);
-    setTimeout(() => scheduleRun(true), 1800);
+    if (!isUltraMode()) {
+      setTimeout(() => scheduleRun(true), 250);
+      setTimeout(() => scheduleRun(true), 900);
+      setTimeout(() => scheduleRun(true), 1800);
+    }
   }
 
      /* =========================================================
