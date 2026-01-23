@@ -1,9 +1,14 @@
 // ==UserScript==
-// @name         YouTube CleanView
-// @name:fr      YouTube CleanView – Nettoyer YouTube
-// @name:en      YouTube CleanView – Clean YouTube
-// @name:es      YouTube CleanView – Limpiar YouTube
-// @name:de      YouTube CleanView – YouTube aufräumen
+// @name         YouTube CleanFeed
+// @name:fr      YouTube CleanFeed – Nettoyer YouTube
+// @name:en      YouTube CleanFeed – Clean YouTube
+// @name:de      YouTube CleanFeed – YouTube aufräumen
+// @name:es      YouTube CleanFeed – Limpiar YouTube
+// @name:it      YouTube CleanFeed – Pulire YouTube
+// @name:pt      YouTube CleanFeed – Limpar YouTube
+// @name:nl      YouTube CleanFeed – YouTube opschonen
+// @name:pl      YouTube CleanFeed – Czyszczenie YouTube
+// @name:tr      YouTube CleanFeed – YouTube temizleme
 //
 // @author       Raph563
 // @namespace    yt-cleanview
@@ -2458,6 +2463,8 @@
     autoLiked: false,
     lastLikePressed: null,
     lastDislikePressed: null,
+    observedLikeBtn: null,
+    observedDislikeBtn: null,
   };
   const AUTO_LIKE_BLOCK_KEY = "ytcf_auto_like_blocked_v1";
   const AUTO_LIKE_DONE_KEY = "ytcf_auto_like_done_v1";
@@ -2485,6 +2492,19 @@
     "dislike", "je n'aime pas", "no me gusta", "non mi piace", "nao gostei",
     "niet leuk", "nicht gefallt", "nie podoba", "begenmedim"
   ];
+  const LIKE_TOKENS = [
+    "like", "j'aime", "jaime", "me gusta", "mi piace", "gostei", "curtir",
+    "gefallt mir", "mag ich", "leuk", "lubie", "begen", "begendim"
+  ];
+
+  function getButtonLabel(btn) {
+    return [
+      btn?.getAttribute?.("aria-label"),
+      btn?.getAttribute?.("title"),
+      btn?.getAttribute?.("data-title-no-tooltip"),
+      btn?.textContent,
+    ].filter(Boolean).join(" ");
+  }
 
   function getWatchVideoId() {
     if (!isWatch()) return null;
@@ -2517,8 +2537,10 @@
   function blockAutoLike(videoId) {
     if (!videoId) return;
     const map = getAutoLikeBlockMap();
+    if (map[videoId]) return;
     map[videoId] = 1;
     setAutoLikeBlockMap(map);
+    scheduleRun(true);
   }
 
   function getAutoLikeDoneMap() {
@@ -2600,6 +2622,8 @@
       autoLiked: false,
       lastLikePressed: null,
       lastDislikePressed: null,
+      observedLikeBtn: null,
+      observedDislikeBtn: null,
     };
     removeAutoLikeIndicator();
   }
@@ -2655,15 +2679,27 @@
     return null;
   }
 
+  function normalizeForMatch(text) {
+    return normalizeBasic(text || "")
+      .replace(/[’`´]/g, "'")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   function textHasAny(text, list) {
-    const t = normalizeBasic(text || "");
+    const t = normalizeForMatch(text);
     if (!t) return false;
-    return list.some(k => t.includes(normalizeBasic(k)));
+    return list.some(k => t.includes(normalizeForMatch(k)));
   }
 
   function isNotificationButton(btn) {
     if (!btn) return false;
-    const label = btn.getAttribute("aria-label") || btn.getAttribute("title") || btn.textContent || "";
+    const label = [
+      btn.getAttribute("aria-label"),
+      btn.getAttribute("title"),
+      btn.getAttribute("data-title-no-tooltip"),
+      btn.textContent,
+    ].filter(Boolean).join(" ");
     return textHasAny(label, NOTIFICATION_TOKENS);
   }
 
@@ -2671,13 +2707,20 @@
     const selectors = [
       "ytd-subscription-notification-toggle-button-renderer button",
       "ytd-subscription-notification-toggle-button-renderer-next button",
+      "ytd-subscription-notification-toggle-button-view-model button",
+      "yt-subscription-notification-toggle-button-view-model button",
       "ytd-subscriptions-notification-toggle-button-renderer button",
       "ytd-notification-toggle-button-renderer button"
     ];
     for (const sel of selectors) {
       const btns = Array.from(document.querySelectorAll(sel));
       for (const btn of btns) {
-        const label = btn.getAttribute("aria-label") || btn.getAttribute("title") || "";
+        const label = [
+          btn.getAttribute("aria-label"),
+          btn.getAttribute("title"),
+          btn.getAttribute("data-title-no-tooltip"),
+          btn.textContent,
+        ].filter(Boolean).join(" ");
         if (textHasAny(label, NOTIFICATION_TOKENS)) return btn;
       }
     }
@@ -2699,10 +2742,18 @@
     const dataSub = renderer?.__data?.subscribed ?? renderer?.__data?.isSubscribed;
     if (dataSub === true) return true;
 
-    const label = btn?.getAttribute?.("aria-label") || btn?.textContent || "";
+    const label = [
+      btn?.getAttribute?.("aria-label"),
+      btn?.getAttribute?.("title"),
+      btn?.getAttribute?.("data-title-no-tooltip"),
+      btn?.textContent,
+    ].filter(Boolean).join(" ");
     if (textHasAny(label, UNSUBSCRIBED_TOKENS)) return false;
     if (textHasAny(label, SUBSCRIBED_TOKENS)) return true;
     if (textHasAny(label, UNSUBSCRIBE_TOKENS)) return true;
+    const rendererText = renderer?.textContent || "";
+    if (textHasAny(rendererText, SUBSCRIBED_TOKENS)) return true;
+    if (textHasAny(rendererText, UNSUBSCRIBED_TOKENS)) return false;
     return false;
   }
 
@@ -2723,15 +2774,74 @@
   function isDislikeButton(btn) {
     if (!btn) return false;
     if (btn.closest?.("ytd-dislike-button-renderer") || btn.closest?.("#dislike-button")) return true;
-    const label = btn.getAttribute("aria-label") || btn.getAttribute("title") || btn.textContent || "";
+    const label = getButtonLabel(btn);
     return textHasAny(label, DISLIKE_TOKENS);
   }
 
+  function isLikeButton(btn) {
+    if (!btn) return false;
+    const label = getButtonLabel(btn);
+    if (textHasAny(label, DISLIKE_TOKENS)) return false;
+    return textHasAny(label, LIKE_TOKENS);
+  }
+
+  const SEGMENTED_LIKE_SELECTOR = [
+    "ytd-segmented-like-dislike-button-renderer",
+    "yt-segmented-like-dislike-button-renderer",
+    "ytd-segmented-like-dislike-button-view-model",
+    "yt-segmented-like-dislike-button-view-model",
+  ].join(", ");
+
+  function getLikeDislikeButtons() {
+    const segmented = document.querySelector(SEGMENTED_LIKE_SELECTOR);
+    if (segmented) {
+      const btns = Array.from(segmented.querySelectorAll("button[aria-pressed]"));
+      if (btns.length) {
+        const dislikeBtn = btns.find(isDislikeButton) || null;
+        let likeBtn = btns.find(isLikeButton) || null;
+        if (!likeBtn) likeBtn = btns.find(btn => btn !== dislikeBtn) || null;
+        if (!likeBtn) likeBtn = btns[0] || null;
+        let resolvedDislike = dislikeBtn;
+        if (!resolvedDislike && btns.length > 1) {
+          resolvedDislike = (btns[0] === likeBtn) ? btns[1] : btns[0];
+        }
+        return { likeBtn, dislikeBtn: resolvedDislike };
+      }
+    }
+
+    const containers = [
+      document.querySelector("#top-level-buttons-computed"),
+      document.querySelector("ytd-menu-renderer"),
+      document.querySelector("ytd-watch-metadata"),
+    ].filter(Boolean);
+
+    for (const container of containers) {
+      const btns = Array.from(container.querySelectorAll("button[aria-pressed]"));
+      if (!btns.length) continue;
+      const dislikeBtn = btns.find(isDislikeButton) || null;
+      let likeBtn = btns.find(isLikeButton) || null;
+      if (!likeBtn) likeBtn = btns.find(btn => btn !== dislikeBtn) || null;
+      if (!likeBtn) likeBtn = btns[0] || null;
+      let resolvedDislike = dislikeBtn;
+      if (!resolvedDislike && btns.length > 1) {
+        resolvedDislike = (btns[0] === likeBtn) ? btns[1] : btns[0];
+      }
+      return { likeBtn, dislikeBtn: resolvedDislike };
+    }
+
+    return { likeBtn: null, dislikeBtn: null };
+  }
+
   function findDislikeButton() {
+    const { dislikeBtn } = getLikeDislikeButtons();
+    if (dislikeBtn) return dislikeBtn;
     const candidates = [
       "ytd-dislike-button-renderer button",
       "#dislike-button button",
       "ytd-segmented-like-dislike-button-renderer button[aria-pressed]",
+      "yt-segmented-like-dislike-button-renderer button[aria-pressed]",
+      "ytd-segmented-like-dislike-button-view-model button[aria-pressed]",
+      "yt-segmented-like-dislike-button-view-model button[aria-pressed]",
       "#top-level-buttons-computed button[aria-pressed]"
     ];
     for (const sel of candidates) {
@@ -2744,11 +2854,18 @@
   }
 
   function findLikeButton() {
+    const { likeBtn } = getLikeDislikeButtons();
+    if (likeBtn) return likeBtn;
     const candidates = [
       "ytd-like-button-renderer button",
       "#like-button button",
       "ytd-like-button-renderer button[aria-pressed]",
       "ytd-segmented-like-dislike-button-renderer button[aria-pressed]",
+      "yt-segmented-like-dislike-button-renderer button[aria-pressed]",
+      "ytd-segmented-like-dislike-button-view-model button[aria-pressed]",
+      "yt-segmented-like-dislike-button-view-model button[aria-pressed]",
+      "ytd-like-button-view-model button",
+      "yt-like-button-view-model button",
       "#top-level-buttons-computed ytd-toggle-button-renderer button[aria-pressed]",
       "#top-level-buttons-computed button[aria-pressed]",
       "ytd-toggle-button-renderer#like-button button"
@@ -2757,9 +2874,23 @@
     for (const sel of candidates) {
       const btns = Array.from(document.querySelectorAll(sel));
       for (const btn of btns) {
+        if (isLikeButton(btn)) return btn;
         if (!isDislikeButton(btn)) return btn;
       }
     }
+    return null;
+  }
+
+  function getPressedState(btn) {
+    if (!btn) return null;
+    const direct = btn.getAttribute?.("aria-pressed");
+    if (direct != null) return direct;
+    const parentPressed = btn.closest?.("[aria-pressed]")?.getAttribute?.("aria-pressed");
+    if (parentPressed != null) return parentPressed;
+    const directChecked = btn.getAttribute?.("aria-checked");
+    if (directChecked != null) return directChecked;
+    const parentChecked = btn.closest?.("[aria-checked]")?.getAttribute?.("aria-checked");
+    if (parentChecked != null) return parentChecked;
     return null;
   }
 
@@ -2812,9 +2943,10 @@
     if (e) {
       e.preventDefault?.();
       e.stopPropagation?.();
+      e.stopImmediatePropagation?.();
     }
 
-    const vid = getWatchVideoId() || autoLikeState.videoId;
+    const vid = getWatchVideoId() || autoLikeState.videoId || lastWatchVideoId;
     if (vid) {
       blockAutoLike(vid);
       unmarkAutoLikeDone(vid);
@@ -2833,10 +2965,10 @@
 
     const attemptRemove = (triesLeft) => {
       const likeBtn = findLikeButton();
-      const pressed = likeBtn?.getAttribute?.("aria-pressed");
+      const pressed = getPressedState(likeBtn);
       if (!likeBtn || pressed == null) {
         if (triesLeft > 0) {
-          setTimeout(() => attemptRemove(triesLeft - 1), 220);
+          setTimeout(() => attemptRemove(triesLeft - 1), 260);
           return;
         }
         autoLikeState.autoLiked = false;
@@ -2853,7 +2985,7 @@
       removeAutoLikeIndicator();
     };
 
-    attemptRemove(3);
+    attemptRemove(6);
   }
 
   function bindAutoLikeIndicatorEvents(el) {
@@ -2923,8 +3055,8 @@
     }
     const likeBtn = findLikeButton();
     const dislikeBtn = findDislikeButton();
-    const likeOn = likeBtn?.getAttribute("aria-pressed") === "true";
-    const dislikeOn = dislikeBtn?.getAttribute("aria-pressed") === "true";
+    const likeOn = getPressedState(likeBtn) === "true";
+    const dislikeOn = getPressedState(dislikeBtn) === "true";
     if (!likeOn || dislikeOn) {
       removeAutoLikeIndicator();
       autoLikeState.autoLiked = false;
@@ -3027,20 +3159,29 @@
     handleWatchVideoChange();
   }
   function bindAutoLikeIndicatorObserver() {
-    if (autoLikeObserver) {
-      autoLikeObserver.disconnect();
-      autoLikeObserver = null;
-    }
     const likeBtn = findLikeButton();
     const dislikeBtn = findDislikeButton();
     const targets = [likeBtn, dislikeBtn].filter(Boolean);
     if (!targets.length) return;
+    if (
+      autoLikeObserver &&
+      autoLikeState.observedLikeBtn === likeBtn &&
+      autoLikeState.observedDislikeBtn === dislikeBtn
+    ) {
+      return;
+    }
+    if (autoLikeObserver) {
+      autoLikeObserver.disconnect();
+      autoLikeObserver = null;
+    }
+    autoLikeState.observedLikeBtn = likeBtn;
+    autoLikeState.observedDislikeBtn = dislikeBtn;
     autoLikeState.lastLikePressed = likeBtn?.getAttribute("aria-pressed") || null;
     autoLikeState.lastDislikePressed = dislikeBtn?.getAttribute("aria-pressed") || null;
     autoLikeObserver = new MutationObserver(() => {
       const likeNow = likeBtn?.getAttribute("aria-pressed") || null;
       const dislikeNow = dislikeBtn?.getAttribute("aria-pressed") || null;
-      const currentVid = getWatchVideoId();
+      const currentVid = getWatchVideoId() || autoLikeState.videoId;
       if (!isWatch() || !currentVid || currentVid !== autoLikeState.videoId) {
         autoLikeState.lastLikePressed = likeNow;
         autoLikeState.lastDislikePressed = dislikeNow;
@@ -3107,9 +3248,11 @@
     if (isAutoLikeBlocked(vid)) return;
     if (autoLikeState.videoId !== vid) resetAutoLikeState(vid);
     if (autoLikeState.done) {
-      if (autoLikeState.autoLiked && !document.getElementById(AUTO_LIKE_INDICATOR_ID)) {
+      if (autoLikeState.autoLiked) {
         updateAutoLikeIndicator();
         bindAutoLikeIndicatorObserver();
+      } else {
+        removeAutoLikeIndicator();
       }
       return;
     }
