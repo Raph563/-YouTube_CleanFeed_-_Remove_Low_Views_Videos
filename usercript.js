@@ -11,14 +11,19 @@
 // @name:tr      YouTube CleanFeed – YouTube temizleme
 //
 // @author       Raph563
-// @namespace    yt-cleanview
+// @namespace    yt-cleanfeed
 // @version      6.3.0
 //
-// @description     Clean YouTube by hiding Shorts, News, and low-popularity videos. Includes filters, modes, dock controls, and SPA support.
-// @description:fr  Nettoie YouTube en masquant Shorts, actualités et vidéos peu populaires. Filtres, modes, dock et support SPA.
-// @description:en  Clean YouTube by hiding Shorts, News, and low-popularity videos. Filters, modes, dock controls, SPA-ready.
-// @description:es  Limpia YouTube ocultando Shorts, noticias y vídeos con pocas vistas. Filtros, modos y soporte SPA.
+// @description     Clean YouTube by hiding Shorts, News, and low-popularity videos.
+// @description:fr  Nettoie YouTube en masquant Shorts, actualités et vidéos peu populaires.
+// @description:en  Clean YouTube by hiding Shorts, News, and low-popularity videos.
 // @description:de  Räumt YouTube auf, indem Shorts, News und Videos mit wenigen Aufrufen ausgeblendet werden.
+// @description:es  Limpia YouTube ocultando Shorts, noticias y vídeos con pocas visualizaciones.
+// @description:it  Pulisce YouTube nascondendo Shorts, notizie e video con poche visualizzazioni.
+// @description:pt  Limpa o YouTube ocultando Shorts, notícias e vídeos com poucas visualizações.
+// @description:nl  Schoont YouTube op door Shorts, nieuws en video’s met weinig weergaven te verbergen.
+// @description:pl  Czyści YouTube, ukrywając Shorts, wiadomości i filmy z małą liczbą wyświetleń.
+// @description:tr  Shorts, haberler ve az izlenen videoları gizleyerek YouTube’u temizler.
 //
 // @homepageURL  https://github.com/Raph563/-YouTube_CleanFeed_-_Remove_Low_Views_Videos
 // @downloadURL  https://raw.githubusercontent.com/Raph563/-YouTube_CleanFeed_-_Remove_Low_Views_Videos/main/usercript.js
@@ -32,6 +37,7 @@
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
 // ==/UserScript==
+
 
 
 (() => {
