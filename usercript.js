@@ -1,19 +1,33 @@
 // ==UserScript==
-// @name         YouTube CleanFeed – Shorts/News + Low-Popularity Filter (FR/EN/ES/DE) [Options + Modes] TEST last
+// @name         YouTube CleanView
+// @name:fr      YouTube CleanView – Nettoyer YouTube
+// @name:en      YouTube CleanView – Clean YouTube
+// @name:es      YouTube CleanView – Limpiar YouTube
+// @name:de      YouTube CleanView – YouTube aufräumen
+//
 // @author       Raph563
-// @namespace    yt-cleanfeed-combined
+// @namespace    yt-cleanview
 // @version      6.3.0
-// @description  Hide Shorts (Home/Search/Sidebar) + hide News on Home + optional block Shorts page + low-popularity filter (Home + Watch). Unified i18n, unified toasts, categorized Tampermonkey menu, SPA-compatible, Eco/Perf modes. Includes dock buttons with Collapse/Expand (Home + Watch), fullscreen auto-hide with delayed restore (10s perf / 30s eco), anti-flicker dock rendering, de-duped SPA nav on /watch. + Optional "Hide header when not hovered" on /watch (menu + dock button).
+//
+// @description     Clean YouTube by hiding Shorts, News, and low-popularity videos. Includes filters, modes, dock controls, and SPA support.
+// @description:fr  Nettoie YouTube en masquant Shorts, actualités et vidéos peu populaires. Filtres, modes, dock et support SPA.
+// @description:en  Clean YouTube by hiding Shorts, News, and low-popularity videos. Filters, modes, dock controls, SPA-ready.
+// @description:es  Limpia YouTube ocultando Shorts, noticias y vídeos con pocas vistas. Filtros, modos y soporte SPA.
+// @description:de  Räumt YouTube auf, indem Shorts, News und Videos mit wenigen Aufrufen ausgeblendet werden.
+//
 // @homepageURL  https://github.com/Raph563/-YouTube_CleanFeed_-_Remove_Low_Views_Videos
-// @downloadURL https://raw.githubusercontent.com/Raph563/-YouTube_CleanFeed_-_Remove_Low_Views_Videos/main/usercript.js
-// @updateURL   https://raw.githubusercontent.com/Raph563/-YouTube_CleanFeed_-_Remove_Low_Views_Videos/main/usercript.js
+// @downloadURL  https://raw.githubusercontent.com/Raph563/-YouTube_CleanFeed_-_Remove_Low_Views_Videos/main/usercript.js
+// @updateURL    https://raw.githubusercontent.com/Raph563/-YouTube_CleanFeed_-_Remove_Low_Views_Videos/main/usercript.js
+//
 // @match        https://www.youtube.com/*
 // @run-at       document-start
+//
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
 // ==/UserScript==
+
 
 (() => {
   "use strict";
@@ -255,6 +269,9 @@
       toast_header_on: "Header auto : activé (/watch)",
       toast_header_off: "Header auto : désactivé (/watch)",
       toast_autolike_blocklist_reset: "Blocklist auto-like reinitialisee",
+      toast_autolike_indicator_hint: "Auto-like actif. Cliquez pour retirer le like et bloquer l'auto-like pour cette vidéo.",
+      toast_autolike_indicator_clicked: "Like retiré. Auto-like bloqué pour cette vidéo.",
+      toast_autolike_indicator_failed: "Impossible de retirer le like pour le moment. Réessayez.",
     },
 
     en: {
@@ -490,6 +507,9 @@
       toast_header_on: "Header auto: ON (/watch)",
       toast_header_off: "Header auto: OFF (/watch)",
       toast_autolike_blocklist_reset: "Auto-like blocklist reset",
+      toast_autolike_indicator_hint: "Auto-like active. Click to remove the like and block auto-like for this video.",
+      toast_autolike_indicator_clicked: "Like removed. Auto-like blocked for this video.",
+      toast_autolike_indicator_failed: "Unable to remove the like right now. Please try again.",
     },
 
     de: {
@@ -2440,6 +2460,7 @@
     lastDislikePressed: null,
   };
   const AUTO_LIKE_BLOCK_KEY = "ytcf_auto_like_blocked_v1";
+  const AUTO_LIKE_DONE_KEY = "ytcf_auto_like_done_v1";
   const SUBSCRIBED_TOKENS = [
     "subscribed", "abonne", "abonné", "abonne(e)", "abonnierte",
     "suscrito", "suscrito a", "inscrito", "iscritto", "abonniert",
@@ -2498,6 +2519,37 @@
     const map = getAutoLikeBlockMap();
     map[videoId] = 1;
     setAutoLikeBlockMap(map);
+  }
+
+  function getAutoLikeDoneMap() {
+    const raw = GM_getValue(AUTO_LIKE_DONE_KEY);
+    if (!raw || typeof raw !== "object") return {};
+    return raw;
+  }
+
+  function setAutoLikeDoneMap(map) {
+    GM_setValue(AUTO_LIKE_DONE_KEY, map);
+  }
+
+  function isAutoLikeDone(videoId) {
+    if (!videoId) return false;
+    const map = getAutoLikeDoneMap();
+    return !!map[videoId];
+  }
+
+  function markAutoLikeDone(videoId) {
+    if (!videoId) return;
+    const map = getAutoLikeDoneMap();
+    map[videoId] = 1;
+    setAutoLikeDoneMap(map);
+  }
+
+  function unmarkAutoLikeDone(videoId) {
+    if (!videoId) return;
+    const map = getAutoLikeDoneMap();
+    if (!map[videoId]) return;
+    delete map[videoId];
+    setAutoLikeDoneMap(map);
   }
 
   function getAutoLikeBlockCount() {
@@ -2589,12 +2641,18 @@
   }
 
   function getSubscribeButton(renderer) {
-    return (
-      renderer?.querySelector("button") ||
-      renderer?.querySelector("yt-button-shape button") ||
-      renderer?.querySelector("tp-yt-paper-button") ||
-      null
-    );
+    if (!renderer) return null;
+    const candidates = [
+      renderer.querySelector("#subscribe-button-shape button"),
+      renderer.querySelector("yt-button-shape#subscribe-button-shape button"),
+      renderer.querySelector("yt-button-shape button"),
+      renderer.querySelector("tp-yt-paper-button"),
+      renderer.querySelector("button"),
+    ].filter(Boolean);
+    for (const btn of candidates) {
+      if (!isNotificationButton(btn)) return btn;
+    }
+    return null;
   }
 
   function textHasAny(text, list) {
@@ -2603,9 +2661,16 @@
     return list.some(k => t.includes(normalizeBasic(k)));
   }
 
+  function isNotificationButton(btn) {
+    if (!btn) return false;
+    const label = btn.getAttribute("aria-label") || btn.getAttribute("title") || btn.textContent || "";
+    return textHasAny(label, NOTIFICATION_TOKENS);
+  }
+
   function findNotificationBellButton() {
     const selectors = [
       "ytd-subscription-notification-toggle-button-renderer button",
+      "ytd-subscription-notification-toggle-button-renderer-next button",
       "ytd-subscriptions-notification-toggle-button-renderer button",
       "ytd-notification-toggle-button-renderer button"
     ];
@@ -2638,6 +2703,20 @@
     if (textHasAny(label, UNSUBSCRIBED_TOKENS)) return false;
     if (textHasAny(label, SUBSCRIBED_TOKENS)) return true;
     if (textHasAny(label, UNSUBSCRIBE_TOKENS)) return true;
+    return false;
+  }
+
+  function isSubscribedOnWatchPage(renderer) {
+    const owner = document.querySelector("ytd-video-owner-renderer");
+    if (owner) {
+      if (owner.hasAttribute("subscribed")) return true;
+      const ownerAttr = owner.getAttribute?.("subscribed");
+      if (ownerAttr === "" || ownerAttr === "true") return true;
+      const ownerData = owner.__data?.subscribed ?? owner.__data?.isSubscribed;
+      if (ownerData === true) return true;
+    }
+    if (renderer && isSubscribedRenderer(renderer)) return true;
+    if (findNotificationBellButton()) return true;
     return false;
   }
 
@@ -2685,6 +2764,117 @@
   }
 
   const AUTO_LIKE_INDICATOR_ID = "ytcf-auto-like-indicator";
+  const AUTO_LIKE_HINT_COOLDOWN = 1200;
+  const AUTO_LIKE_VERIFY_CHECKS = [250, 600, 1200, 2000, 3200, 5000];
+  const AUTO_LIKE_CONFIRM_WINDOW_MS = 8000;
+  let autoLikeIndicatorHintAt = 0;
+
+  function isRecentAutoLikeClick() {
+    return !!autoLikeState.lastClickAt && (Date.now() - autoLikeState.lastClickAt) <= AUTO_LIKE_CONFIRM_WINDOW_MS;
+  }
+
+  function getAutoLikeIndicatorHintText() {
+    return (
+      T.toast_autolike_indicator_hint ||
+      "Auto-like active. Click to remove the like and block auto-like for this video."
+    );
+  }
+
+  function getAutoLikeIndicatorClickedText() {
+    return (
+      T.toast_autolike_indicator_clicked ||
+      "Like removed. Auto-like blocked for this video."
+    );
+  }
+
+  function getAutoLikeIndicatorFailText() {
+    return (
+      T.toast_autolike_indicator_failed ||
+      "Unable to remove the like right now. Please try again."
+    );
+  }
+
+  function updateAutoLikeIndicatorLabel(el) {
+    if (!el) return;
+    const hint = getAutoLikeIndicatorHintText();
+    el.title = hint;
+    el.setAttribute("aria-label", hint);
+  }
+
+  function maybeShowAutoLikeIndicatorHint() {
+    const now = Date.now();
+    if (now - autoLikeIndicatorHintAt < AUTO_LIKE_HINT_COOLDOWN) return;
+    autoLikeIndicatorHintAt = now;
+    showToast(getAutoLikeIndicatorHintText(), "info");
+  }
+
+  function handleAutoLikeIndicatorClick(e) {
+    if (e) {
+      e.preventDefault?.();
+      e.stopPropagation?.();
+    }
+
+    const vid = getWatchVideoId() || autoLikeState.videoId;
+    if (vid) {
+      blockAutoLike(vid);
+      unmarkAutoLikeDone(vid);
+    }
+
+    autoLikeState.done = true;
+    autoLikeState.pendingLike = false;
+    clearAutoLikeRetryTimers();
+    clearAutoLikeVerifyTimers();
+    stopAutoLikeWatchObserver();
+
+    if (autoLikeObserver) {
+      autoLikeObserver.disconnect();
+      autoLikeObserver = null;
+    }
+
+    const attemptRemove = (triesLeft) => {
+      const likeBtn = findLikeButton();
+      const pressed = likeBtn?.getAttribute?.("aria-pressed");
+      if (!likeBtn || pressed == null) {
+        if (triesLeft > 0) {
+          setTimeout(() => attemptRemove(triesLeft - 1), 220);
+          return;
+        }
+        autoLikeState.autoLiked = false;
+        showToast(getAutoLikeIndicatorFailText(), "off");
+        removeAutoLikeIndicator();
+        return;
+      }
+
+      if (pressed === "true") {
+        likeBtn.click();
+      }
+      autoLikeState.autoLiked = false;
+      showToast(getAutoLikeIndicatorClickedText(), "info");
+      removeAutoLikeIndicator();
+    };
+
+    attemptRemove(3);
+  }
+
+  function bindAutoLikeIndicatorEvents(el) {
+    if (!el || el.dataset.ytcfAutoLikeBound === "1") return;
+    el.dataset.ytcfAutoLikeBound = "1";
+    el.style.cursor = "pointer";
+    el.style.pointerEvents = "auto";
+    el.setAttribute("role", "button");
+    el.tabIndex = 0;
+    updateAutoLikeIndicatorLabel(el);
+
+    el.addEventListener("mouseenter", maybeShowAutoLikeIndicatorHint, { passive: true });
+    el.addEventListener("focus", maybeShowAutoLikeIndicatorHint);
+    el.addEventListener("click", handleAutoLikeIndicatorClick);
+    el.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter" || ev.key === " ") {
+        ev.preventDefault();
+        handleAutoLikeIndicatorClick(ev);
+      }
+    });
+  }
 
   function getActionBarEl() {
     return (
@@ -2696,7 +2886,11 @@
 
   function ensureAutoLikeIndicator() {
     let el = document.getElementById(AUTO_LIKE_INDICATOR_ID);
-    if (el) return el;
+    if (el) {
+      updateAutoLikeIndicatorLabel(el);
+      bindAutoLikeIndicatorEvents(el);
+      return el;
+    }
     el = document.createElement("span");
     el.id = AUTO_LIKE_INDICATOR_ID;
     el.textContent = "🤖";
@@ -2713,6 +2907,8 @@
       line-height: 1;
       border: 1px solid rgba(255,255,255,0.18);
     `;
+    updateAutoLikeIndicatorLabel(el);
+    bindAutoLikeIndicatorEvents(el);
     return el;
   }
 
@@ -2844,9 +3040,16 @@
     autoLikeObserver = new MutationObserver(() => {
       const likeNow = likeBtn?.getAttribute("aria-pressed") || null;
       const dislikeNow = dislikeBtn?.getAttribute("aria-pressed") || null;
+      const currentVid = getWatchVideoId();
+      if (!isWatch() || !currentVid || currentVid !== autoLikeState.videoId) {
+        autoLikeState.lastLikePressed = likeNow;
+        autoLikeState.lastDislikePressed = dislikeNow;
+        return;
+      }
 
       if (autoLikeState.lastLikePressed === "true" && likeNow === "false") {
         blockAutoLike(autoLikeState.videoId);
+        unmarkAutoLikeDone(autoLikeState.videoId);
         autoLikeState.done = true;
         stopAutoLikeWatchObserver();
         clearAutoLikeRetryTimers();
@@ -2854,6 +3057,7 @@
       }
       if (autoLikeState.lastDislikePressed !== "true" && dislikeNow === "true") {
         blockAutoLike(autoLikeState.videoId);
+        unmarkAutoLikeDone(autoLikeState.videoId);
         autoLikeState.done = true;
         stopAutoLikeWatchObserver();
         clearAutoLikeRetryTimers();
@@ -2871,7 +3075,7 @@
 
   function scheduleAutoLikeVerify(vid) {
     if (autoLikeState.verifyTimers.length) return;
-    const checks = [250, 600, 1200];
+    const checks = AUTO_LIKE_VERIFY_CHECKS;
     autoLikeState.verifyTimers = checks.map((ms, idx) => setTimeout(() => {
       if (autoLikeState.videoId !== vid) return;
       const likeBtn = findLikeButton();
@@ -2880,6 +3084,7 @@
         autoLikeState.done = true;
         autoLikeState.autoLiked = true;
         autoLikeState.pendingLike = false;
+        markAutoLikeDone(vid);
         updateAutoLikeIndicator();
         bindAutoLikeIndicatorObserver();
         stopAutoLikeWatchObserver();
@@ -2901,7 +3106,13 @@
     if (!vid) return;
     if (isAutoLikeBlocked(vid)) return;
     if (autoLikeState.videoId !== vid) resetAutoLikeState(vid);
-    if (autoLikeState.done) return;
+    if (autoLikeState.done) {
+      if (autoLikeState.autoLiked && !document.getElementById(AUTO_LIKE_INDICATOR_ID)) {
+        updateAutoLikeIndicator();
+        bindAutoLikeIndicatorObserver();
+      }
+      return;
+    }
 
     const now = Date.now();
     if (now - autoLikeState.lastAttempt < 120) return;
@@ -2913,32 +3124,38 @@
     }
 
     const renderer = document.querySelector("ytd-subscribe-button-renderer, ytd-subscribe-button-view-model");
-    if (renderer) {
-      if (!isSubscribedRenderer(renderer)) {
-        scheduleAutoLikeRetries();
-        return;
-      }
-    } else {
-      const bellBtn = findNotificationBellButton();
-      if (!bellBtn) {
-        scheduleAutoLikeRetries();
-        return;
-      }
+    const likeBtn = findLikeButton();
+    const likePressedAttr = likeBtn?.getAttribute("aria-pressed");
+    const dislikeBtn = findDislikeButton();
+    const dislikeOn = dislikeBtn?.getAttribute("aria-pressed") === "true";
+
+    if (likePressedAttr === "true" && isAutoLikeDone(vid) && !dislikeOn) {
+      autoLikeState.done = true;
+      autoLikeState.autoLiked = true;
+      updateAutoLikeIndicator();
+      bindAutoLikeIndicatorObserver();
+      stopAutoLikeWatchObserver();
+      clearAutoLikeRetryTimers();
+      clearAutoLikeVerifyTimers();
+      return;
     }
 
-    const likeBtn = findLikeButton();
+    if (!isSubscribedOnWatchPage(renderer)) {
+      scheduleAutoLikeRetries();
+      return;
+    }
+
     if (!likeBtn) {
       scheduleAutoLikeRetries();
       return;
     }
-    const likePressedAttr = likeBtn.getAttribute("aria-pressed");
     if (likePressedAttr == null) {
       scheduleAutoLikeRetries();
       return;
     }
-    const dislikeBtn = findDislikeButton();
-    if (dislikeBtn?.getAttribute("aria-pressed") === "true") {
+    if (dislikeOn) {
       blockAutoLike(vid);
+      unmarkAutoLikeDone(vid);
       autoLikeState.done = true;
       stopAutoLikeWatchObserver();
       return;
@@ -2951,7 +3168,11 @@
     const pressed = likePressedAttr;
     if (pressed === "true") {
       autoLikeState.done = true;
-      if (autoLikeState.autoLiked) {
+      autoLikeState.pendingLike = false;
+      const recentAutoLike = isRecentAutoLikeClick();
+      if (autoLikeState.autoLiked || isAutoLikeDone(vid) || recentAutoLike) {
+        autoLikeState.autoLiked = true;
+        markAutoLikeDone(vid);
         updateAutoLikeIndicator();
         bindAutoLikeIndicatorObserver();
       } else {
