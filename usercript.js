@@ -116,11 +116,53 @@
       dock_lowpop_watch_action_on: "Afficher les recommandations peu populaires",
       dock_lowpop_watch_action_off: "Masquer les recommandations peu populaires",
       dock_lowpop_watch_info: "Masque les recommandations sous le seuil de vues sur /watch.",
+      dock_autolike_subs_label: "Auto-like abonnements",
+      dock_autolike_subs_action_on: "Desactiver auto-like",
+      dock_autolike_subs_action_off: "Activer auto-like",
+      dock_autolike_subs_info: "Like automatiquement les videos des chaines abonnees.",
+      dock_autolike_blocklist_label: "Blocklist auto-like",
+      dock_autolike_blocklist_action: "Reinitialiser la blocklist",
+      dock_autolike_blocklist_info: "Efface la liste des videos bloquees (unlike/dislike manuel).",
 
       dock_lowpop_search_label: "Vidéos peu populaires (Recherche)",
       dock_lowpop_search_action_on: "Afficher les vidéos peu populaires (Recherche)",
       dock_lowpop_search_action_off: "Masquer les vidéos peu populaires (Recherche)",
       dock_lowpop_search_info: "Masque les vidéos sous le seuil de vues dans la recherche.",
+
+      dock_lowlive_min_label: "Seuil viewers live",
+      dock_lowlive_min_custom: "Personnaliser",
+      dock_lowlive_min_prompt: "Entrer un seuil live (ex: 50, 1k)",
+      dock_lowlive_min_invalid: "Valeur invalide",
+
+      dock_live_home_label: "Livestreams masqués (Accueil)",
+      dock_live_home_action_on: "Afficher les livestreams (Accueil)",
+      dock_live_home_action_off: "Masquer les livestreams (Accueil)",
+      dock_live_home_info: "Masque les livestreams sur la page d’accueil.",
+
+      dock_live_watch_label: "Livestreams masqués (/watch)",
+      dock_live_watch_action_on: "Afficher les livestreams (/watch)",
+      dock_live_watch_action_off: "Masquer les livestreams (/watch)",
+      dock_live_watch_info: "Masque les recommandations live sur /watch.",
+
+      dock_live_search_label: "Livestreams masqués (Recherche)",
+      dock_live_search_action_on: "Afficher les livestreams (Recherche)",
+      dock_live_search_action_off: "Masquer les livestreams (Recherche)",
+      dock_live_search_info: "Masque les livestreams dans la recherche.",
+
+      dock_lowlive_home_label: "Livestreams peu populaires (Accueil)",
+      dock_lowlive_home_action_on: "Afficher les livestreams peu populaires",
+      dock_lowlive_home_action_off: "Masquer les livestreams peu populaires",
+      dock_lowlive_home_info: "Masque les livestreams sous le seuil de viewers sur l’accueil.",
+
+      dock_lowlive_watch_label: "Livestreams peu populaires (/watch)",
+      dock_lowlive_watch_action_on: "Afficher les livestreams peu populaires",
+      dock_lowlive_watch_action_off: "Masquer les livestreams peu populaires",
+      dock_lowlive_watch_info: "Masque les livestreams sous le seuil de viewers sur /watch.",
+
+      dock_lowlive_search_label: "Livestreams peu populaires (Recherche)",
+      dock_lowlive_search_action_on: "Afficher les livestreams peu populaires",
+      dock_lowlive_search_action_off: "Masquer les livestreams peu populaires",
+      dock_lowlive_search_info: "Masque les livestreams sous le seuil de viewers dans la recherche.",
 
       dock_header_info: "Active le masquage auto du header sur /watch, avec apparition au survol.",
       dock_float_buttons_label: "Dock affiché",
@@ -130,6 +172,9 @@
       dock_menu_home_label: "Fonctionnalités Accueil",
       dock_menu_home_title: "Fonctionnalités Accueil :",
       dock_menu_home_info: "Réglages spécifiques à l'accueil (Shorts, News, vidéos peu populaires).",
+      dock_menu_general_label: "Général",
+      dock_menu_general_title: "Général :",
+      dock_menu_general_info: "Raccourcis globaux (Shorts, Live, filtres, etc.).",
       dock_menu_watch_label: "Fonctionnalités Vidéo",
       dock_menu_watch_title: "Fonctionnalités Vidéo :",
       dock_menu_watch_info: "Réglages spécifiques à la page vidéo (/watch).",
@@ -143,6 +188,36 @@
       dock_menu_adv_title: "Avancé :",
       dock_menu_adv_info: "Options avancées du dock (visibilité, etc.).",
       dock_menu_back: "Retour ◀️",
+
+      dock_master_shorts_label: "Supprimer entièrement les Shorts",
+      dock_master_shorts_action_on: "Tout afficher (Shorts)",
+      dock_master_shorts_action_off: "Tout masquer (Shorts)",
+      dock_master_shorts_info: "Active toutes les options liées aux Shorts (Accueil, Recherche, Menu, Blocage).",
+
+      dock_master_lowpop_label: "Filtrer les vidéos peu populaires",
+      dock_master_lowpop_action_on: "Afficher vidéos peu populaires",
+      dock_master_lowpop_action_off: "Masquer vidéos peu populaires",
+      dock_master_lowpop_info: "Active le filtre low-pop sur Accueil, Recherche et /watch.",
+
+      dock_master_news_label: "Masquer News/Actualités",
+      dock_master_news_action_on: "Afficher News",
+      dock_master_news_action_off: "Masquer News",
+      dock_master_news_info: "Masque la section News/Actualités sur l’accueil.",
+
+      dock_master_live_label: "Masquer les livestreams",
+      dock_master_live_action_on: "Afficher les livestreams",
+      dock_master_live_action_off: "Masquer les livestreams",
+      dock_master_live_info: "Active le masquage des livestreams sur Accueil, Recherche et /watch.",
+
+      dock_master_lowlive_label: "Masquer les livestreams peu populaires",
+      dock_master_lowlive_action_on: "Afficher les livestreams peu populaires",
+      dock_master_lowlive_action_off: "Masquer les livestreams peu populaires",
+      dock_master_lowlive_info: "Active le filtre live peu populaire sur Accueil, Recherche et /watch.",
+
+      dock_master_header_label: "Header auto-hide (/watch)",
+      dock_master_header_action_on: "Header normal",
+      dock_master_header_action_off: "Header auto",
+      dock_master_header_info: "Active ou désactive le masquage auto du header sur /watch.",
 
       dock_mode_state_perf: "Mode : Performance",
       dock_mode_state_eco: "Mode : Économie",
@@ -179,6 +254,7 @@
 
       toast_header_on: "Header auto : activé (/watch)",
       toast_header_off: "Header auto : désactivé (/watch)",
+      toast_autolike_blocklist_reset: "Blocklist auto-like reinitialisee",
     },
 
     en: {
@@ -275,11 +351,53 @@
       dock_lowpop_watch_action_on: "Show unpopular recommendations",
       dock_lowpop_watch_action_off: "Hide unpopular recommendations",
       dock_lowpop_watch_info: "Hides recommendations under the view threshold on /watch.",
+      dock_autolike_subs_label: "Auto-like subscribed channels",
+      dock_autolike_subs_action_on: "Disable auto-like",
+      dock_autolike_subs_action_off: "Enable auto-like",
+      dock_autolike_subs_info: "Automatically likes videos from channels you are subscribed to.",
+      dock_autolike_blocklist_label: "Auto-like blocklist",
+      dock_autolike_blocklist_action: "Reset blocklist",
+      dock_autolike_blocklist_info: "Clears the list of videos you manually unliked/disliked.",
 
       dock_lowpop_search_label: "Low-pop videos (Search)",
       dock_lowpop_search_action_on: "Show unpopular videos (Search)",
       dock_lowpop_search_action_off: "Hide unpopular videos (Search)",
       dock_lowpop_search_info: "Hides videos under the view threshold in Search.",
+
+      dock_lowlive_min_label: "Live min viewers",
+      dock_lowlive_min_custom: "Custom",
+      dock_lowlive_min_prompt: "Enter a live threshold (e.g. 50, 1k)",
+      dock_lowlive_min_invalid: "Invalid value",
+
+      dock_live_home_label: "Livestreams hidden (Home)",
+      dock_live_home_action_on: "Show livestreams (Home)",
+      dock_live_home_action_off: "Hide livestreams (Home)",
+      dock_live_home_info: "Hides live streams on the Home feed.",
+
+      dock_live_watch_label: "Livestreams hidden (/watch)",
+      dock_live_watch_action_on: "Show livestreams (/watch)",
+      dock_live_watch_action_off: "Hide livestreams (/watch)",
+      dock_live_watch_info: "Hides live recommendations on /watch.",
+
+      dock_live_search_label: "Livestreams hidden (Search)",
+      dock_live_search_action_on: "Show livestreams (Search)",
+      dock_live_search_action_off: "Hide livestreams (Search)",
+      dock_live_search_info: "Hides live streams in Search.",
+
+      dock_lowlive_home_label: "Low-viewer livestreams (Home)",
+      dock_lowlive_home_action_on: "Show low-viewer livestreams",
+      dock_lowlive_home_action_off: "Hide low-viewer livestreams",
+      dock_lowlive_home_info: "Hides live streams under the viewer threshold on Home.",
+
+      dock_lowlive_watch_label: "Low-viewer livestreams (/watch)",
+      dock_lowlive_watch_action_on: "Show low-viewer livestreams",
+      dock_lowlive_watch_action_off: "Hide low-viewer livestreams",
+      dock_lowlive_watch_info: "Hides live streams under the viewer threshold on /watch.",
+
+      dock_lowlive_search_label: "Low-viewer livestreams (Search)",
+      dock_lowlive_search_action_on: "Show low-viewer livestreams",
+      dock_lowlive_search_action_off: "Hide low-viewer livestreams",
+      dock_lowlive_search_info: "Hides live streams under the viewer threshold in Search.",
 
       dock_header_info: "Enables auto-hide for the header on /watch, with reveal on hover.",
       dock_float_buttons_label: "Dock visible",
@@ -289,6 +407,9 @@
       dock_menu_home_label: "Home Features",
       dock_menu_home_title: "Home Features:",
       dock_menu_home_info: "Home-specific settings (Shorts, News, low-pop videos).",
+      dock_menu_general_label: "General",
+      dock_menu_general_title: "General:",
+      dock_menu_general_info: "Global shortcuts (Shorts, Live, filters, etc.).",
       dock_menu_watch_label: "Video Features",
       dock_menu_watch_title: "Video Features:",
       dock_menu_watch_info: "Video page settings (/watch).",
@@ -302,6 +423,36 @@
       dock_menu_adv_title: "Advanced:",
       dock_menu_adv_info: "Advanced dock options (visibility, etc.).",
       dock_menu_back: "Back ◀️",
+
+      dock_master_shorts_label: "Remove Shorts entirely",
+      dock_master_shorts_action_on: "Show all Shorts",
+      dock_master_shorts_action_off: "Hide all Shorts",
+      dock_master_shorts_info: "Enables all Shorts-related options (Home, Search, Sidebar, Block page).",
+
+      dock_master_lowpop_label: "Filter low-pop videos",
+      dock_master_lowpop_action_on: "Show low-pop videos",
+      dock_master_lowpop_action_off: "Hide low-pop videos",
+      dock_master_lowpop_info: "Enables low-pop filter on Home, Search and /watch.",
+
+      dock_master_news_label: "Hide News",
+      dock_master_news_action_on: "Show News",
+      dock_master_news_action_off: "Hide News",
+      dock_master_news_info: "Hides the News/Top stories section on Home.",
+
+      dock_master_live_label: "Hide livestreams",
+      dock_master_live_action_on: "Show livestreams",
+      dock_master_live_action_off: "Hide livestreams",
+      dock_master_live_info: "Enables live hiding on Home, Search and /watch.",
+
+      dock_master_lowlive_label: "Hide low-viewer livestreams",
+      dock_master_lowlive_action_on: "Show low-viewer livestreams",
+      dock_master_lowlive_action_off: "Hide low-viewer livestreams",
+      dock_master_lowlive_info: "Enables low-live filter on Home, Search and /watch.",
+
+      dock_master_header_label: "Header auto-hide (/watch)",
+      dock_master_header_action_on: "Header normal",
+      dock_master_header_action_off: "Header auto",
+      dock_master_header_info: "Enables/disables auto-hide header on /watch.",
 
       dock_mode_state_perf: "Mode: Performance",
       dock_mode_state_eco: "Mode: Saver",
@@ -338,6 +489,7 @@
 
       toast_header_on: "Header auto: ON (/watch)",
       toast_header_off: "Header auto: OFF (/watch)",
+      toast_autolike_blocklist_reset: "Auto-like blocklist reset",
     },
 
     de: {
@@ -429,11 +581,50 @@
       dock_lowpop_watch_action_on: "Unbeliebte Empfehlungen anzeigen",
       dock_lowpop_watch_action_off: "Unbeliebte Empfehlungen ausblenden",
       dock_lowpop_watch_info: "Blendet Empfehlungen unter dem Aufruf-Schwellenwert auf /watch aus.",
+      dock_autolike_subs_label: "Auto-like abonnierte Kanale",
+      dock_autolike_subs_action_on: "Auto-like deaktivieren",
+      dock_autolike_subs_action_off: "Auto-like aktivieren",
+      dock_autolike_subs_info: "Liked automatisch Videos von abonnierten Kanalen.",
 
       dock_lowpop_search_label: "Unbeliebte Videos (Suche)",
       dock_lowpop_search_action_on: "Unbeliebte Videos anzeigen (Suche)",
       dock_lowpop_search_action_off: "Unbeliebte Videos ausblenden (Suche)",
       dock_lowpop_search_info: "Blendet Videos unter dem Aufruf-Schwellenwert in der Suche aus.",
+
+      dock_lowlive_min_label: "Live-Min.-Zuschauer",
+      dock_lowlive_min_custom: "Anpassen",
+      dock_lowlive_min_prompt: "Live-Schwelle eingeben (z. B. 50, 1k)",
+      dock_lowlive_min_invalid: "Ungültiger Wert",
+
+      dock_live_home_label: "Livestreams ausgeblendet (Home)",
+      dock_live_home_action_on: "Livestreams anzeigen (Home)",
+      dock_live_home_action_off: "Livestreams ausblenden (Home)",
+      dock_live_home_info: "Blendet Livestreams auf der Home-Seite aus.",
+
+      dock_live_watch_label: "Livestreams ausgeblendet (/watch)",
+      dock_live_watch_action_on: "Livestreams anzeigen (/watch)",
+      dock_live_watch_action_off: "Livestreams ausblenden (/watch)",
+      dock_live_watch_info: "Blendet Live-Empfehlungen auf /watch aus.",
+
+      dock_live_search_label: "Livestreams ausgeblendet (Suche)",
+      dock_live_search_action_on: "Livestreams anzeigen (Suche)",
+      dock_live_search_action_off: "Livestreams ausblenden (Suche)",
+      dock_live_search_info: "Blendet Livestreams in der Suche aus.",
+
+      dock_lowlive_home_label: "Livestreams mit wenigen Zuschauern (Home)",
+      dock_lowlive_home_action_on: "Livestreams mit wenigen Zuschauern anzeigen",
+      dock_lowlive_home_action_off: "Livestreams mit wenigen Zuschauern ausblenden",
+      dock_lowlive_home_info: "Blendet Livestreams unter dem Zuschauer-Schwellenwert auf Home aus.",
+
+      dock_lowlive_watch_label: "Livestreams mit wenigen Zuschauern (/watch)",
+      dock_lowlive_watch_action_on: "Livestreams mit wenigen Zuschauern anzeigen",
+      dock_lowlive_watch_action_off: "Livestreams mit wenigen Zuschauern ausblenden",
+      dock_lowlive_watch_info: "Blendet Livestreams unter dem Zuschauer-Schwellenwert auf /watch aus.",
+
+      dock_lowlive_search_label: "Livestreams mit wenigen Zuschauern (Suche)",
+      dock_lowlive_search_action_on: "Livestreams mit wenigen Zuschauern anzeigen",
+      dock_lowlive_search_action_off: "Livestreams mit wenigen Zuschauern ausblenden",
+      dock_lowlive_search_info: "Blendet Livestreams unter dem Zuschauer-Schwellenwert in der Suche aus.",
 
       dock_header_info: "Aktiviert Auto-Hide für den Header auf /watch, mit Anzeige bei Hover.",
       dock_float_buttons_label: "Dock sichtbar",
@@ -443,6 +634,9 @@
       dock_menu_home_label: "Startseiten-Funktionen",
       dock_menu_home_title: "Startseiten-Funktionen:",
       dock_menu_home_info: "Startseiten-spezifische Einstellungen (Shorts, News, unbeliebte Videos).",
+      dock_menu_general_label: "Allgemein",
+      dock_menu_general_title: "Allgemein:",
+      dock_menu_general_info: "Globale Kurzbefehle (Shorts, Live, Filter usw.).",
       dock_menu_watch_label: "Video-Funktionen",
       dock_menu_watch_title: "Video-Funktionen:",
       dock_menu_watch_info: "Einstellungen für die Videoseite (/watch).",
@@ -456,6 +650,36 @@
       dock_menu_adv_title: "Erweitert:",
       dock_menu_adv_info: "Erweiterte Dock-Optionen (Sichtbarkeit, etc.).",
       dock_menu_back: "Zurück ◀️",
+
+      dock_master_shorts_label: "Shorts vollständig entfernen",
+      dock_master_shorts_action_on: "Alle Shorts anzeigen",
+      dock_master_shorts_action_off: "Alle Shorts ausblenden",
+      dock_master_shorts_info: "Aktiviert alle Shorts-bezogenen Optionen (Home, Suche, Seitenleiste, Seite blockieren).",
+
+      dock_master_lowpop_label: "Unbeliebte Videos filtern",
+      dock_master_lowpop_action_on: "Unbeliebte Videos anzeigen",
+      dock_master_lowpop_action_off: "Unbeliebte Videos ausblenden",
+      dock_master_lowpop_info: "Aktiviert den Low-pop-Filter auf Home, Suche und /watch.",
+
+      dock_master_news_label: "News ausblenden",
+      dock_master_news_action_on: "News anzeigen",
+      dock_master_news_action_off: "News ausblenden",
+      dock_master_news_info: "Blendet die News/Top-Meldungen-Sektion auf Home aus.",
+
+      dock_master_live_label: "Livestreams ausblenden",
+      dock_master_live_action_on: "Livestreams anzeigen",
+      dock_master_live_action_off: "Livestreams ausblenden",
+      dock_master_live_info: "Aktiviert das Ausblenden von Livestreams auf Home, Suche und /watch.",
+
+      dock_master_lowlive_label: "Livestreams mit wenigen Zuschauern ausblenden",
+      dock_master_lowlive_action_on: "Livestreams mit wenigen Zuschauern anzeigen",
+      dock_master_lowlive_action_off: "Livestreams mit wenigen Zuschauern ausblenden",
+      dock_master_lowlive_info: "Aktiviert den Low-live-Filter auf Home, Suche und /watch.",
+
+      dock_master_header_label: "Header Auto-Hide (/watch)",
+      dock_master_header_action_on: "Header normal",
+      dock_master_header_action_off: "Header auto",
+      dock_master_header_info: "Aktiviert oder deaktiviert das automatische Ausblenden des Headers auf /watch.",
 
       dock_mode_state_perf: "Modus: Leistung",
       dock_mode_state_eco: "Modus: Sparen",
@@ -583,11 +807,50 @@
       dock_lowpop_watch_action_on: "Mostrar recomendaciones poco populares",
       dock_lowpop_watch_action_off: "Ocultar recomendaciones poco populares",
       dock_lowpop_watch_info: "Oculta recomendaciones por debajo del umbral de vistas en /watch.",
+      dock_autolike_subs_label: "Auto-like suscripciones",
+      dock_autolike_subs_action_on: "Desactivar auto-like",
+      dock_autolike_subs_action_off: "Activar auto-like",
+      dock_autolike_subs_info: "Da like automaticamente a videos de canales suscritos.",
 
       dock_lowpop_search_label: "Videos poco populares (Búsqueda)",
       dock_lowpop_search_action_on: "Mostrar videos poco populares (Búsqueda)",
       dock_lowpop_search_action_off: "Ocultar videos poco populares (Búsqueda)",
       dock_lowpop_search_info: "Oculta videos por debajo del umbral de vistas en Búsqueda.",
+
+      dock_lowlive_min_label: "Mín. espectadores en vivo",
+      dock_lowlive_min_custom: "Personalizar",
+      dock_lowlive_min_prompt: "Ingresa un umbral en vivo (ej.: 50, 1k)",
+      dock_lowlive_min_invalid: "Valor inválido",
+
+      dock_live_home_label: "Directos ocultos (Inicio)",
+      dock_live_home_action_on: "Mostrar directos (Inicio)",
+      dock_live_home_action_off: "Ocultar directos (Inicio)",
+      dock_live_home_info: "Oculta directos en la página de inicio.",
+
+      dock_live_watch_label: "Directos ocultos (/watch)",
+      dock_live_watch_action_on: "Mostrar directos (/watch)",
+      dock_live_watch_action_off: "Ocultar directos (/watch)",
+      dock_live_watch_info: "Oculta recomendaciones en vivo en /watch.",
+
+      dock_live_search_label: "Directos ocultos (Búsqueda)",
+      dock_live_search_action_on: "Mostrar directos (Búsqueda)",
+      dock_live_search_action_off: "Ocultar directos (Búsqueda)",
+      dock_live_search_info: "Oculta directos en la búsqueda.",
+
+      dock_lowlive_home_label: "Directos con pocos espectadores (Inicio)",
+      dock_lowlive_home_action_on: "Mostrar directos con pocos espectadores",
+      dock_lowlive_home_action_off: "Ocultar directos con pocos espectadores",
+      dock_lowlive_home_info: "Oculta directos por debajo del umbral de espectadores en Inicio.",
+
+      dock_lowlive_watch_label: "Directos con pocos espectadores (/watch)",
+      dock_lowlive_watch_action_on: "Mostrar directos con pocos espectadores",
+      dock_lowlive_watch_action_off: "Ocultar directos con pocos espectadores",
+      dock_lowlive_watch_info: "Oculta directos por debajo del umbral de espectadores en /watch.",
+
+      dock_lowlive_search_label: "Directos con pocos espectadores (Búsqueda)",
+      dock_lowlive_search_action_on: "Mostrar directos con pocos espectadores",
+      dock_lowlive_search_action_off: "Ocultar directos con pocos espectadores",
+      dock_lowlive_search_info: "Oculta directos por debajo del umbral de espectadores en la búsqueda.",
 
       dock_header_info: "Activa el auto-ocultado del header en /watch con aparición al pasar.",
       dock_float_buttons_label: "Dock visible",
@@ -597,6 +860,9 @@
       dock_menu_home_label: "Funciones de Inicio",
       dock_menu_home_title: "Funciones de Inicio:",
       dock_menu_home_info: "Ajustes específicos de Inicio (Shorts, Noticias, videos poco populares).",
+      dock_menu_general_label: "General",
+      dock_menu_general_title: "General:",
+      dock_menu_general_info: "Atajos globales (Shorts, Directos, filtros, etc.).",
       dock_menu_watch_label: "Funciones de Video",
       dock_menu_watch_title: "Funciones de Video:",
       dock_menu_watch_info: "Ajustes de la página de video (/watch).",
@@ -610,6 +876,36 @@
       dock_menu_adv_title: "Avanzado:",
       dock_menu_adv_info: "Opciones avanzadas del dock (visibilidad, etc.).",
       dock_menu_back: "Volver ◀️",
+
+      dock_master_shorts_label: "Eliminar Shorts por completo",
+      dock_master_shorts_action_on: "Mostrar todos los Shorts",
+      dock_master_shorts_action_off: "Ocultar todos los Shorts",
+      dock_master_shorts_info: "Activa todas las opciones relacionadas con Shorts (Inicio, Búsqueda, Menú, Bloquear página).",
+
+      dock_master_lowpop_label: "Filtrar videos poco populares",
+      dock_master_lowpop_action_on: "Mostrar videos poco populares",
+      dock_master_lowpop_action_off: "Ocultar videos poco populares",
+      dock_master_lowpop_info: "Activa el filtro low-pop en Inicio, Búsqueda y /watch.",
+
+      dock_master_news_label: "Ocultar Noticias",
+      dock_master_news_action_on: "Mostrar Noticias",
+      dock_master_news_action_off: "Ocultar Noticias",
+      dock_master_news_info: "Oculta la sección de Noticias/Top stories en Inicio.",
+
+      dock_master_live_label: "Ocultar directos",
+      dock_master_live_action_on: "Mostrar directos",
+      dock_master_live_action_off: "Ocultar directos",
+      dock_master_live_info: "Activa el ocultado de directos en Inicio, Búsqueda y /watch.",
+
+      dock_master_lowlive_label: "Ocultar directos con pocos espectadores",
+      dock_master_lowlive_action_on: "Mostrar directos con pocos espectadores",
+      dock_master_lowlive_action_off: "Ocultar directos con pocos espectadores",
+      dock_master_lowlive_info: "Activa el filtro de directos poco populares en Inicio, Búsqueda y /watch.",
+
+      dock_master_header_label: "Auto-ocultar header (/watch)",
+      dock_master_header_action_on: "Header normal",
+      dock_master_header_action_off: "Header auto",
+      dock_master_header_info: "Activa o desactiva el auto-ocultado del header en /watch.",
 
       dock_mode_state_perf: "Modo: Rendimiento",
       dock_mode_state_eco: "Modo: Ahorro",
@@ -736,11 +1032,50 @@
       dock_lowpop_watch_action_on: "Mostra consigli poco popolari",
       dock_lowpop_watch_action_off: "Nascondi consigli poco popolari",
       dock_lowpop_watch_info: "Nasconde consigli sotto la soglia di visualizzazioni su /watch.",
+      dock_autolike_subs_label: "Auto-like iscrizioni",
+      dock_autolike_subs_action_on: "Disattiva auto-like",
+      dock_autolike_subs_action_off: "Attiva auto-like",
+      dock_autolike_subs_info: "Mette like automaticamente ai video dei canali iscritti.",
 
       dock_lowpop_search_label: "Video poco popolari (Ricerca)",
       dock_lowpop_search_action_on: "Mostra video poco popolari (Ricerca)",
       dock_lowpop_search_action_off: "Nascondi video poco popolari (Ricerca)",
       dock_lowpop_search_info: "Nasconde video sotto la soglia di visualizzazioni nella ricerca.",
+
+      dock_lowlive_min_label: "Min. spettatori live",
+      dock_lowlive_min_custom: "Personalizza",
+      dock_lowlive_min_prompt: "Inserisci una soglia live (es: 50, 1k)",
+      dock_lowlive_min_invalid: "Valore non valido",
+
+      dock_live_home_label: "Livestream nascosti (Home)",
+      dock_live_home_action_on: "Mostra livestream (Home)",
+      dock_live_home_action_off: "Nascondi livestream (Home)",
+      dock_live_home_info: "Nasconde i livestream nella Home.",
+
+      dock_live_watch_label: "Livestream nascosti (/watch)",
+      dock_live_watch_action_on: "Mostra livestream (/watch)",
+      dock_live_watch_action_off: "Nascondi livestream (/watch)",
+      dock_live_watch_info: "Nasconde le raccomandazioni live su /watch.",
+
+      dock_live_search_label: "Livestream nascosti (Ricerca)",
+      dock_live_search_action_on: "Mostra livestream (Ricerca)",
+      dock_live_search_action_off: "Nascondi livestream (Ricerca)",
+      dock_live_search_info: "Nasconde i livestream nella ricerca.",
+
+      dock_lowlive_home_label: "Livestream con pochi spettatori (Home)",
+      dock_lowlive_home_action_on: "Mostra livestream con pochi spettatori",
+      dock_lowlive_home_action_off: "Nascondi livestream con pochi spettatori",
+      dock_lowlive_home_info: "Nasconde i livestream sotto la soglia spettatori in Home.",
+
+      dock_lowlive_watch_label: "Livestream con pochi spettatori (/watch)",
+      dock_lowlive_watch_action_on: "Mostra livestream con pochi spettatori",
+      dock_lowlive_watch_action_off: "Nascondi livestream con pochi spettatori",
+      dock_lowlive_watch_info: "Nasconde i livestream sotto la soglia spettatori su /watch.",
+
+      dock_lowlive_search_label: "Livestream con pochi spettatori (Ricerca)",
+      dock_lowlive_search_action_on: "Mostra livestream con pochi spettatori",
+      dock_lowlive_search_action_off: "Nascondi livestream con pochi spettatori",
+      dock_lowlive_search_info: "Nasconde i livestream sotto la soglia spettatori nella ricerca.",
 
       dock_header_info: "Attiva auto-hide dell'header su /watch, con comparsa al passaggio.",
       dock_float_buttons_label: "Dock visibile",
@@ -750,6 +1085,9 @@
       dock_menu_home_label: "Funzionalita Home",
       dock_menu_home_title: "Funzionalita Home:",
       dock_menu_home_info: "Impostazioni Home (Shorts, Notizie, video poco popolari).",
+      dock_menu_general_label: "Generale",
+      dock_menu_general_title: "Generale:",
+      dock_menu_general_info: "Scorciatoie globali (Shorts, Live, filtri, ecc.).",
       dock_menu_watch_label: "Funzionalita Video",
       dock_menu_watch_title: "Funzionalita Video:",
       dock_menu_watch_info: "Impostazioni pagina video (/watch).",
@@ -763,6 +1101,36 @@
       dock_menu_adv_title: "Avanzate:",
       dock_menu_adv_info: "Opzioni avanzate del dock (visibilita, ecc.).",
       dock_menu_back: "Indietro ◀️",
+
+      dock_master_shorts_label: "Rimuovi completamente gli Shorts",
+      dock_master_shorts_action_on: "Mostra tutti gli Shorts",
+      dock_master_shorts_action_off: "Nascondi tutti gli Shorts",
+      dock_master_shorts_info: "Abilita tutte le opzioni relative agli Shorts (Home, Ricerca, Menu laterale, Blocco pagina).",
+
+      dock_master_lowpop_label: "Filtra video poco popolari",
+      dock_master_lowpop_action_on: "Mostra video poco popolari",
+      dock_master_lowpop_action_off: "Nascondi video poco popolari",
+      dock_master_lowpop_info: "Abilita il filtro low-pop su Home, Ricerca e /watch.",
+
+      dock_master_news_label: "Nascondi Notizie",
+      dock_master_news_action_on: "Mostra Notizie",
+      dock_master_news_action_off: "Nascondi Notizie",
+      dock_master_news_info: "Nasconde la sezione Notizie/Top news in Home.",
+
+      dock_master_live_label: "Nascondi livestream",
+      dock_master_live_action_on: "Mostra livestream",
+      dock_master_live_action_off: "Nascondi livestream",
+      dock_master_live_info: "Abilita il nascondimento dei livestream su Home, Ricerca e /watch.",
+
+      dock_master_lowlive_label: "Nascondi livestream con pochi spettatori",
+      dock_master_lowlive_action_on: "Mostra livestream con pochi spettatori",
+      dock_master_lowlive_action_off: "Nascondi livestream con pochi spettatori",
+      dock_master_lowlive_info: "Abilita il filtro live poco popolari su Home, Ricerca e /watch.",
+
+      dock_master_header_label: "Header auto-hide (/watch)",
+      dock_master_header_action_on: "Header normale",
+      dock_master_header_action_off: "Header auto",
+      dock_master_header_info: "Abilita o disabilita l'auto-hide dell'header su /watch.",
 
       dock_mode_state_perf: "Modalita: Prestazioni",
       dock_mode_state_eco: "Modalita: Risparmio",
@@ -888,11 +1256,50 @@
       dock_lowpop_watch_action_on: "Mostrar recomendacoes pouco populares",
       dock_lowpop_watch_action_off: "Ocultar recomendacoes pouco populares",
       dock_lowpop_watch_info: "Oculta recomendacoes abaixo do limite de visualizacoes em /watch.",
+      dock_autolike_subs_label: "Auto-like inscritos",
+      dock_autolike_subs_action_on: "Desativar auto-like",
+      dock_autolike_subs_action_off: "Ativar auto-like",
+      dock_autolike_subs_info: "Da like automaticamente nos videos de canais inscritos.",
 
       dock_lowpop_search_label: "Videos pouco populares (Pesquisa)",
       dock_lowpop_search_action_on: "Mostrar videos pouco populares (Pesquisa)",
       dock_lowpop_search_action_off: "Ocultar videos pouco populares (Pesquisa)",
       dock_lowpop_search_info: "Oculta videos abaixo do limite de visualizacoes na pesquisa.",
+
+      dock_lowlive_min_label: "Min. espectadores ao vivo",
+      dock_lowlive_min_custom: "Personalizar",
+      dock_lowlive_min_prompt: "Digite um limite ao vivo (ex: 50, 1k)",
+      dock_lowlive_min_invalid: "Valor inválido",
+
+      dock_live_home_label: "Livestreams ocultos (Home)",
+      dock_live_home_action_on: "Mostrar livestreams (Home)",
+      dock_live_home_action_off: "Ocultar livestreams (Home)",
+      dock_live_home_info: "Oculta livestreams na Home.",
+
+      dock_live_watch_label: "Livestreams ocultos (/watch)",
+      dock_live_watch_action_on: "Mostrar livestreams (/watch)",
+      dock_live_watch_action_off: "Ocultar livestreams (/watch)",
+      dock_live_watch_info: "Oculta recomendacoes ao vivo em /watch.",
+
+      dock_live_search_label: "Livestreams ocultos (Pesquisa)",
+      dock_live_search_action_on: "Mostrar livestreams (Pesquisa)",
+      dock_live_search_action_off: "Ocultar livestreams (Pesquisa)",
+      dock_live_search_info: "Oculta livestreams na pesquisa.",
+
+      dock_lowlive_home_label: "Livestreams com poucos espectadores (Home)",
+      dock_lowlive_home_action_on: "Mostrar livestreams com poucos espectadores",
+      dock_lowlive_home_action_off: "Ocultar livestreams com poucos espectadores",
+      dock_lowlive_home_info: "Oculta livestreams abaixo do limite de espectadores na Home.",
+
+      dock_lowlive_watch_label: "Livestreams com poucos espectadores (/watch)",
+      dock_lowlive_watch_action_on: "Mostrar livestreams com poucos espectadores",
+      dock_lowlive_watch_action_off: "Ocultar livestreams com poucos espectadores",
+      dock_lowlive_watch_info: "Oculta livestreams abaixo do limite de espectadores em /watch.",
+
+      dock_lowlive_search_label: "Livestreams com poucos espectadores (Pesquisa)",
+      dock_lowlive_search_action_on: "Mostrar livestreams com poucos espectadores",
+      dock_lowlive_search_action_off: "Ocultar livestreams com poucos espectadores",
+      dock_lowlive_search_info: "Oculta livestreams abaixo do limite de espectadores na pesquisa.",
 
       dock_header_info: "Ativa auto-ocultacao do header em /watch, com exibicao ao passar o mouse.",
       dock_float_buttons_label: "Dock visivel",
@@ -902,6 +1309,9 @@
       dock_menu_home_label: "Funcionalidades da Home",
       dock_menu_home_title: "Funcionalidades da Home:",
       dock_menu_home_info: "Configuracoes da Home (Shorts, Noticias, videos pouco populares).",
+      dock_menu_general_label: "Geral",
+      dock_menu_general_title: "Geral:",
+      dock_menu_general_info: "Atalhos globais (Shorts, Live, filtros, etc.).",
       dock_menu_watch_label: "Funcionalidades de Video",
       dock_menu_watch_title: "Funcionalidades de Video:",
       dock_menu_watch_info: "Configuracoes da pagina de video (/watch).",
@@ -915,6 +1325,36 @@
       dock_menu_adv_title: "Avancado:",
       dock_menu_adv_info: "Opcoes avancadas do dock (visibilidade, etc.).",
       dock_menu_back: "Voltar ◀️",
+
+      dock_master_shorts_label: "Remover Shorts completamente",
+      dock_master_shorts_action_on: "Mostrar todos os Shorts",
+      dock_master_shorts_action_off: "Ocultar todos os Shorts",
+      dock_master_shorts_info: "Ativa todas as opcoes relacionadas aos Shorts (Home, Pesquisa, Menu, Bloquear pagina).",
+
+      dock_master_lowpop_label: "Filtrar videos pouco populares",
+      dock_master_lowpop_action_on: "Mostrar videos pouco populares",
+      dock_master_lowpop_action_off: "Ocultar videos pouco populares",
+      dock_master_lowpop_info: "Ativa o filtro low-pop na Home, Pesquisa e /watch.",
+
+      dock_master_news_label: "Ocultar Noticias",
+      dock_master_news_action_on: "Mostrar Noticias",
+      dock_master_news_action_off: "Ocultar Noticias",
+      dock_master_news_info: "Oculta a secao Noticias/Top stories na Home.",
+
+      dock_master_live_label: "Ocultar livestreams",
+      dock_master_live_action_on: "Mostrar livestreams",
+      dock_master_live_action_off: "Ocultar livestreams",
+      dock_master_live_info: "Ativa o ocultamento de livestreams na Home, Pesquisa e /watch.",
+
+      dock_master_lowlive_label: "Ocultar livestreams com poucos espectadores",
+      dock_master_lowlive_action_on: "Mostrar livestreams com poucos espectadores",
+      dock_master_lowlive_action_off: "Ocultar livestreams com poucos espectadores",
+      dock_master_lowlive_info: "Ativa o filtro de live pouco populares na Home, Pesquisa e /watch.",
+
+      dock_master_header_label: "Auto-ocultar header (/watch)",
+      dock_master_header_action_on: "Header normal",
+      dock_master_header_action_off: "Header auto",
+      dock_master_header_info: "Ativa ou desativa o auto-ocultacao do header em /watch.",
 
       dock_mode_state_perf: "Modo: Desempenho",
       dock_mode_state_eco: "Modo: Economia",
@@ -1040,11 +1480,50 @@
       dock_lowpop_watch_action_on: "Onpopulaire aanbevelingen tonen",
       dock_lowpop_watch_action_off: "Onpopulaire aanbevelingen verbergen",
       dock_lowpop_watch_info: "Verbergt aanbevelingen onder de weergavedrempel op /watch.",
+      dock_autolike_subs_label: "Auto-like abonnementen",
+      dock_autolike_subs_action_on: "Auto-like uitschakelen",
+      dock_autolike_subs_action_off: "Auto-like inschakelen",
+      dock_autolike_subs_info: "Geeft automatisch een like aan videos van geabonneerde kanalen.",
 
       dock_lowpop_search_label: "Onpopulaire video's (Zoeken)",
       dock_lowpop_search_action_on: "Onpopulaire video's tonen (Zoeken)",
       dock_lowpop_search_action_off: "Onpopulaire video's verbergen (Zoeken)",
       dock_lowpop_search_info: "Verbergt video's onder de weergavedrempel in Zoeken.",
+
+      dock_lowlive_min_label: "Min. live kijkers",
+      dock_lowlive_min_custom: "Aanpassen",
+      dock_lowlive_min_prompt: "Voer een live-drempel in (bijv. 50, 1k)",
+      dock_lowlive_min_invalid: "Ongeldige waarde",
+
+      dock_live_home_label: "Livestreams verborgen (Home)",
+      dock_live_home_action_on: "Livestreams tonen (Home)",
+      dock_live_home_action_off: "Livestreams verbergen (Home)",
+      dock_live_home_info: "Verbergt livestreams op Home.",
+
+      dock_live_watch_label: "Livestreams verborgen (/watch)",
+      dock_live_watch_action_on: "Livestreams tonen (/watch)",
+      dock_live_watch_action_off: "Livestreams verbergen (/watch)",
+      dock_live_watch_info: "Verbergt live-aanbevelingen op /watch.",
+
+      dock_live_search_label: "Livestreams verborgen (Zoeken)",
+      dock_live_search_action_on: "Livestreams tonen (Zoeken)",
+      dock_live_search_action_off: "Livestreams verbergen (Zoeken)",
+      dock_live_search_info: "Verbergt livestreams in Zoeken.",
+
+      dock_lowlive_home_label: "Livestreams met weinig kijkers (Home)",
+      dock_lowlive_home_action_on: "Livestreams met weinig kijkers tonen",
+      dock_lowlive_home_action_off: "Livestreams met weinig kijkers verbergen",
+      dock_lowlive_home_info: "Verbergt livestreams onder de kijkersdrempel op Home.",
+
+      dock_lowlive_watch_label: "Livestreams met weinig kijkers (/watch)",
+      dock_lowlive_watch_action_on: "Livestreams met weinig kijkers tonen",
+      dock_lowlive_watch_action_off: "Livestreams met weinig kijkers verbergen",
+      dock_lowlive_watch_info: "Verbergt livestreams onder de kijkersdrempel op /watch.",
+
+      dock_lowlive_search_label: "Livestreams met weinig kijkers (Zoeken)",
+      dock_lowlive_search_action_on: "Livestreams met weinig kijkers tonen",
+      dock_lowlive_search_action_off: "Livestreams met weinig kijkers verbergen",
+      dock_lowlive_search_info: "Verbergt livestreams onder de kijkersdrempel in Zoeken.",
 
       dock_header_info: "Schakelt auto-hide in voor de header op /watch, met tonen bij hover.",
       dock_float_buttons_label: "Dock zichtbaar",
@@ -1054,6 +1533,9 @@
       dock_menu_home_label: "Home-functies",
       dock_menu_home_title: "Home-functies:",
       dock_menu_home_info: "Home-specifieke instellingen (Shorts, Nieuws, onpopulaire video's).",
+      dock_menu_general_label: "Algemeen",
+      dock_menu_general_title: "Algemeen:",
+      dock_menu_general_info: "Globale snelkoppelingen (Shorts, Live, filters, enz.).",
       dock_menu_watch_label: "Video-functies",
       dock_menu_watch_title: "Video-functies:",
       dock_menu_watch_info: "Instellingen voor de videopagina (/watch).",
@@ -1067,6 +1549,36 @@
       dock_menu_adv_title: "Geavanceerd:",
       dock_menu_adv_info: "Geavanceerde dock-opties (zichtbaarheid, enz.).",
       dock_menu_back: "Terug ◀️",
+
+      dock_master_shorts_label: "Shorts volledig verwijderen",
+      dock_master_shorts_action_on: "Alle Shorts tonen",
+      dock_master_shorts_action_off: "Alle Shorts verbergen",
+      dock_master_shorts_info: "Schakelt alle Shorts-gerelateerde opties in (Home, Zoeken, Zijbalk, Pagina blokkeren).",
+
+      dock_master_lowpop_label: "Onpopulaire video's filteren",
+      dock_master_lowpop_action_on: "Onpopulaire video's tonen",
+      dock_master_lowpop_action_off: "Onpopulaire video's verbergen",
+      dock_master_lowpop_info: "Schakelt low-pop filter in op Home, Zoeken en /watch.",
+
+      dock_master_news_label: "Nieuws verbergen",
+      dock_master_news_action_on: "Nieuws tonen",
+      dock_master_news_action_off: "Nieuws verbergen",
+      dock_master_news_info: "Verbergt de Nieuws/Top stories-sectie op Home.",
+
+      dock_master_live_label: "Livestreams verbergen",
+      dock_master_live_action_on: "Livestreams tonen",
+      dock_master_live_action_off: "Livestreams verbergen",
+      dock_master_live_info: "Schakelt het verbergen van livestreams in op Home, Zoeken en /watch.",
+
+      dock_master_lowlive_label: "Livestreams met weinig kijkers verbergen",
+      dock_master_lowlive_action_on: "Livestreams met weinig kijkers tonen",
+      dock_master_lowlive_action_off: "Livestreams met weinig kijkers verbergen",
+      dock_master_lowlive_info: "Schakelt low-live filter in op Home, Zoeken en /watch.",
+
+      dock_master_header_label: "Header auto-hide (/watch)",
+      dock_master_header_action_on: "Header normaal",
+      dock_master_header_action_off: "Header auto",
+      dock_master_header_info: "Schakelt automatisch verbergen van de header op /watch in of uit.",
 
       dock_mode_state_perf: "Modus: Prestatie",
       dock_mode_state_eco: "Modus: Besparen",
@@ -1192,11 +1704,50 @@
       dock_lowpop_watch_action_on: "Pokaz malo popularne rekomendacje",
       dock_lowpop_watch_action_off: "Ukryj malo popularne rekomendacje",
       dock_lowpop_watch_info: "Ukrywa rekomendacje ponizej progu wyswietlen na /watch.",
+      dock_autolike_subs_label: "Auto-like subskrypcje",
+      dock_autolike_subs_action_on: "Wylacz auto-like",
+      dock_autolike_subs_action_off: "Wlacz auto-like",
+      dock_autolike_subs_info: "Automatycznie daje like filmom z subskrybowanych kanalow.",
 
       dock_lowpop_search_label: "Malo popularne filmy (Wyszukiwanie)",
       dock_lowpop_search_action_on: "Pokaz malo popularne filmy (Wyszukiwanie)",
       dock_lowpop_search_action_off: "Ukryj malo popularne filmy (Wyszukiwanie)",
       dock_lowpop_search_info: "Ukrywa filmy ponizej progu wyswietlen w wyszukiwaniu.",
+
+      dock_lowlive_min_label: "Min. widzow na zywo",
+      dock_lowlive_min_custom: "Dostosuj",
+      dock_lowlive_min_prompt: "Wpisz prog live (np. 50, 1k)",
+      dock_lowlive_min_invalid: "Nieprawidlowa wartosc",
+
+      dock_live_home_label: "Livestreamy ukryte (Home)",
+      dock_live_home_action_on: "Pokaz livestreamy (Home)",
+      dock_live_home_action_off: "Ukryj livestreamy (Home)",
+      dock_live_home_info: "Ukrywa livestreamy na Home.",
+
+      dock_live_watch_label: "Livestreamy ukryte (/watch)",
+      dock_live_watch_action_on: "Pokaz livestreamy (/watch)",
+      dock_live_watch_action_off: "Ukryj livestreamy (/watch)",
+      dock_live_watch_info: "Ukrywa rekomendacje live na /watch.",
+
+      dock_live_search_label: "Livestreamy ukryte (Wyszukiwanie)",
+      dock_live_search_action_on: "Pokaz livestreamy (Wyszukiwanie)",
+      dock_live_search_action_off: "Ukryj livestreamy (Wyszukiwanie)",
+      dock_live_search_info: "Ukrywa livestreamy w wyszukiwaniu.",
+
+      dock_lowlive_home_label: "Livestreamy z mala liczba widzow (Home)",
+      dock_lowlive_home_action_on: "Pokaz livestreamy z mala liczba widzow",
+      dock_lowlive_home_action_off: "Ukryj livestreamy z mala liczba widzow",
+      dock_lowlive_home_info: "Ukrywa livestreamy ponizej progu widzow na Home.",
+
+      dock_lowlive_watch_label: "Livestreamy z mala liczba widzow (/watch)",
+      dock_lowlive_watch_action_on: "Pokaz livestreamy z mala liczba widzow",
+      dock_lowlive_watch_action_off: "Ukryj livestreamy z mala liczba widzow",
+      dock_lowlive_watch_info: "Ukrywa livestreamy ponizej progu widzow na /watch.",
+
+      dock_lowlive_search_label: "Livestreamy z mala liczba widzow (Wyszukiwanie)",
+      dock_lowlive_search_action_on: "Pokaz livestreamy z mala liczba widzow",
+      dock_lowlive_search_action_off: "Ukryj livestreamy z mala liczba widzow",
+      dock_lowlive_search_info: "Ukrywa livestreamy ponizej progu widzow w wyszukiwaniu.",
 
       dock_header_info: "Wlacza auto-ukrywanie naglowka na /watch, z pokazaniem po najechaniu.",
       dock_float_buttons_label: "Dock widoczny",
@@ -1206,6 +1757,9 @@
       dock_menu_home_label: "Funkcje Home",
       dock_menu_home_title: "Funkcje Home:",
       dock_menu_home_info: "Ustawienia Home (Shorts, Wiadomosci, malo popularne filmy).",
+      dock_menu_general_label: "Ogolne",
+      dock_menu_general_title: "Ogolne:",
+      dock_menu_general_info: "Globalne skroty (Shorts, Live, filtry itd.).",
       dock_menu_watch_label: "Funkcje wideo",
       dock_menu_watch_title: "Funkcje wideo:",
       dock_menu_watch_info: "Ustawienia strony wideo (/watch).",
@@ -1219,6 +1773,36 @@
       dock_menu_adv_title: "Zaawansowane:",
       dock_menu_adv_info: "Zaawansowane opcje docka (widocznosc, itp.).",
       dock_menu_back: "Wstecz ◀️",
+
+      dock_master_shorts_label: "Usun Shorts calkowicie",
+      dock_master_shorts_action_on: "Pokaz wszystkie Shorts",
+      dock_master_shorts_action_off: "Ukryj wszystkie Shorts",
+      dock_master_shorts_info: "Wlacza wszystkie opcje zwiazane z Shorts (Home, Wyszukiwanie, Menu, Blokada strony).",
+
+      dock_master_lowpop_label: "Filtruj malo popularne filmy",
+      dock_master_lowpop_action_on: "Pokaz malo popularne filmy",
+      dock_master_lowpop_action_off: "Ukryj malo popularne filmy",
+      dock_master_lowpop_info: "Wlacza filtr low-pop na Home, Wyszukiwanie i /watch.",
+
+      dock_master_news_label: "Ukryj Wiadomosci",
+      dock_master_news_action_on: "Pokaz Wiadomosci",
+      dock_master_news_action_off: "Ukryj Wiadomosci",
+      dock_master_news_info: "Ukrywa sekcje Wiadomosci/Top news na Home.",
+
+      dock_master_live_label: "Ukryj livestreamy",
+      dock_master_live_action_on: "Pokaz livestreamy",
+      dock_master_live_action_off: "Ukryj livestreamy",
+      dock_master_live_info: "Wlacza ukrywanie livestreamow na Home, Wyszukiwanie i /watch.",
+
+      dock_master_lowlive_label: "Ukryj livestreamy z mala liczba widzow",
+      dock_master_lowlive_action_on: "Pokaz livestreamy z mala liczba widzow",
+      dock_master_lowlive_action_off: "Ukryj livestreamy z mala liczba widzow",
+      dock_master_lowlive_info: "Wlacza filtr live o niskiej popularnosci na Home, Wyszukiwanie i /watch.",
+
+      dock_master_header_label: "Auto-ukrywanie naglowka (/watch)",
+      dock_master_header_action_on: "Naglowek normalny",
+      dock_master_header_action_off: "Naglowek auto",
+      dock_master_header_info: "Wlacza lub wylacza auto-ukrywanie naglowka na /watch.",
 
       dock_mode_state_perf: "Tryb: Wydajnosc",
       dock_mode_state_eco: "Tryb: Oszczedny",
@@ -1344,11 +1928,50 @@
       dock_lowpop_watch_action_on: "Az populer onerileri goster",
       dock_lowpop_watch_action_off: "Az populer onerileri gizle",
       dock_lowpop_watch_info: "/watch'ta goruntuleme esiginin altindaki onerileri gizler.",
+      dock_autolike_subs_label: "Auto-like abonelikler",
+      dock_autolike_subs_action_on: "Auto-like devre disi",
+      dock_autolike_subs_action_off: "Auto-like etkin",
+      dock_autolike_subs_info: "Abone olunan kanallarin videolarini otomatik begenir.",
 
       dock_lowpop_search_label: "Az populer videolar (Arama)",
       dock_lowpop_search_action_on: "Az populer videolari goster (Arama)",
       dock_lowpop_search_action_off: "Az populer videolari gizle (Arama)",
       dock_lowpop_search_info: "Aramada goruntuleme esiginin altindaki videolari gizler.",
+
+      dock_lowlive_min_label: "Min. canli izleyici",
+      dock_lowlive_min_custom: "Ozellestir",
+      dock_lowlive_min_prompt: "Canli esik gir (orn. 50, 1k)",
+      dock_lowlive_min_invalid: "Gecersiz deger",
+
+      dock_live_home_label: "Livestreamler gizli (Home)",
+      dock_live_home_action_on: "Livestreamleri goster (Home)",
+      dock_live_home_action_off: "Livestreamleri gizle (Home)",
+      dock_live_home_info: "Home'da livestreamleri gizler.",
+
+      dock_live_watch_label: "Livestreamler gizli (/watch)",
+      dock_live_watch_action_on: "Livestreamleri goster (/watch)",
+      dock_live_watch_action_off: "Livestreamleri gizle (/watch)",
+      dock_live_watch_info: "/watch'ta canli onerileri gizler.",
+
+      dock_live_search_label: "Livestreamler gizli (Arama)",
+      dock_live_search_action_on: "Livestreamleri goster (Arama)",
+      dock_live_search_action_off: "Livestreamleri gizle (Arama)",
+      dock_live_search_info: "Aramada livestreamleri gizler.",
+
+      dock_lowlive_home_label: "Az izlenen livestreamler (Home)",
+      dock_lowlive_home_action_on: "Az izlenen livestreamleri goster",
+      dock_lowlive_home_action_off: "Az izlenen livestreamleri gizle",
+      dock_lowlive_home_info: "Home'da izleyici esiginin altindaki livestreamleri gizler.",
+
+      dock_lowlive_watch_label: "Az izlenen livestreamler (/watch)",
+      dock_lowlive_watch_action_on: "Az izlenen livestreamleri goster",
+      dock_lowlive_watch_action_off: "Az izlenen livestreamleri gizle",
+      dock_lowlive_watch_info: "/watch'ta izleyici esiginin altindaki livestreamleri gizler.",
+
+      dock_lowlive_search_label: "Az izlenen livestreamler (Arama)",
+      dock_lowlive_search_action_on: "Az izlenen livestreamleri goster",
+      dock_lowlive_search_action_off: "Az izlenen livestreamleri gizle",
+      dock_lowlive_search_info: "Aramada izleyici esiginin altindaki livestreamleri gizler.",
 
       dock_header_info: "/watch'ta header icin auto-hide etkinlestirir, hover ile gorunur.",
       dock_float_buttons_label: "Dock gorunur",
@@ -1358,6 +1981,9 @@
       dock_menu_home_label: "Home Ozellikleri",
       dock_menu_home_title: "Home Ozellikleri:",
       dock_menu_home_info: "Home ayarlari (Shorts, Haberler, az populer videolar).",
+      dock_menu_general_label: "Genel",
+      dock_menu_general_title: "Genel:",
+      dock_menu_general_info: "Genel kisayollar (Shorts, Canli, filtreler vb.).",
       dock_menu_watch_label: "Video Ozellikleri",
       dock_menu_watch_title: "Video Ozellikleri:",
       dock_menu_watch_info: "Video sayfasi ayarlari (/watch).",
@@ -1371,6 +1997,36 @@
       dock_menu_adv_title: "Gelismis:",
       dock_menu_adv_info: "Dock icin gelismis secenekler (gorunurluk, vb.).",
       dock_menu_back: "Geri ◀️",
+
+      dock_master_shorts_label: "Shorts'u tamamen kaldir",
+      dock_master_shorts_action_on: "Tum Shorts'u goster",
+      dock_master_shorts_action_off: "Tum Shorts'u gizle",
+      dock_master_shorts_info: "Shorts ile ilgili tum secenekleri etkinlestirir (Home, Arama, Yan menu, Sayfa engeli).",
+
+      dock_master_lowpop_label: "Az populer videolari filtrele",
+      dock_master_lowpop_action_on: "Az populer videolari goster",
+      dock_master_lowpop_action_off: "Az populer videolari gizle",
+      dock_master_lowpop_info: "Home, Arama ve /watch uzerinde low-pop filtresini etkinlestirir.",
+
+      dock_master_news_label: "Haberleri gizle",
+      dock_master_news_action_on: "Haberleri goster",
+      dock_master_news_action_off: "Haberleri gizle",
+      dock_master_news_info: "Home'da Haberler/Top news bolumunu gizler.",
+
+      dock_master_live_label: "Livestreamleri gizle",
+      dock_master_live_action_on: "Livestreamleri goster",
+      dock_master_live_action_off: "Livestreamleri gizle",
+      dock_master_live_info: "Home, Arama ve /watch uzerinde livestream gizlemeyi etkinlestirir.",
+
+      dock_master_lowlive_label: "Az izlenen livestreamleri gizle",
+      dock_master_lowlive_action_on: "Az izlenen livestreamleri goster",
+      dock_master_lowlive_action_off: "Az izlenen livestreamleri gizle",
+      dock_master_lowlive_info: "Home, Arama ve /watch uzerinde dusuk izleyicili live filtresini etkinlestirir.",
+
+      dock_master_header_label: "Header auto-hide (/watch)",
+      dock_master_header_action_on: "Header normal",
+      dock_master_header_action_off: "Header auto",
+      dock_master_header_info: "/watch'ta header auto-hide'i etkinlestirir veya devre disi birakir.",
 
       dock_mode_state_perf: "Mod: Performans",
       dock_mode_state_eco: "Mod: Tasarruf",
@@ -1435,6 +2091,15 @@
     lowpopWatch: "ytcf_lowpop_watch",
     lowpopSearch: "ytcf_lowpop_search",
     lowpopMinViews: "ytcf_lowpop_min_views",
+    liveHome: "ytcf_live_home",
+    liveWatch: "ytcf_live_watch",
+    liveSearch: "ytcf_live_search",
+    lowpopLiveHome: "ytcf_lowpop_live_home",
+    lowpopLiveWatch: "ytcf_lowpop_live_watch",
+    lowpopLiveSearch: "ytcf_lowpop_live_search",
+    lowpopLiveMinViews: "ytcf_lowpop_live_min_views",
+
+    autoLikeSubs: "ytcf_auto_like_subs",
 
     floatButtons: "ytcf_float_buttons",
     uiCollapsed: "ytcf_ui_collapsed",
@@ -1458,6 +2123,15 @@
     [KEY.lowpopWatch]: true,
     [KEY.lowpopSearch]: false,
     [KEY.lowpopMinViews]: 5000,
+    [KEY.liveHome]: false,
+    [KEY.liveWatch]: false,
+    [KEY.liveSearch]: false,
+    [KEY.lowpopLiveHome]: false,
+    [KEY.lowpopLiveWatch]: false,
+    [KEY.lowpopLiveSearch]: false,
+    [KEY.lowpopLiveMinViews]: 100,
+
+    [KEY.autoLikeSubs]: false,
 
     [KEY.floatButtons]: true,
     [KEY.uiCollapsed]: false,
@@ -1486,6 +2160,18 @@
     const next = Math.max(1, Math.round(Number(v) || 0));
     setVal(KEY.lowpopMinViews, next);
     CONFIG.minViews = next;
+  }
+
+  function getMinLiveViews() {
+    const raw = Number(getVal(KEY.lowpopLiveMinViews));
+    if (Number.isFinite(raw) && raw > 0) return Math.round(raw);
+    return DEFAULTS[KEY.lowpopLiveMinViews];
+  }
+
+  function setMinLiveViews(v) {
+    const next = Math.max(1, Math.round(Number(v) || 0));
+    setVal(KEY.lowpopLiveMinViews, next);
+    CONFIG.minLiveViews = next;
   }
 
   function getLangSetting() {
@@ -1736,6 +2422,559 @@
   function hide(el) { if (el) el.style.display = "none"; }
 
   /* =========================================================
+   * AUTO-LIKE (Subscribed Channels)
+   * ========================================================= */
+  let lastWatchVideoId = null;
+  let lastWatchHref = "";
+  let autoLikeState = {
+    videoId: null,
+    attempts: 0,
+    lastAttempt: 0,
+    lastClickAt: 0,
+    pendingLike: false,
+    done: false,
+    retryTimers: [],
+    verifyTimers: [],
+    autoLiked: false,
+    lastLikePressed: null,
+    lastDislikePressed: null,
+  };
+  const AUTO_LIKE_BLOCK_KEY = "ytcf_auto_like_blocked_v1";
+  const SUBSCRIBED_TOKENS = [
+    "subscribed", "abonne", "abonné", "abonne(e)", "abonnierte",
+    "suscrito", "suscrito a", "inscrito", "iscritto", "abonniert",
+    "geabonneerd", "subskrybowano", "abonelik", "abonelikler"
+  ];
+  const UNSUBSCRIBED_TOKENS = [
+    "subscribe", "s'abonner", "sabonner", "abonnieren", "suscribirse",
+    "suscribete", "suscribete", "iscriviti", "inscreva-se", "abonneren",
+    "subskrybuj", "abone ol"
+  ];
+  const UNSUBSCRIBE_TOKENS = [
+    "unsubscribe", "desabonner", "désabonner", "abmelden", "annulla",
+    "cancelar suscripcion", "cancelar suscripción", "se desinscrever",
+    "uitschrijven", "anuluj subskrypcje", "abonelikten cik"
+  ];
+  const NOTIFICATION_TOKENS = [
+    "notification", "notifications", "notificaciones", "benachrichtigungen",
+    "notifiche", "notificacoes", "notificações", "meldingen",
+    "powiadomienia", "bildirim"
+  ];
+  const DISLIKE_TOKENS = [
+    "dislike", "je n'aime pas", "no me gusta", "non mi piace", "nao gostei",
+    "niet leuk", "nicht gefallt", "nie podoba", "begenmedim"
+  ];
+
+  function getWatchVideoId() {
+    if (!isWatch()) return null;
+    const flexyId = document.querySelector("ytd-watch-flexy")?.getAttribute("video-id");
+    if (flexyId) return flexyId;
+    const metaId = document.querySelector('meta[itemprop="videoId"]')?.getAttribute("content");
+    if (metaId) return metaId;
+    const initialId = window.ytInitialPlayerResponse?.videoDetails?.videoId;
+    if (initialId) return initialId;
+    const params = new URLSearchParams(location.search);
+    return params.get("v");
+  }
+
+  function getAutoLikeBlockMap() {
+    const raw = GM_getValue(AUTO_LIKE_BLOCK_KEY);
+    if (!raw || typeof raw !== "object") return {};
+    return raw;
+  }
+
+  function setAutoLikeBlockMap(map) {
+    GM_setValue(AUTO_LIKE_BLOCK_KEY, map);
+  }
+
+  function isAutoLikeBlocked(videoId) {
+    if (!videoId) return false;
+    const map = getAutoLikeBlockMap();
+    return !!map[videoId];
+  }
+
+  function blockAutoLike(videoId) {
+    if (!videoId) return;
+    const map = getAutoLikeBlockMap();
+    map[videoId] = 1;
+    setAutoLikeBlockMap(map);
+  }
+
+  function getAutoLikeBlockCount() {
+    const map = getAutoLikeBlockMap();
+    try {
+      return Object.keys(map || {}).length;
+    } catch {
+      return 0;
+    }
+  }
+
+  function resetAutoLikeBlocklist() {
+    setAutoLikeBlockMap({});
+    showToast(T.toast_autolike_blocklist_reset || "Auto-like blocklist reset", "info");
+  }
+
+  function clearAutoLikeRetryTimers() {
+    if (autoLikeState.retryTimers?.length) {
+      autoLikeState.retryTimers.forEach(id => clearTimeout(id));
+    }
+    autoLikeState.retryTimers = [];
+  }
+
+  function clearAutoLikeVerifyTimers() {
+    if (autoLikeState.verifyTimers?.length) {
+      autoLikeState.verifyTimers.forEach(id => clearTimeout(id));
+    }
+    autoLikeState.verifyTimers = [];
+  }
+
+  function resetAutoLikeState(videoId) {
+    clearAutoLikeRetryTimers();
+    clearAutoLikeVerifyTimers();
+    if (autoLikeObserver) {
+      autoLikeObserver.disconnect();
+      autoLikeObserver = null;
+    }
+    stopAutoLikeWatchObserver();
+    autoLikeState = {
+      videoId,
+      attempts: 0,
+      lastAttempt: 0,
+      lastClickAt: 0,
+      pendingLike: false,
+      done: false,
+      retryTimers: [],
+      verifyTimers: [],
+      autoLiked: false,
+      lastLikePressed: null,
+      lastDislikePressed: null,
+    };
+    removeAutoLikeIndicator();
+  }
+
+  function handleWatchVideoChange() {
+    if (!getBool(KEY.autoLikeSubs)) return;
+    if (!isWatch()) return;
+    const vid = getWatchVideoId();
+    const href = location.href;
+    if (!vid) {
+      if (href !== lastWatchHref) {
+        lastWatchHref = href;
+        resetAutoLikeState(null);
+        startAutoLikeWatchObserver();
+      }
+      return;
+    }
+    if (vid === lastWatchVideoId) return;
+    lastWatchHref = href;
+    lastWatchVideoId = vid;
+    resetAutoLikeState(vid);
+    startAutoLikeWatchObserver();
+    autoLikeSubscribedWatch();
+    scheduleAutoLikeRetries();
+    setTimeout(bindAutoLikeIndicatorObserver, 120);
+  }
+
+  function scheduleAutoLikeRetries() {
+    if (!getBool(KEY.autoLikeSubs)) return;
+    if (isAutoLikeBlocked(getWatchVideoId())) return;
+    if (autoLikeState.done) return;
+    if (autoLikeState.attempts >= 8) return;
+    if (autoLikeState.retryTimers.length) return;
+
+    const delays = [80, 180, 320, 520, 900, 1500, 2400, 3500];
+    autoLikeState.retryTimers = delays.map((ms) => setTimeout(() => {
+      autoLikeSubscribedWatch();
+    }, ms));
+  }
+
+  function getSubscribeButton(renderer) {
+    return (
+      renderer?.querySelector("button") ||
+      renderer?.querySelector("yt-button-shape button") ||
+      renderer?.querySelector("tp-yt-paper-button") ||
+      null
+    );
+  }
+
+  function textHasAny(text, list) {
+    const t = normalizeBasic(text || "");
+    if (!t) return false;
+    return list.some(k => t.includes(normalizeBasic(k)));
+  }
+
+  function findNotificationBellButton() {
+    const selectors = [
+      "ytd-subscription-notification-toggle-button-renderer button",
+      "ytd-subscriptions-notification-toggle-button-renderer button",
+      "ytd-notification-toggle-button-renderer button"
+    ];
+    for (const sel of selectors) {
+      const btns = Array.from(document.querySelectorAll(sel));
+      for (const btn of btns) {
+        const label = btn.getAttribute("aria-label") || btn.getAttribute("title") || "";
+        if (textHasAny(label, NOTIFICATION_TOKENS)) return btn;
+      }
+    }
+    return null;
+  }
+
+  function isSubscribedRenderer(renderer) {
+    if (!renderer) return false;
+    if (renderer.hasAttribute("subscribed")) return true;
+    const subAttr =
+      renderer.getAttribute?.("is-subscribed") ||
+      renderer.getAttribute?.("data-is-subscribed") ||
+      renderer.getAttribute?.("subscribed");
+    if (subAttr === "" || subAttr === "true") return true;
+    const btn = getSubscribeButton(renderer);
+    const pressed = btn?.getAttribute?.("aria-pressed");
+    if (pressed === "true") return true;
+    if (pressed === "false") return false;
+    const dataSub = renderer?.__data?.subscribed ?? renderer?.__data?.isSubscribed;
+    if (dataSub === true) return true;
+
+    const label = btn?.getAttribute?.("aria-label") || btn?.textContent || "";
+    if (textHasAny(label, UNSUBSCRIBED_TOKENS)) return false;
+    if (textHasAny(label, SUBSCRIBED_TOKENS)) return true;
+    if (textHasAny(label, UNSUBSCRIBE_TOKENS)) return true;
+    return false;
+  }
+
+  function isDislikeButton(btn) {
+    if (!btn) return false;
+    if (btn.closest?.("ytd-dislike-button-renderer") || btn.closest?.("#dislike-button")) return true;
+    const label = btn.getAttribute("aria-label") || btn.getAttribute("title") || btn.textContent || "";
+    return textHasAny(label, DISLIKE_TOKENS);
+  }
+
+  function findDislikeButton() {
+    const candidates = [
+      "ytd-dislike-button-renderer button",
+      "#dislike-button button",
+      "ytd-segmented-like-dislike-button-renderer button[aria-pressed]",
+      "#top-level-buttons-computed button[aria-pressed]"
+    ];
+    for (const sel of candidates) {
+      const btns = Array.from(document.querySelectorAll(sel));
+      for (const btn of btns) {
+        if (isDislikeButton(btn)) return btn;
+      }
+    }
+    return null;
+  }
+
+  function findLikeButton() {
+    const candidates = [
+      "ytd-like-button-renderer button",
+      "#like-button button",
+      "ytd-like-button-renderer button[aria-pressed]",
+      "ytd-segmented-like-dislike-button-renderer button[aria-pressed]",
+      "#top-level-buttons-computed ytd-toggle-button-renderer button[aria-pressed]",
+      "#top-level-buttons-computed button[aria-pressed]",
+      "ytd-toggle-button-renderer#like-button button"
+    ];
+
+    for (const sel of candidates) {
+      const btns = Array.from(document.querySelectorAll(sel));
+      for (const btn of btns) {
+        if (!isDislikeButton(btn)) return btn;
+      }
+    }
+    return null;
+  }
+
+  const AUTO_LIKE_INDICATOR_ID = "ytcf-auto-like-indicator";
+
+  function getActionBarEl() {
+    return (
+      document.querySelector("#top-level-buttons-computed") ||
+      document.querySelector("ytd-segmented-like-dislike-button-renderer") ||
+      document.querySelector("ytd-menu-renderer")
+    );
+  }
+
+  function ensureAutoLikeIndicator() {
+    let el = document.getElementById(AUTO_LIKE_INDICATOR_ID);
+    if (el) return el;
+    el = document.createElement("span");
+    el.id = AUTO_LIKE_INDICATOR_ID;
+    el.textContent = "🤖";
+    el.style.cssText = `
+      display: inline-flex;
+      align-items: center;
+      margin-right: 8px;
+      padding: 0 6px;
+      height: 28px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      font-size: 14px;
+      line-height: 1;
+      border: 1px solid rgba(255,255,255,0.18);
+    `;
+    return el;
+  }
+
+  function removeAutoLikeIndicator() {
+    document.getElementById(AUTO_LIKE_INDICATOR_ID)?.remove();
+  }
+
+  function updateAutoLikeIndicator() {
+    if (!autoLikeState.autoLiked) {
+      removeAutoLikeIndicator();
+      return;
+    }
+    const likeBtn = findLikeButton();
+    const dislikeBtn = findDislikeButton();
+    const likeOn = likeBtn?.getAttribute("aria-pressed") === "true";
+    const dislikeOn = dislikeBtn?.getAttribute("aria-pressed") === "true";
+    if (!likeOn || dislikeOn) {
+      removeAutoLikeIndicator();
+      autoLikeState.autoLiked = false;
+      return;
+    }
+    const bar =
+      likeBtn?.closest?.("#top-level-buttons-computed") ||
+      likeBtn?.closest?.("ytd-segmented-like-dislike-button-renderer")?.parentElement ||
+      getActionBarEl();
+    if (!bar) return;
+    const el = ensureAutoLikeIndicator();
+    if (!el.isConnected) {
+      const likeGroup =
+        likeBtn?.closest?.("ytd-toggle-button-renderer") ||
+        likeBtn?.closest?.("ytd-like-button-renderer") ||
+        likeBtn?.closest?.("ytd-segmented-like-dislike-button-renderer") ||
+        null;
+      if (likeGroup?.parentElement) {
+        likeGroup.parentElement.insertBefore(el, likeGroup);
+      } else {
+        bar.insertBefore(el, bar.firstChild || null);
+      }
+    }
+  }
+
+  let autoLikeObserver = null;
+  let autoLikeWatchObserver = null;
+  let autoLikeWatchObserverTimer = null;
+  let autoLikePulseTimer = null;
+  let autoLikePulseEnd = 0;
+  let watchFlexyObserver = null;
+  let watchFlexyEl = null;
+
+  function stopAutoLikeWatchObserver() {
+    if (autoLikeWatchObserver) {
+      autoLikeWatchObserver.disconnect();
+      autoLikeWatchObserver = null;
+    }
+    if (autoLikeWatchObserverTimer) {
+      clearTimeout(autoLikeWatchObserverTimer);
+      autoLikeWatchObserverTimer = null;
+    }
+    if (autoLikePulseTimer) {
+      clearInterval(autoLikePulseTimer);
+      autoLikePulseTimer = null;
+    }
+    autoLikePulseEnd = 0;
+  }
+
+  function startAutoLikeWatchObserver() {
+    if (!getBool(KEY.autoLikeSubs) || !isWatch()) return;
+    stopAutoLikeWatchObserver();
+    const root =
+      document.querySelector("ytd-watch-flexy") ||
+      document.querySelector("ytd-app") ||
+      document.documentElement;
+    if (!root) return;
+    autoLikeWatchObserver = new MutationObserver(() => {
+      autoLikeSubscribedWatch();
+    });
+    autoLikeWatchObserver.observe(root, { childList: true, subtree: true });
+    autoLikeWatchObserverTimer = setTimeout(stopAutoLikeWatchObserver, 6000);
+    autoLikePulseEnd = Date.now() + 6000;
+    autoLikePulseTimer = setInterval(() => {
+      if (Date.now() > autoLikePulseEnd) {
+        stopAutoLikeWatchObserver();
+        return;
+      }
+      handleWatchVideoChange();
+      autoLikeSubscribedWatch();
+    }, 220);
+  }
+
+  function bindWatchVideoIdObserver() {
+    if (!getBool(KEY.autoLikeSubs)) {
+      if (watchFlexyObserver) {
+        watchFlexyObserver.disconnect();
+        watchFlexyObserver = null;
+      }
+      watchFlexyEl = null;
+      return;
+    }
+    if (!isWatch()) {
+      if (watchFlexyObserver) {
+        watchFlexyObserver.disconnect();
+        watchFlexyObserver = null;
+      }
+      watchFlexyEl = null;
+      return;
+    }
+    const flexy = document.querySelector("ytd-watch-flexy");
+    if (!flexy) return;
+    if (watchFlexyEl === flexy && watchFlexyObserver) return;
+    if (watchFlexyObserver) watchFlexyObserver.disconnect();
+    watchFlexyEl = flexy;
+    watchFlexyObserver = new MutationObserver(() => {
+      handleWatchVideoChange();
+    });
+    watchFlexyObserver.observe(flexy, { attributes: true, attributeFilter: ["video-id"] });
+    handleWatchVideoChange();
+  }
+  function bindAutoLikeIndicatorObserver() {
+    if (autoLikeObserver) {
+      autoLikeObserver.disconnect();
+      autoLikeObserver = null;
+    }
+    const likeBtn = findLikeButton();
+    const dislikeBtn = findDislikeButton();
+    const targets = [likeBtn, dislikeBtn].filter(Boolean);
+    if (!targets.length) return;
+    autoLikeState.lastLikePressed = likeBtn?.getAttribute("aria-pressed") || null;
+    autoLikeState.lastDislikePressed = dislikeBtn?.getAttribute("aria-pressed") || null;
+    autoLikeObserver = new MutationObserver(() => {
+      const likeNow = likeBtn?.getAttribute("aria-pressed") || null;
+      const dislikeNow = dislikeBtn?.getAttribute("aria-pressed") || null;
+
+      if (autoLikeState.lastLikePressed === "true" && likeNow === "false") {
+        blockAutoLike(autoLikeState.videoId);
+        autoLikeState.done = true;
+        stopAutoLikeWatchObserver();
+        clearAutoLikeRetryTimers();
+        clearAutoLikeVerifyTimers();
+      }
+      if (autoLikeState.lastDislikePressed !== "true" && dislikeNow === "true") {
+        blockAutoLike(autoLikeState.videoId);
+        autoLikeState.done = true;
+        stopAutoLikeWatchObserver();
+        clearAutoLikeRetryTimers();
+        clearAutoLikeVerifyTimers();
+      }
+
+      autoLikeState.lastLikePressed = likeNow;
+      autoLikeState.lastDislikePressed = dislikeNow;
+      updateAutoLikeIndicator();
+    });
+    for (const target of targets) {
+      autoLikeObserver.observe(target, { attributes: true, attributeFilter: ["aria-pressed"] });
+    }
+  }
+
+  function scheduleAutoLikeVerify(vid) {
+    if (autoLikeState.verifyTimers.length) return;
+    const checks = [250, 600, 1200];
+    autoLikeState.verifyTimers = checks.map((ms, idx) => setTimeout(() => {
+      if (autoLikeState.videoId !== vid) return;
+      const likeBtn = findLikeButton();
+      const pressed = likeBtn?.getAttribute("aria-pressed");
+      if (pressed === "true") {
+        autoLikeState.done = true;
+        autoLikeState.autoLiked = true;
+        autoLikeState.pendingLike = false;
+        updateAutoLikeIndicator();
+        bindAutoLikeIndicatorObserver();
+        stopAutoLikeWatchObserver();
+        clearAutoLikeRetryTimers();
+        clearAutoLikeVerifyTimers();
+        return;
+      }
+      if (idx === checks.length - 1) {
+        autoLikeState.pendingLike = false;
+        clearAutoLikeVerifyTimers();
+        scheduleAutoLikeRetries();
+      }
+    }, ms));
+  }
+
+  function autoLikeSubscribedWatch() {
+    if (!getBool(KEY.autoLikeSubs)) return;
+    const vid = getWatchVideoId();
+    if (!vid) return;
+    if (isAutoLikeBlocked(vid)) return;
+    if (autoLikeState.videoId !== vid) resetAutoLikeState(vid);
+    if (autoLikeState.done) return;
+
+    const now = Date.now();
+    if (now - autoLikeState.lastAttempt < 120) return;
+    autoLikeState.lastAttempt = now;
+    if (autoLikeState.attempts >= 8) return;
+    if (autoLikeState.pendingLike) {
+      scheduleAutoLikeVerify(vid);
+      return;
+    }
+
+    const renderer = document.querySelector("ytd-subscribe-button-renderer, ytd-subscribe-button-view-model");
+    if (renderer) {
+      if (!isSubscribedRenderer(renderer)) {
+        scheduleAutoLikeRetries();
+        return;
+      }
+    } else {
+      const bellBtn = findNotificationBellButton();
+      if (!bellBtn) {
+        scheduleAutoLikeRetries();
+        return;
+      }
+    }
+
+    const likeBtn = findLikeButton();
+    if (!likeBtn) {
+      scheduleAutoLikeRetries();
+      return;
+    }
+    const likePressedAttr = likeBtn.getAttribute("aria-pressed");
+    if (likePressedAttr == null) {
+      scheduleAutoLikeRetries();
+      return;
+    }
+    const dislikeBtn = findDislikeButton();
+    if (dislikeBtn?.getAttribute("aria-pressed") === "true") {
+      blockAutoLike(vid);
+      autoLikeState.done = true;
+      stopAutoLikeWatchObserver();
+      return;
+    }
+    if (likeBtn.disabled || likeBtn.getAttribute("aria-disabled") === "true") {
+      scheduleAutoLikeRetries();
+      return;
+    }
+
+    const pressed = likePressedAttr;
+    if (pressed === "true") {
+      autoLikeState.done = true;
+      if (autoLikeState.autoLiked) {
+        updateAutoLikeIndicator();
+        bindAutoLikeIndicatorObserver();
+      } else {
+        removeAutoLikeIndicator();
+      }
+      stopAutoLikeWatchObserver();
+      clearAutoLikeRetryTimers();
+      clearAutoLikeVerifyTimers();
+      return;
+    }
+    if (likeBtn.disabled) {
+      scheduleAutoLikeRetries();
+      return;
+    }
+
+    autoLikeState.attempts += 1;
+    autoLikeState.lastClickAt = Date.now();
+    autoLikeState.pendingLike = true;
+    likeBtn.click();
+    scheduleAutoLikeVerify(vid);
+  }
+
+  /* =========================================================
    * Block Shorts Page (redirect)
    * ========================================================= */
   function maybeRedirectShortsPage() {
@@ -1946,11 +3185,11 @@
   /* =========================================================
    * Low-popularity filter (Home + Watch)
    * ========================================================= */
-  const CONFIG = { minViews: getMinViews() };
+  const CONFIG = { minViews: getMinViews(), minLiveViews: getMinLiveViews() };
 
   const WORDS = {
     fr: { views: ["vue", "vues"], live: ["spectateur", "spectateurs"] },
-    en: { views: ["view", "views"], live: ["viewer", "viewers"] },
+    en: { views: ["view", "views"], live: ["viewer", "viewers", "watching"] },
     de: { views: ["aufruf", "aufrufe", "aufrufen"], live: ["zuschauer"] },
     es: { views: ["vista", "vistas", "visualiz", "visualización", "visualizaciones"], live: ["espectador", "espectadores"] },
     it: { views: ["visualizzazione", "visualizzazioni"], live: ["spettatore", "spettatori"] },
@@ -2000,6 +3239,15 @@
     return parseNumberWithSuffix(t);
   }
 
+  function parseLiveViewerCount(text) {
+    if (!text) return null;
+    const t = normalizeMetric(text);
+    const dict = WORDS[LANG] || WORDS.en;
+    const liveKeys = (dict.live || []);
+    if (!hasAnyKeyword(t, liveKeys)) return null;
+    return parseNumberWithSuffix(t);
+  }
+
   function getViewCountFromNode(node) {
     if (!node || node.nodeType !== 1) return null;
 
@@ -2027,6 +3275,62 @@
     return null;
   }
 
+  function getLiveViewerCountFromNode(node) {
+    if (!node || node.nodeType !== 1) return null;
+
+    const candidates = node.querySelectorAll(
+      [
+        "span.yt-content-metadata-view-model__metadata-text",
+        "#metadata-line span",
+        "span.inline-metadata-item",
+        "ytd-video-meta-block span",
+        "span",
+      ].join(", ")
+    );
+
+    for (const span of candidates) {
+      const count = parseLiveViewerCount(span.textContent);
+      if (count != null) return count;
+    }
+
+    const aria = node.getAttribute?.("aria-label") || "";
+    if (aria) {
+      const count = parseLiveViewerCount(aria);
+      if (count != null) return count;
+    }
+
+    return null;
+  }
+
+  const LIVE_BADGE_TOKENS = [
+    "live",
+    "en direct",
+    "en vivo",
+    "directo",
+    "ao vivo",
+    "diretta",
+    "na zywo",
+    "canli",
+  ].map(normalizeBasic);
+
+  function looksLikeLiveBadge(text) {
+    const tt = normalizeBasic(text);
+    if (!tt) return false;
+    return LIVE_BADGE_TOKENS.some(k => tt.includes(k));
+  }
+
+  function isLiveItem(node) {
+    if (!node || node.nodeType !== 1) return false;
+    const badgeText = [
+      node.querySelector("ytd-badge-supported-renderer")?.textContent,
+      node.querySelector(".badge-style-type-live-now")?.textContent,
+      node.querySelector(".badge-style-type-simple")?.textContent,
+      node.querySelector("span.ytd-thumbnail-overlay-time-status-renderer")?.textContent,
+      node.querySelector("ytd-thumbnail-overlay-time-status-renderer")?.textContent,
+    ].filter(Boolean).join(" ");
+    return looksLikeLiveBadge(badgeText);
+  }
+
   function processHomeItem(item) {
     if (!getBool(KEY.lowpopHome)) return;
     if (!item || item.nodeType !== 1) return;
@@ -2047,6 +3351,45 @@
     const base = root && root.querySelectorAll ? root : document;
     base.querySelectorAll("ytd-rich-item-renderer").forEach(processHomeItem);
     if (root && root.matches && root.matches("ytd-rich-item-renderer")) processHomeItem(root);
+  }
+
+  function processHomeLiveItem(item) {
+    if (!getBool(KEY.liveHome)) return;
+    if (!item || item.nodeType !== 1) return;
+    if (item.dataset.ytcfLiveDone === "1") return;
+    if (!isLiveItem(item)) return;
+    item.dataset.ytcfLiveDone = "1";
+    item.style.display = "none";
+    item.dataset.ytcfLiveHidden = "1";
+  }
+
+  function scanHomeLive(root) {
+    if (!getBool(KEY.liveHome)) return;
+    const base = root && root.querySelectorAll ? root : document;
+    base.querySelectorAll("ytd-rich-item-renderer").forEach(processHomeLiveItem);
+    if (root && root.matches && root.matches("ytd-rich-item-renderer")) processHomeLiveItem(root);
+  }
+
+  function processHomeLowLiveItem(item) {
+    if (!getBool(KEY.lowpopLiveHome)) return;
+    if (!item || item.nodeType !== 1) return;
+    if (item.dataset.ytcfLowliveDone === "1") return;
+    if (!isLiveItem(item)) return;
+    const count = getLiveViewerCountFromNode(item);
+    if (count != null) {
+      item.dataset.ytcfLowliveDone = "1";
+      if (count < CONFIG.minLiveViews) {
+        item.style.display = "none";
+        item.dataset.ytcfLowliveHidden = "1";
+      }
+    }
+  }
+
+  function scanHomeLowLive(root) {
+    if (!getBool(KEY.lowpopLiveHome)) return;
+    const base = root && root.querySelectorAll ? root : document;
+    base.querySelectorAll("ytd-rich-item-renderer").forEach(processHomeLowLiveItem);
+    if (root && root.matches && root.matches("ytd-rich-item-renderer")) processHomeLowLiveItem(root);
   }
 
   function processWatchCard(card) {
@@ -2108,6 +3451,89 @@
     }
   }
 
+  function processWatchLiveCard(card) {
+    if (!getBool(KEY.liveWatch)) return;
+    if (!card || card.nodeType !== 1) return;
+    if (card.dataset.ytcfLiveDone === "1") return;
+    if (!isLiveItem(card)) return;
+    card.dataset.ytcfLiveDone = "1";
+    card.style.display = "none";
+    card.dataset.ytcfLiveHidden = "1";
+  }
+
+  function scanWatchLive(root) {
+    if (!getBool(KEY.liveWatch)) return;
+    const base = root && root.querySelectorAll ? root : document;
+    base.querySelectorAll(
+      [
+        "div.yt-lockup-view-model",
+        "ytd-compact-video-renderer",
+        "ytd-video-renderer",
+        "ytd-grid-video-renderer",
+        "ytd-rich-item-renderer",
+      ].join(", ")
+    ).forEach(processWatchLiveCard);
+    if (
+      root &&
+      root.matches &&
+      root.matches(
+        [
+          "div.yt-lockup-view-model",
+          "ytd-compact-video-renderer",
+          "ytd-video-renderer",
+          "ytd-grid-video-renderer",
+          "ytd-rich-item-renderer",
+        ].join(", ")
+      )
+    ) {
+      processWatchLiveCard(root);
+    }
+  }
+
+  function processWatchLowLiveCard(card) {
+    if (!getBool(KEY.lowpopLiveWatch)) return;
+    if (!card || card.nodeType !== 1) return;
+    if (card.dataset.ytcfLowliveDone === "1") return;
+    if (!isLiveItem(card)) return;
+    const count = getLiveViewerCountFromNode(card);
+    if (count != null) {
+      card.dataset.ytcfLowliveDone = "1";
+      if (count < CONFIG.minLiveViews) {
+        card.style.display = "none";
+        card.dataset.ytcfLowliveHidden = "1";
+      }
+    }
+  }
+
+  function scanWatchLowLive(root) {
+    if (!getBool(KEY.lowpopLiveWatch)) return;
+    const base = root && root.querySelectorAll ? root : document;
+    base.querySelectorAll(
+      [
+        "div.yt-lockup-view-model",
+        "ytd-compact-video-renderer",
+        "ytd-video-renderer",
+        "ytd-grid-video-renderer",
+        "ytd-rich-item-renderer",
+      ].join(", ")
+    ).forEach(processWatchLowLiveCard);
+    if (
+      root &&
+      root.matches &&
+      root.matches(
+        [
+          "div.yt-lockup-view-model",
+          "ytd-compact-video-renderer",
+          "ytd-video-renderer",
+          "ytd-grid-video-renderer",
+          "ytd-rich-item-renderer",
+        ].join(", ")
+      )
+    ) {
+      processWatchLowLiveCard(root);
+    }
+  }
+
   function scanSearchLowpop(root) {
     if (!getBool(KEY.lowpopSearch)) return;
     const base = root && root.querySelectorAll ? root : document;
@@ -2121,6 +3547,63 @@
       root.matches("ytd-video-renderer, ytd-compact-video-renderer, ytd-grid-video-renderer, ytd-rich-item-renderer")
     ) {
       processSearchItem(root);
+    }
+  }
+
+  function processSearchLiveItem(item) {
+    if (!getBool(KEY.liveSearch)) return;
+    if (!item || item.nodeType !== 1) return;
+    if (item.dataset.ytcfLiveDone === "1") return;
+    if (!isLiveItem(item)) return;
+    item.dataset.ytcfLiveDone = "1";
+    item.style.display = "none";
+    item.dataset.ytcfLiveHidden = "1";
+  }
+
+  function scanSearchLive(root) {
+    if (!getBool(KEY.liveSearch)) return;
+    const base = root && root.querySelectorAll ? root : document;
+    const candidates = base.querySelectorAll(
+      "ytd-video-renderer, ytd-compact-video-renderer, ytd-grid-video-renderer, ytd-rich-item-renderer"
+    );
+    candidates.forEach(processSearchLiveItem);
+    if (
+      root &&
+      root.matches &&
+      root.matches("ytd-video-renderer, ytd-compact-video-renderer, ytd-grid-video-renderer, ytd-rich-item-renderer")
+    ) {
+      processSearchLiveItem(root);
+    }
+  }
+
+  function processSearchLowLiveItem(item) {
+    if (!getBool(KEY.lowpopLiveSearch)) return;
+    if (!item || item.nodeType !== 1) return;
+    if (item.dataset.ytcfLowliveDone === "1") return;
+    if (!isLiveItem(item)) return;
+    const count = getLiveViewerCountFromNode(item);
+    if (count != null) {
+      item.dataset.ytcfLowliveDone = "1";
+      if (count < CONFIG.minLiveViews) {
+        item.style.display = "none";
+        item.dataset.ytcfLowliveHidden = "1";
+      }
+    }
+  }
+
+  function scanSearchLowLive(root) {
+    if (!getBool(KEY.lowpopLiveSearch)) return;
+    const base = root && root.querySelectorAll ? root : document;
+    const candidates = base.querySelectorAll(
+      "ytd-video-renderer, ytd-compact-video-renderer, ytd-grid-video-renderer, ytd-rich-item-renderer"
+    );
+    candidates.forEach(processSearchLowLiveItem);
+    if (
+      root &&
+      root.matches &&
+      root.matches("ytd-video-renderer, ytd-compact-video-renderer, ytd-grid-video-renderer, ytd-rich-item-renderer")
+    ) {
+      processSearchLowLiveItem(root);
     }
   }
 
@@ -2152,6 +3635,42 @@
     });
   }
 
+  function unhideLive() {
+    document.querySelectorAll(
+      [
+        "ytd-rich-item-renderer[data-ytcf-live-hidden='1']",
+        "ytd-video-renderer[data-ytcf-live-hidden='1']",
+        "ytd-compact-video-renderer[data-ytcf-live-hidden='1']",
+        "ytd-grid-video-renderer[data-ytcf-live-hidden='1']",
+        "div.yt-lockup-view-model[data-ytcf-live-hidden='1']",
+      ].join(", ")
+    ).forEach(el => {
+      el.style.display = "";
+      el.removeAttribute("data-ytcf-live-hidden");
+      el.removeAttribute("data-ytcf-live-done");
+      el.removeAttribute("data-ytcfLiveHidden");
+      el.removeAttribute("data-ytcfLiveDone");
+    });
+  }
+
+  function unhideLowLive() {
+    document.querySelectorAll(
+      [
+        "ytd-rich-item-renderer[data-ytcf-lowlive-hidden='1']",
+        "ytd-video-renderer[data-ytcf-lowlive-hidden='1']",
+        "ytd-compact-video-renderer[data-ytcf-lowlive-hidden='1']",
+        "ytd-grid-video-renderer[data-ytcf-lowlive-hidden='1']",
+        "div.yt-lockup-view-model[data-ytcf-lowlive-hidden='1']",
+      ].join(", ")
+    ).forEach(el => {
+      el.style.display = "";
+      el.removeAttribute("data-ytcf-lowlive-hidden");
+      el.removeAttribute("data-ytcf-lowlive-done");
+      el.removeAttribute("data-ytcfLowliveHidden");
+      el.removeAttribute("data-ytcfLowliveDone");
+    });
+  }
+
   function resetLowpopProcessed() {
     document.querySelectorAll(
       [
@@ -2164,6 +3683,36 @@
     ).forEach(el => {
       el.removeAttribute("data-ytcf-lowpop-done");
       el.removeAttribute("data-ytcfLowpopDone");
+    });
+  }
+
+  function resetLiveProcessed() {
+    document.querySelectorAll(
+      [
+        "ytd-rich-item-renderer[data-ytcf-live-done='1']",
+        "ytd-video-renderer[data-ytcf-live-done='1']",
+        "ytd-compact-video-renderer[data-ytcf-live-done='1']",
+        "ytd-grid-video-renderer[data-ytcf-live-done='1']",
+        "div.yt-lockup-view-model[data-ytcf-live-done='1']",
+      ].join(", ")
+    ).forEach(el => {
+      el.removeAttribute("data-ytcf-live-done");
+      el.removeAttribute("data-ytcfLiveDone");
+    });
+  }
+
+  function resetLowLiveProcessed() {
+    document.querySelectorAll(
+      [
+        "ytd-rich-item-renderer[data-ytcf-lowlive-done='1']",
+        "ytd-video-renderer[data-ytcf-lowlive-done='1']",
+        "ytd-compact-video-renderer[data-ytcf-lowlive-done='1']",
+        "ytd-grid-video-renderer[data-ytcf-lowlive-done='1']",
+        "div.yt-lockup-view-model[data-ytcf-lowlive-done='1']",
+      ].join(", ")
+    ).forEach(el => {
+      el.removeAttribute("data-ytcf-lowlive-done");
+      el.removeAttribute("data-ytcfLowliveDone");
     });
   }
 
@@ -2694,6 +4243,7 @@
   const BTN_MODE_STATUS = "ytcf-btn-mode-status";
   const BTN_MODE_CHANGE = "ytcf-btn-mode-change";
   const BTN_MENU_HOME = "ytcf-btn-menu-home";
+  const BTN_MENU_GENERAL = "ytcf-btn-menu-general";
   const BTN_MENU_SEARCH = "ytcf-btn-menu-search";
   const BTN_MENU_SIDEBAR = "ytcf-btn-menu-sidebar";
   const BTN_MENU_WATCH = "ytcf-btn-menu-watch";
@@ -2836,6 +4386,7 @@
   let modeChangeRevealUntil = 0;
   let langChangeRevealUntil = 0;
   let minViewsChangeRevealUntil = 0;
+  let minLiveViewsChangeRevealUntil = 0;
 
   function isFullscreenNow() {
     return !!(document.fullscreenElement || document.webkitFullscreenElement);
@@ -2999,6 +4550,31 @@
     container.replaceChildren(labelSpan, sep, stateSpan);
   }
 
+  function renderCountState(container, label, count) {
+    const labelSpan = document.createElement("span");
+    labelSpan.textContent = label;
+    labelSpan.style.color = "#fff";
+    labelSpan.style.textShadow = "0 1px 2px rgba(0,0,0,0.6)";
+
+    const sep = document.createTextNode(" : ");
+
+    const countSpan = document.createElement("span");
+    countSpan.textContent = String(Math.max(0, Number(count) || 0));
+    countSpan.style.color = "#60a5fa";
+    countSpan.style.fontWeight = "700";
+    countSpan.style.textShadow = "0 1px 2px rgba(0,0,0,0.6)";
+
+    container.replaceChildren(labelSpan, sep, countSpan);
+  }
+
+  function getGroupState(keys) {
+    return keys.every(k => getBool(k));
+  }
+
+  function setGroupState(keys, next) {
+    keys.forEach(k => setBool(k, next));
+  }
+
   function makeToggleRow(options) {
     const wrap = document.createElement("div");
     wrap.style.display = "flex";
@@ -3014,7 +4590,7 @@
     const infoBtn = makeInfoIcon(options.infoText);
 
     const perf = getMode() === "perf";
-    const canHoverAction = !isUltraMode();
+    const canHoverAction = true;
 
     actionBtn.style.whiteSpace = "nowrap";
     if (perf) {
@@ -3091,6 +4667,188 @@
     return wrap;
   }
 
+  function makeActionRow(options) {
+    const wrap = document.createElement("div");
+    wrap.style.display = "flex";
+    wrap.style.gap = "6px";
+    wrap.style.alignItems = "center";
+    wrap.style.justifyContent = "flex-end";
+
+    const actionBtn = makeDockButton(options.actionId, "");
+    const stateBtn = makeDockButton(options.stateId, "");
+    stateBtn.setAttribute("aria-disabled", "true");
+    stateBtn.style.pointerEvents = "none";
+
+    const infoBtn = makeInfoIcon(options.infoText);
+
+    const perf = getMode() === "perf";
+    const canHoverAction = true;
+
+    actionBtn.style.whiteSpace = "nowrap";
+    if (perf) {
+      actionBtn.style.maxWidth = "0";
+      actionBtn.style.paddingLeft = "0";
+      actionBtn.style.paddingRight = "0";
+      actionBtn.style.opacity = "0";
+      actionBtn.style.transform = "translateX(6px)";
+      actionBtn.style.marginRight = "-6px";
+      actionBtn.style.overflow = "hidden";
+      actionBtn.style.pointerEvents = "none";
+      actionBtn.style.transition = "max-width 180ms ease, padding 180ms ease, opacity 180ms ease, transform 180ms ease";
+    } else {
+      actionBtn.style.display = "none";
+      actionBtn.style.pointerEvents = "none";
+    }
+
+    const render = () => {
+      renderCountState(stateBtn, options.label, options.count());
+      actionBtn.textContent = options.actionLabel;
+    };
+
+    actionBtn.addEventListener("click", () => {
+      options.onAction?.();
+      render();
+      registerMenu();
+      forceRenderDockNow();
+    });
+
+    const showAction = () => {
+      if (!canHoverAction) return;
+      if (perf) {
+        actionBtn.style.maxWidth = "260px";
+        actionBtn.style.paddingLeft = "12px";
+        actionBtn.style.paddingRight = "12px";
+        actionBtn.style.opacity = "1";
+        actionBtn.style.transform = "translateX(0)";
+        actionBtn.style.marginRight = "0";
+        actionBtn.style.pointerEvents = "auto";
+      } else {
+        actionBtn.style.display = "";
+        actionBtn.style.pointerEvents = "auto";
+      }
+    };
+
+    const hideAction = () => {
+      if (perf) {
+        actionBtn.style.maxWidth = "0";
+        actionBtn.style.paddingLeft = "0";
+        actionBtn.style.paddingRight = "0";
+        actionBtn.style.opacity = "0";
+        actionBtn.style.transform = "translateX(6px)";
+        actionBtn.style.marginRight = "-6px";
+        actionBtn.style.pointerEvents = "none";
+      } else {
+        actionBtn.style.display = "none";
+        actionBtn.style.pointerEvents = "none";
+      }
+    };
+
+    render();
+    hideAction();
+
+    if (canHoverAction) {
+      wrap.addEventListener("mouseenter", showAction);
+      wrap.addEventListener("mouseleave", hideAction);
+      wrap.addEventListener("focusin", showAction);
+      wrap.addEventListener("focusout", hideAction);
+    }
+
+    wrap.append(actionBtn, stateBtn, infoBtn);
+    return wrap;
+  }
+
+  function makeToggleRowGroup(options) {
+    const wrap = document.createElement("div");
+    wrap.style.display = "flex";
+    wrap.style.gap = "6px";
+    wrap.style.alignItems = "center";
+    wrap.style.justifyContent = "flex-end";
+
+    const actionBtn = makeDockButton(options.actionId, "");
+    const stateBtn = makeDockButton(options.stateId, "");
+    stateBtn.setAttribute("aria-disabled", "true");
+    stateBtn.style.pointerEvents = "none";
+
+    const infoBtn = makeInfoIcon(options.infoText);
+
+    const perf = getMode() === "perf";
+    const canHoverAction = true;
+
+    actionBtn.style.whiteSpace = "nowrap";
+    if (perf) {
+      actionBtn.style.maxWidth = "0";
+      actionBtn.style.paddingLeft = "0";
+      actionBtn.style.paddingRight = "0";
+      actionBtn.style.opacity = "0";
+      actionBtn.style.transform = "translateX(6px)";
+      actionBtn.style.marginRight = "-6px";
+      actionBtn.style.overflow = "hidden";
+      actionBtn.style.pointerEvents = "none";
+      actionBtn.style.transition = "max-width 180ms ease, padding 180ms ease, opacity 180ms ease, transform 180ms ease";
+    } else {
+      actionBtn.style.display = "none";
+      actionBtn.style.pointerEvents = "none";
+    }
+
+    const render = () => {
+      const isOn = options.isOn();
+      renderToggleState(stateBtn, options.label, isOn);
+      actionBtn.textContent = isOn ? options.actionOn : options.actionOff;
+    };
+
+    actionBtn.addEventListener("click", () => {
+      const next = !options.isOn();
+      options.onToggle?.(next);
+      render();
+      registerMenu();
+      forceRenderDockNow();
+    });
+
+    const showAction = () => {
+      if (!canHoverAction) return;
+      if (perf) {
+        actionBtn.style.maxWidth = "260px";
+        actionBtn.style.paddingLeft = "12px";
+        actionBtn.style.paddingRight = "12px";
+        actionBtn.style.opacity = "1";
+        actionBtn.style.transform = "translateX(0)";
+        actionBtn.style.marginRight = "0";
+        actionBtn.style.pointerEvents = "auto";
+      } else {
+        actionBtn.style.display = "";
+        actionBtn.style.pointerEvents = "auto";
+      }
+    };
+
+    const hideAction = () => {
+      if (perf) {
+        actionBtn.style.maxWidth = "0";
+        actionBtn.style.paddingLeft = "0";
+        actionBtn.style.paddingRight = "0";
+        actionBtn.style.opacity = "0";
+        actionBtn.style.transform = "translateX(6px)";
+        actionBtn.style.marginRight = "-6px";
+        actionBtn.style.pointerEvents = "none";
+      } else {
+        actionBtn.style.display = "none";
+        actionBtn.style.pointerEvents = "none";
+      }
+    };
+
+    render();
+    hideAction();
+
+    if (canHoverAction) {
+      wrap.addEventListener("mouseenter", showAction);
+      wrap.addEventListener("mouseleave", hideAction);
+      wrap.addEventListener("focusin", showAction);
+      wrap.addEventListener("focusout", hideAction);
+    }
+
+    wrap.append(actionBtn, stateBtn, infoBtn);
+    return wrap;
+  }
+
   const MIN_VIEWS_STEPS = [
     1000,
     5000,
@@ -3103,6 +4861,19 @@
     1000000,
     2000000,
     5000000,
+  ];
+
+  const MIN_LIVE_VIEWS_STEPS = [
+    10,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    5000,
+    10000,
   ];
 
   function formatViewsShort(value) {
@@ -3159,6 +4930,20 @@
 
   function getMinViewsUpValue(cur) {
     for (const step of MIN_VIEWS_STEPS) {
+      if (step > cur) return step;
+    }
+    return cur;
+  }
+
+  function getMinLiveViewsDownValue(cur) {
+    for (let i = MIN_LIVE_VIEWS_STEPS.length - 1; i >= 0; i--) {
+      if (MIN_LIVE_VIEWS_STEPS[i] < cur) return MIN_LIVE_VIEWS_STEPS[i];
+    }
+    return cur;
+  }
+
+  function getMinLiveViewsUpValue(cur) {
+    for (const step of MIN_LIVE_VIEWS_STEPS) {
       if (step > cur) return step;
     }
     return cur;
@@ -3317,6 +5102,169 @@
     };
 
     if (Date.now() < minViewsChangeRevealUntil) show();
+
+    wrap.addEventListener("mouseenter", show);
+    wrap.addEventListener("mouseleave", scheduleHide);
+    wrap.addEventListener("focusin", show);
+    wrap.addEventListener("focusout", scheduleHide);
+
+    wrap.append(customBtn, downBtn, upBtn, stateBtn);
+    return wrap;
+  }
+
+  function makeMinLiveViewsRow() {
+    const wrap = document.createElement("div");
+    wrap.style.display = "flex";
+    wrap.style.gap = "6px";
+    wrap.style.alignItems = "center";
+    wrap.style.justifyContent = "flex-end";
+
+    const customBtn = makeDockButton("ytcf-btn-lowlive-min-custom", T.dock_lowlive_min_custom || "Custom");
+    const downBtn = makeDockButton("ytcf-btn-lowlive-min-down", "⬇️");
+    const upBtn = makeDockButton("ytcf-btn-lowlive-min-up", "⬆️");
+    const stateBtn = makeDockButton("ytcf-btn-lowlive-min-state", "");
+    stateBtn.setAttribute("aria-disabled", "true");
+    stateBtn.style.pointerEvents = "none";
+
+    const perf = getMode() === "perf";
+    customBtn.style.whiteSpace = "nowrap";
+    downBtn.style.whiteSpace = "nowrap";
+    upBtn.style.whiteSpace = "nowrap";
+
+    if (perf) {
+      for (const btn of [customBtn, downBtn, upBtn]) {
+        btn.style.maxWidth = "0";
+        btn.style.paddingLeft = "0";
+        btn.style.paddingRight = "0";
+        btn.style.opacity = "0";
+        btn.style.transform = "translateX(6px)";
+        btn.style.marginRight = "-6px";
+        btn.style.overflow = "hidden";
+        btn.style.pointerEvents = "none";
+        btn.style.transition = "max-width 180ms ease, padding 180ms ease, opacity 180ms ease, transform 180ms ease";
+      }
+    } else {
+      customBtn.style.display = "none";
+      downBtn.style.display = "none";
+      upBtn.style.display = "none";
+      customBtn.style.pointerEvents = "none";
+      downBtn.style.pointerEvents = "none";
+      upBtn.style.pointerEvents = "none";
+    }
+
+    const label = T.dock_lowlive_min_label || "Live min viewers";
+
+    const render = () => {
+      const cur = getMinLiveViews();
+      stateBtn.textContent = `${label}: ${formatViewsShort(cur)}`;
+      const downNext = getMinLiveViewsDownValue(cur);
+      const upNext = getMinLiveViewsUpValue(cur);
+      downBtn.title = `${label}: ${formatViewsShort(downNext)}`;
+      upBtn.title = `${label}: ${formatViewsShort(upNext)}`;
+      customBtn.title = T.dock_lowlive_min_prompt || "Enter a live threshold (e.g. 50, 1k)";
+    };
+
+    const applyMinLiveViewsChange = (next) => {
+      minLiveViewsChangeRevealUntil = Date.now() + 500;
+      setMinLiveViews(next);
+      resetLowLiveProcessed();
+      unhideLowLive();
+      if (!isUltraMode()) {
+        if (getBool(KEY.lowpopLiveHome)) scanHomeLowLive(homeContainer());
+        if (getBool(KEY.lowpopLiveSearch)) scanSearchLowLive(searchContainer());
+        if (getBool(KEY.lowpopLiveWatch)) scanWatchLowLive(watchContainer());
+      }
+      render();
+      forceRenderDockNow();
+      scheduleRun(true);
+      showToast(T.toast_updated || "Updated", "info");
+    };
+
+    customBtn.addEventListener("click", () => {
+      minLiveViewsChangeRevealUntil = Date.now() + 500;
+      const promptText = T.dock_lowlive_min_prompt || "Enter a live threshold (e.g. 50, 1k)";
+      const input = window.prompt(promptText, String(getMinLiveViews()));
+      if (input == null) return;
+      const parsed = parseCustomViewsInput(input);
+      if (!parsed || parsed <= 0) {
+        showToast(T.dock_lowlive_min_invalid || "Invalid value", "off");
+        return;
+      }
+      applyMinLiveViewsChange(parsed);
+    });
+
+    downBtn.addEventListener("click", () => {
+      applyMinLiveViewsChange(getMinLiveViewsDownValue(getMinLiveViews()));
+    });
+
+    upBtn.addEventListener("click", () => {
+      applyMinLiveViewsChange(getMinLiveViewsUpValue(getMinLiveViews()));
+    });
+
+    const showAction = () => {
+      if (perf) {
+        for (const btn of [customBtn, downBtn, upBtn]) {
+          btn.style.maxWidth = "240px";
+          btn.style.paddingLeft = "12px";
+          btn.style.paddingRight = "12px";
+          btn.style.opacity = "1";
+          btn.style.transform = "translateX(0)";
+          btn.style.marginRight = "0";
+          btn.style.pointerEvents = "auto";
+        }
+      } else {
+        customBtn.style.display = "";
+        downBtn.style.display = "";
+        upBtn.style.display = "";
+        customBtn.style.pointerEvents = "auto";
+        downBtn.style.pointerEvents = "auto";
+        upBtn.style.pointerEvents = "auto";
+      }
+    };
+
+    const hideAction = () => {
+      if (perf) {
+        for (const btn of [customBtn, downBtn, upBtn]) {
+          btn.style.maxWidth = "0";
+          btn.style.paddingLeft = "0";
+          btn.style.paddingRight = "0";
+          btn.style.opacity = "0";
+          btn.style.transform = "translateX(6px)";
+          btn.style.marginRight = "-6px";
+          btn.style.pointerEvents = "none";
+        }
+      } else {
+        customBtn.style.display = "none";
+        downBtn.style.display = "none";
+        upBtn.style.display = "none";
+        customBtn.style.pointerEvents = "none";
+        downBtn.style.pointerEvents = "none";
+        upBtn.style.pointerEvents = "none";
+      }
+    };
+
+    render();
+    hideAction();
+
+    let hideTimer = null;
+    const show = () => {
+      if (hideTimer) clearTimeout(hideTimer);
+      hideTimer = null;
+      showAction();
+    };
+    const scheduleHide = () => {
+      if (hideTimer) clearTimeout(hideTimer);
+      const delay = Math.max(0, minLiveViewsChangeRevealUntil - Date.now());
+      if (delay === 0) {
+        if (!wrap.matches(":hover")) hideAction();
+        return;
+      }
+      hideTimer = setTimeout(() => {
+        if (!wrap.matches(":hover")) hideAction();
+      }, delay);
+    };
+
+    if (Date.now() < minLiveViewsChangeRevealUntil) show();
 
     wrap.addEventListener("mouseenter", show);
     wrap.addEventListener("mouseleave", scheduleHide);
@@ -3606,6 +5554,101 @@
     if (animate) animateDockIn(dock);
   }
 
+function buildGeneralRows() {
+  const shortsKeys = [KEY.shortsHome, KEY.shortsSearch, KEY.sidebarShorts, KEY.blockShortsPage];
+  const lowpopKeys = [KEY.lowpopHome, KEY.lowpopSearch, KEY.lowpopWatch];
+  const liveKeys = [KEY.liveHome, KEY.liveSearch, KEY.liveWatch];
+  const lowLiveKeys = [KEY.lowpopLiveHome, KEY.lowpopLiveSearch, KEY.lowpopLiveWatch];
+
+  return [
+    makeToggleRowGroup({
+      actionId: "ytcf-btn-master-shorts-action",
+      stateId: "ytcf-btn-master-shorts-state",
+      label: T.dock_master_shorts_label || "Remove Shorts entirely",
+      actionOn: T.dock_master_shorts_action_on || "Show all Shorts",
+      actionOff: T.dock_master_shorts_action_off || "Hide all Shorts",
+      infoText: T.dock_master_shorts_info || "Enables all Shorts-related options.",
+      isOn: () => getGroupState(shortsKeys),
+      onToggle: (next) => {
+        setGroupState(shortsKeys, next);
+        scheduleRun(true);
+      },
+    }),
+    makeToggleRowGroup({
+      actionId: "ytcf-btn-master-news-action",
+      stateId: "ytcf-btn-master-news-state",
+      label: T.dock_master_news_label || "Hide News",
+      actionOn: T.dock_master_news_action_on || "Show News",
+      actionOff: T.dock_master_news_action_off || "Hide News",
+      infoText: T.dock_master_news_info || "Hides the News section on Home.",
+      isOn: () => getBool(KEY.newsHome),
+      onToggle: (next) => {
+        setBool(KEY.newsHome, next);
+        scheduleRun(true);
+      },
+    }),
+    makeToggleRowGroup({
+      actionId: "ytcf-btn-master-lowpop-action",
+      stateId: "ytcf-btn-master-lowpop-state",
+      label: T.dock_master_lowpop_label || "Filter low-pop videos",
+      actionOn: T.dock_master_lowpop_action_on || "Show low-pop videos",
+      actionOff: T.dock_master_lowpop_action_off || "Hide low-pop videos",
+      infoText: T.dock_master_lowpop_info || "Enables low-pop filter everywhere.",
+      isOn: () => getGroupState(lowpopKeys),
+      onToggle: (next) => {
+        setGroupState(lowpopKeys, next);
+        if (!next) unhideLowpop();
+        scheduleRun(true);
+      },
+    }),
+    makeToggleRowGroup({
+      actionId: "ytcf-btn-master-live-action",
+      stateId: "ytcf-btn-master-live-state",
+      label: T.dock_master_live_label || "Hide livestreams",
+      actionOn: T.dock_master_live_action_on || "Show livestreams",
+      actionOff: T.dock_master_live_action_off || "Hide livestreams",
+      infoText: T.dock_master_live_info || "Enables live hiding everywhere.",
+      isOn: () => getGroupState(liveKeys),
+      onToggle: (next) => {
+        setGroupState(liveKeys, next);
+        if (!next) unhideLive();
+        resetLiveProcessed();
+        scheduleRun(true);
+      },
+    }),
+    makeToggleRowGroup({
+      actionId: "ytcf-btn-master-lowlive-action",
+      stateId: "ytcf-btn-master-lowlive-state",
+      label: T.dock_master_lowlive_label || "Hide low-viewer livestreams",
+      actionOn: T.dock_master_lowlive_action_on || "Show low-viewer livestreams",
+      actionOff: T.dock_master_lowlive_action_off || "Hide low-viewer livestreams",
+      infoText: T.dock_master_lowlive_info || "Enables low-live filter everywhere.",
+      isOn: () => getGroupState(lowLiveKeys),
+      onToggle: (next) => {
+        setGroupState(lowLiveKeys, next);
+        if (!next) unhideLowLive();
+        resetLowLiveProcessed();
+        scheduleRun(true);
+      },
+    }),
+    makeToggleRowGroup({
+      actionId: "ytcf-btn-master-header-action",
+      stateId: "ytcf-btn-master-header-state",
+      label: T.dock_master_header_label || "Header auto-hide (/watch)",
+      actionOn: T.dock_master_header_action_on || "Header normal",
+      actionOff: T.dock_master_header_action_off || "Header auto",
+      infoText: T.dock_master_header_info || "Enable or disable auto-hide header.",
+      isOn: () => getBool(KEY.headerHoverWatch),
+      onToggle: (next) => {
+        setBool(KEY.headerHoverWatch, next);
+        bindHeaderMouse();
+        applyHeaderHoverNow();
+        scheduleRun(true);
+      },
+    }),
+  ];
+}
+
 function buildHomeRows() {
     return [
       makeToggleRow({
@@ -3632,6 +5675,34 @@ function buildHomeRows() {
         actionOff: T.dock_news_action_off,
         infoText: T.dock_news_info,
         onToggle: () => { scheduleRun(true); },
+      }),
+      makeToggleRow({
+        actionId: "ytcf-btn-live-home-action",
+        stateId: "ytcf-btn-live-home-state",
+        key: KEY.liveHome,
+        label: T.dock_live_home_label || "Livestreams hidden (Home)",
+        actionOn: T.dock_live_home_action_on || "Show livestreams (Home)",
+        actionOff: T.dock_live_home_action_off || "Hide livestreams (Home)",
+        infoText: T.dock_live_home_info || "Hides live streams on the Home feed.",
+        onToggle: (next) => {
+          if (!next) unhideLive();
+          resetLiveProcessed();
+          scheduleRun(true);
+        },
+      }),
+      makeToggleRow({
+        actionId: "ytcf-btn-lowlive-home-action",
+        stateId: "ytcf-btn-lowlive-home-state",
+        key: KEY.lowpopLiveHome,
+        label: T.dock_lowlive_home_label || "Low-viewer livestreams (Home)",
+        actionOn: T.dock_lowlive_home_action_on || "Show low-viewer livestreams",
+        actionOff: T.dock_lowlive_home_action_off || "Hide low-viewer livestreams",
+        infoText: T.dock_lowlive_home_info || "Hides live streams under the viewer threshold on Home.",
+        onToggle: (next) => {
+          if (!next) unhideLowLive();
+          resetLowLiveProcessed();
+          scheduleRun(true);
+        },
       }),
       makeToggleRow({
         actionId: "ytcf-btn-lowpop-home-action",
@@ -3672,6 +5743,34 @@ function buildSearchRows() {
       infoText: T.dock_lowpop_search_info,
       onToggle: (next) => {
         if (!next) unhideLowpop();
+        scheduleRun(true);
+      },
+    }),
+    makeToggleRow({
+      actionId: "ytcf-btn-live-search-action",
+      stateId: "ytcf-btn-live-search-state",
+      key: KEY.liveSearch,
+      label: T.dock_live_search_label || "Livestreams hidden (Search)",
+      actionOn: T.dock_live_search_action_on || "Show livestreams (Search)",
+      actionOff: T.dock_live_search_action_off || "Hide livestreams (Search)",
+      infoText: T.dock_live_search_info || "Hides live streams in Search.",
+      onToggle: (next) => {
+        if (!next) unhideLive();
+        resetLiveProcessed();
+        scheduleRun(true);
+      },
+    }),
+    makeToggleRow({
+      actionId: "ytcf-btn-lowlive-search-action",
+      stateId: "ytcf-btn-lowlive-search-state",
+      key: KEY.lowpopLiveSearch,
+      label: T.dock_lowlive_search_label || "Low-viewer livestreams (Search)",
+      actionOn: T.dock_lowlive_search_action_on || "Show low-viewer livestreams",
+      actionOff: T.dock_lowlive_search_action_off || "Hide low-viewer livestreams",
+      infoText: T.dock_lowlive_search_info || "Hides live streams under the viewer threshold in Search.",
+      onToggle: (next) => {
+        if (!next) unhideLowLive();
+        resetLowLiveProcessed();
         scheduleRun(true);
       },
     }),
@@ -3723,6 +5822,47 @@ function buildWatchRows() {
           showToast(next ? T.toast_header_on : T.toast_header_off, next ? "on" : "off");
         },
       }),
+      makeToggleRow({
+        actionId: "ytcf-btn-autolike-subs-action",
+        stateId: "ytcf-btn-autolike-subs-state",
+        key: KEY.autoLikeSubs,
+        label: T.dock_autolike_subs_label || "Auto-like subscribed channels",
+        actionOn: T.dock_autolike_subs_action_on || "Disable auto-like",
+        actionOff: T.dock_autolike_subs_action_off || "Enable auto-like",
+        infoText: T.dock_autolike_subs_info || "Automatically likes videos from subscribed channels.",
+        onToggle: () => {
+          scheduleRun(true);
+          autoLikeSubscribedWatch();
+        },
+      }),
+      makeToggleRow({
+        actionId: "ytcf-btn-live-watch-action",
+        stateId: "ytcf-btn-live-watch-state",
+        key: KEY.liveWatch,
+        label: T.dock_live_watch_label || "Livestreams hidden (/watch)",
+        actionOn: T.dock_live_watch_action_on || "Show livestreams (/watch)",
+        actionOff: T.dock_live_watch_action_off || "Hide livestreams (/watch)",
+        infoText: T.dock_live_watch_info || "Hides live recommendations on /watch.",
+        onToggle: (next) => {
+          if (!next) unhideLive();
+          resetLiveProcessed();
+          scheduleRun(true);
+        },
+      }),
+      makeToggleRow({
+        actionId: "ytcf-btn-lowlive-watch-action",
+        stateId: "ytcf-btn-lowlive-watch-state",
+        key: KEY.lowpopLiveWatch,
+        label: T.dock_lowlive_watch_label || "Low-viewer livestreams (/watch)",
+        actionOn: T.dock_lowlive_watch_action_on || "Show low-viewer livestreams",
+        actionOff: T.dock_lowlive_watch_action_off || "Hide low-viewer livestreams",
+        infoText: T.dock_lowlive_watch_info || "Hides live streams under the viewer threshold on /watch.",
+        onToggle: (next) => {
+          if (!next) unhideLowLive();
+          resetLowLiveProcessed();
+          scheduleRun(true);
+        },
+      }),
     ];
 }
 
@@ -3748,18 +5888,41 @@ function buildAdvancedRows() {
       infoText: T.dock_float_buttons_info,
       onToggle: () => { scheduleRun(true); },
     }),
+    makeActionRow({
+      actionId: "ytcf-btn-autolike-blocklist-reset",
+      stateId: "ytcf-btn-autolike-blocklist-state",
+      label: T.dock_autolike_blocklist_label || "Auto-like blocklist",
+      actionLabel: T.dock_autolike_blocklist_action || "Reset blocklist",
+      infoText: T.dock_autolike_blocklist_info || "Clears the list of videos you manually unliked/disliked.",
+      count: () => getAutoLikeBlockCount(),
+      onAction: () => {
+        resetAutoLikeBlocklist();
+        scheduleRun(true);
+      },
+    }),
     makeMinViewsRow(),
+    makeMinLiveViewsRow(),
     makeLanguageRow(),
   ];
 }
 
-function buildSubmenuButtons(highlightTarget) {
-  return [
-    makeMenuAccessButton(
-      BTN_MENU_HOME,
-      T.dock_menu_home_label,
-      T.dock_menu_home_info,
-      () => {
+  function buildSubmenuButtons(highlightTarget) {
+    return [
+      makeMenuAccessButton(
+        BTN_MENU_GENERAL,
+        T.dock_menu_general_label || "General",
+        T.dock_menu_general_info || "Global shortcuts.",
+        () => {
+          dockSubmenu = "general";
+          forceRenderDockNow();
+        },
+        highlightTarget === "general"
+      ),
+      makeMenuAccessButton(
+        BTN_MENU_HOME,
+        T.dock_menu_home_label,
+        T.dock_menu_home_info,
+        () => {
         dockSubmenu = "home";
         forceRenderDockNow();
       },
@@ -3864,8 +6027,17 @@ function buildSubmenuButtons(highlightTarget) {
       getBool(KEY.shortsHome) ? "sh1" : "sh0",
       getBool(KEY.lowpopHome) ? "lh1" : "lh0",
       getBool(KEY.lowpopWatch) ? "lw1" : "lw0",
+      getBool(KEY.liveHome) ? "lvh1" : "lvh0",
+      getBool(KEY.liveSearch) ? "lvs1" : "lvs0",
+      getBool(KEY.liveWatch) ? "lvw1" : "lvw0",
+      getBool(KEY.lowpopLiveHome) ? "llh1" : "llh0",
+      getBool(KEY.lowpopLiveSearch) ? "lls1" : "lls0",
+      getBool(KEY.lowpopLiveWatch) ? "llw1" : "llw0",
       getBool(KEY.headerHoverWatch) ? "hh1" : "hh0",
+      getBool(KEY.autoLikeSubs) ? "al1" : "al0",
+      `bl-${getAutoLikeBlockCount()}`,
       `mv-${getMinViews()}`,
+      `mlv-${getMinLiveViews()}`,
       dockSubmenu ? `sm-${dockSubmenu}` : "sm0",
       // ✅ new visibility bit so dock updates correctly without full rerenders
       (shouldShowGoTop() ? "gt1" : "gt0"),
@@ -3910,6 +6082,7 @@ function buildSubmenuButtons(highlightTarget) {
       });
 
       const submenuTitles = {
+        general: T.dock_menu_general_title || "General:",
         home: T.dock_menu_home_title,
         search: T.dock_menu_search_title,
         sidebar: T.dock_menu_sidebar_title,
@@ -3929,6 +6102,7 @@ function buildSubmenuButtons(highlightTarget) {
 
       items.push(backBtn, titleBtn);
       const submenuRows = {
+        general: buildGeneralRows(),
         home: buildHomeRows(),
         search: buildSearchRows(),
         sidebar: buildSidebarRows(),
@@ -4093,6 +6267,8 @@ function buildSubmenuButtons(highlightTarget) {
 
     if (getBool(KEY.shortsHome)) hideShortsShelvesWithin(home, "home");
     if (getBool(KEY.newsHome)) hideNewsShelfOnHome(home);
+    if (getBool(KEY.liveHome)) scanHomeLive(home);
+    if (!isUltraMode() && getBool(KEY.lowpopLiveHome)) scanHomeLowLive(home);
     if (!isUltraMode() && getBool(KEY.lowpopHome)) scanHomeLowpop(home);
   }
 
@@ -4107,6 +6283,8 @@ function buildSubmenuButtons(highlightTarget) {
       hideShortsShelvesWithin(search, "search");
       hideShortsVideoResultsInSearch(search);
     }
+    if (getBool(KEY.liveSearch)) scanSearchLive(search);
+    if (!isUltraMode() && getBool(KEY.lowpopLiveSearch)) scanSearchLowLive(search);
     if (!isUltraMode() && getBool(KEY.lowpopSearch)) scanSearchLowpop(search);
   }
 
@@ -4114,6 +6292,13 @@ function buildSubmenuButtons(highlightTarget) {
     const watch = watchContainer();
     if (!watch) return;
     const deferHeavy = isSearchInteractionActive();
+
+    bindWatchVideoIdObserver();
+    handleWatchVideoChange();
+    autoLikeSubscribedWatch();
+
+    if (getBool(KEY.liveWatch) && !deferHeavy) scanWatchLive(watch);
+    if (!isUltraMode() && getBool(KEY.lowpopLiveWatch) && !deferHeavy) scanWatchLowLive(watch);
     if (!isUltraMode() && getBool(KEY.lowpopWatch) && !deferHeavy) scanWatchLowpop(watch);
     if (deferHeavy) deferHeavyRun();
 
@@ -4182,9 +6367,26 @@ function buildSubmenuButtons(highlightTarget) {
   function shouldObserve() {
     if (getMode() !== "perf") return false;
 
-    const needHome = isHome() && (getBool(KEY.shortsHome) || getBool(KEY.newsHome) || getBool(KEY.lowpopHome));
-    const needSearch = isSearch() && (getBool(KEY.shortsSearch) || getBool(KEY.lowpopSearch));
-    const needWatch = isWatch() && (getBool(KEY.lowpopWatch) || getBool(KEY.headerHoverWatch));
+    const needHome = isHome() && (
+      getBool(KEY.shortsHome) ||
+      getBool(KEY.newsHome) ||
+      getBool(KEY.lowpopHome) ||
+      getBool(KEY.liveHome) ||
+      getBool(KEY.lowpopLiveHome)
+    );
+    const needSearch = isSearch() && (
+      getBool(KEY.shortsSearch) ||
+      getBool(KEY.lowpopSearch) ||
+      getBool(KEY.liveSearch) ||
+      getBool(KEY.lowpopLiveSearch)
+    );
+    const needWatch = isWatch() && (
+      getBool(KEY.lowpopWatch) ||
+      getBool(KEY.headerHoverWatch) ||
+      getBool(KEY.autoLikeSubs) ||
+      getBool(KEY.liveWatch) ||
+      getBool(KEY.lowpopLiveWatch)
+    );
     const needUI = getBool(KEY.sidebarShorts);
 
     return needHome || needSearch || needWatch || needUI;
@@ -4304,6 +6506,16 @@ function buildSubmenuButtons(highlightTarget) {
     bindHeaderMouse();
     applyHeaderHoverNow();
 
+    if (isWatch()) {
+      bindWatchVideoIdObserver();
+      handleWatchVideoChange();
+    } else {
+      lastWatchVideoId = null;
+      resetAutoLikeState(null);
+      stopAutoLikeWatchObserver();
+      bindWatchVideoIdObserver();
+    }
+
     scheduleRun(true);
     if (!isUltraMode()) {
       setTimeout(() => scheduleRun(true), 250);
@@ -4342,6 +6554,8 @@ function buildSubmenuButtons(highlightTarget) {
       document.addEventListener("webkitfullscreenchange", onFsChange);
 
       window.addEventListener("yt-navigate-finish", onNavigate, true);
+      window.addEventListener("yt-navigate-end", onNavigate, true);
+      window.addEventListener("yt-page-data-updated", onNavigate, true);
       window.addEventListener("popstate", onNavigate, true);
     } catch (e) {
       // si une erreur empêche tout, au moins on le voit dans la console
@@ -4356,3 +6570,4 @@ function buildSubmenuButtons(highlightTarget) {
     boot();
   }
 })();
+
